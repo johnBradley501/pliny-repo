@@ -1,0 +1,204 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Containment View</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e4658">2.1.7 Containment View</a></h1>
+      <h2>What's it for?</h2>
+      <p>When a reference to a resource ("A") (say, a note) appears in another
+         		  resource's ("B") reference or annotation area, the reference to B is said to be
+         		  contained within A. Containment provides one of the major ways to organise
+         		  materials in Pliny. Containment in Pliny does not, however, operate in a
+         		  hierarchical structure: it is both true that any note "A" can contain
+         		  references to more than one other note, but it is also true that references to
+         		  A can appear in many other notes. The <i>Containment View</i> offers a
+         		  visualisation of these containments so that you can manage them better.
+      </p>
+      <h2>Starting the Containment View</h2>
+      <p>The Containment View is opened by clicking on its icon in the main
+         		  toolbar very near the very top of the Pliny window:
+      </p>
+      <p align="center"><img src="images/contain-ref-1.gif"></p>
+      <p>In response, the containment view will appear, and will normally place
+         		  itself across the bottom edge of the Pliny window. If you'd rather have it
+         		  somewhere else, drag it by the tab to one of the edges of the Pliny window (or
+         		  right out of the Pliny window if you'd rather have it appear in an independant
+         		  window). The containment view tends to be wider rather than tall, so it is
+         		  often best to place it at the bottom or top of the Pliny screen rather than to
+         		  the sides.
+      </p>
+      <h2>What the Containment View Shows</h2>
+      <p>The containment view tracks the Pliny resource you are showing in the
+         		  main editor window, and shows the containment structure associated withat that
+         		  resource. As you switch from resource to resource in the main editor window the
+         		  containment view will also recreate itself, showing you the structure of each
+         		  resource you look at in turn.
+      </p>
+      <p>The Containment View maps the containment information information
+         		  attached to a resource (what references to other resources it contains, and
+         		  what other resources contain reference to it) as a graph. When you first
+         		  display the Containment View with a note such as:
+      </p>
+      <p align="center"><img src="images/contain-ref-2.png"></p>
+      <p>... (a note which, itself, is referenced from two other notes) the
+         		  Containment view might appear as:
+      </p>
+      <p align="center"><img src="images/contain-ref-3.gif"></p>
+      <p>Each box represents a resource, the arrows between them show the
+         		  containment information. For example, we can see from the Note editor
+         		  screenshot above that <i>Wittig 1978</i> contains directly a reference to two
+         		  resources. You can see them shown in the containment view with arrows going
+         		  from Wittig 1978 to each of them. The direction of the arrow shows the
+         		  containment -- it shows that the reference to "Wittig 1978: reading and
+         		  semiotics" is contained <i>within</i> "Wittig 1978", for example. The colour of
+         		  the arrowhead is the same as the colour of the reference object in the note,
+         		  and is controlled by the type associated with the reference itself. There is
+         		  more information about reference types and how to manage them in the reference
+         		  section for the <a href="ref.typeManagerView.html">Type Manager</a>.
+      </p>
+      <p>Similarly, if we look above the box representing <i>Wittig 1978</i> in
+         		  the view we can see the two resources that contain references to Wittig 1978 --
+         		  here they are shown as one called <i>Articles on CBTA</i>, and one called
+         		  <i>Read Materials</i>.
+      </p>
+      <p>The containment manager can be asked to show the next level of
+         		  containment around its primary resource as well. If we ask this of it (see the
+         		  Commands section below for guidance about how this is done) we will see:
+      </p>
+      <p align="center"><img src="images/contain-ref-4.gif"></p>
+      <p>We have asked the view to show us the next level of containment under
+         		  <i>Wittig 1978</i>. We can now see what the original note in the note editor
+         		  also happened to show -- that the objects directly contained in <i>Wittig
+            		  1978</i> also contain references to other objects themselves. Suppose we now
+         		  ask to see the objects contained in <i>Read Materials</i> (above <i>Wittig
+            		  1978</i> in this diagram) to see what other objects it refers to as well as
+         		  <i>Wittig 1978</i>:
+      </p>
+      <p align="center"><img src="images/contain-ref-5.gif"></p>
+      <p>The graph is becoming more complex, but we can still see both
+         		  <i>Wittig 1978</i> and the objects it contains, and the two objects that
+         		  contain references to <i>Wittig 1978</i>. In addition, we can see that Read
+         		  Materials contains references to 5 other objects in addition to <i>Wittig
+            		  1978</i>.
+      </p>
+      <p>Hopefully, this bit of information gives you a sense of how the
+         		  Containment View operates, and how it might be useful to you. Note that
+         		  although you can expand containment levels shown in the view, Pliny will not
+         		  store the expansion for future reference -- if you close the Containment View
+         		  and reopen it, or if you shut down Pliny altogether and restart it, you will
+         		  find that the Containment View will start off showing only the current
+         		  reference and the things that directly contain it, and that it directly
+         		  contains.
+      </p>
+      <h2>Commands</h2>
+      <p>Pliny's containment view is a display only -- you cannot use it to
+         		  actually change any containment information that Pliny is storing for you.
+         		  Thus, the commands that the containment view provides can only control what the
+         		  view shows you -- not the information behind it.
+      </p>
+      <h3>Selection</h3>
+      <p>Each box in the containment view represents a Pliny resource. To
+         			 invoke most of the Pliny commands (but not all of them) you must select one or
+         			 more of them. Select a resource by clicking on its display box. If you wish to
+         			 select more than one, hold down the Shift key while clicking on the 2nd and
+         			 third one. As you select Pliny will show you which one(s) has/have been
+         			 selected by drawing a heavier box about it. Here is a fragment of the display
+         			 with one item selected showing it:
+      </p>
+      <p align="center"><img src="images/contain-ref-6.gif"></p>
+      <p>Item <i>Articles on CBTA</i> is currently selected, whereas
+         			 <i>Wittig 1978</i> is not.
+      </p>
+      <h3>Operations on Selected Objects</h3>
+      <p>Once you have selected one or more objects you can request some
+         			 operations to be performed on them. You do this by displaying the contextual
+         			 menu (by clicking with the other mouse button (or, on the one-button Macintosh,
+         			 clicking while the CTRL button is depressed) while the mouse pointer still
+         			 points at one of your selected items. The contextual menu will look like
+         			 this:
+      </p>
+      <p align="center"><img src="images/contain-ref-7.gif"></p>
+      <p>All the commands except for the last ("Included Types") will be
+         			 applied to the currently selected items. Choose a command from the list by
+         			 pointing at it and clicking. We will describe "Included Types" shortly. Here is
+         			 a description of the other operations: 
+         		  
+         <ul>
+            <li><tt>Open Selected</tt>: Choose this to ask Pliny to open its
+               				editor for the selected items. Here, if only <i>Articles on CBTA</i> was
+               				selected, choosing this command would cause Plinyh to open the Note Editor on
+               				<i>Articles on CBTA</i>.
+            </li>
+            <li><tt>Add Containment Parents</tt>: Choose this to ask Pliny to
+               				extend the current Containment View to show all the references that contain
+               				references to the selected items. Here, if only <i>Articles on CBTA</i> is
+               				selected, then Pliny will show all places containing a reference to <i>Articles
+                  				to CBTA</i>. Select several items before choosing this item to have it applied
+               				against several items at once.
+            </li>
+            <li><tt>Add Containment Children</tt>: Choose this to ask Pliny to
+               				extend the current Containment View to show all the references that are made by
+               				the selected items. Here, if only <i>Articles on CBTA</i> is selected, then
+               				Pliny will show all places <i>Articles to CBTA</i> refers to. Select several
+               				items before choosing this item to have it applied against several items at
+               				once.
+            </li>
+            <li><tt>Add Parents and Children</tt>: Choose this to ask Pliny to
+               				request both parents and children to be added at the same time. Here, if only
+               				<i>Articles on CBTA</i> is selected, then Pliny will show all places
+               				<i>Articles to CBTA</i> refers to, and all places that refer to <i>Articles to
+                  				CBTA</i>. Select several items before choosing this item to have it applied
+               				against several items at once.
+            </li>
+            <li><tt>Included types</tt>: choose this to filter the references
+               				shown in the containment view by the reference type. See the subsection
+               				immediately below this for more details.
+            </li>
+            <li><tt>Export Data</tt>: (shown only if more than one item is chosen
+               				in this this display) Choose this item to ask Pliny to take the items you have
+               				selected in the containment display and export them to a text file (in
+               				HTML).
+            </li>
+         </ul>
+      </p>
+      <h3>Included Types List</h3>
+      <p>The Containment View shows containment references between objects
+         			 but is configured by default to suppress references of type "source document".
+         			 You might recall that source document references are automatically inserted as
+         			 back references when referent support is in use. They are used to assert that
+         a
+         			 particular note comes from a particular source, and since they are pointers
+         			 back from the point of view of the Containment View they often provide
+         			 redundant information that makes the containment diagram unnecessarily
+         			 complex.
+      </p>
+      <p>Choose the Included Types List if you wish to change these
+         			 assumptions. You will see a further list of types that you have in Pliny and by
+         			 choosing items representing the types in the list you can choose to ask the
+         			 Containment View to ignore or include all references that are of any of these
+         			 types. Unless you have already changed the types selection you will see that
+         			 references of type source document will be excluded and all others are
+         			 included. If you change this setting Pliny will remember your new setting both
+         			 for the rest of this session and for future Pliny sessions as well until you
+         			 change it again.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

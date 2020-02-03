@@ -1,0 +1,321 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Note Editor</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e4110">2.1.4 Note Editor</a></h1>
+      <h2>What's it for</h2>
+      <p>The Note Editor is invoked by Pliny whenever you wish to change the
+         		  content of a Note. It is an editor, so it will launch an editing space for the
+         		  note it is allowing you to edit in the editor pane.
+      </p>
+      <p>Notes are a key element in more than one way in Pliny. You can seetwo
+         		  ways to use notes be looking at two tutorials: <a href="tut.nonDigital.html">using
+            		  Pliny with non-digital materials</a>, and <a href="tut.organisingNotes.html">using Pliny to organise notes</a>.
+      </p>
+      <h2>Screen components</h2>
+      <p>Here is a typical display of the Note Editor, with its parts
+         		  labelled:
+      </p>
+      <p align="center"><img src="images/noteEditor-1.png"></p>
+      <h3>Tab</h3>
+      <p>Tabs appear at the top of the editor pane. The highlighted one (in
+         			 the figure, "Wittig 1978") belongs to the main screen area below. The "X" icon
+         			 can be clicked on to close the object.
+      </p>
+      <h3>Boundary</h3>
+      <p>All notes have two major components, content and reference, and they
+         			 are displayed side-by-side in the Note Editor. The Reference area is separated
+         			 from the Content areas by a boundary. Drag the boundary area left or right to
+         			 change the proportion of screen are given to the two portions.
+      </p>
+      <h3>Title</h3>
+      <p>In Pliny, all references, including Notes, have a title. The title
+         			 of the current note appears here and can be edited by clicking in the title
+         			 area. If the title is too long to appear in the window the area will roll
+         			 left/right to give access to the entire title. After you have finished editing
+         			 the text you needn't do anything, but if you want to explicitly close the
+         			 editing space so that you can see the effect, click somewhere out of the
+         			 editing space when done.
+      </p>
+      <h3>Content</h3>
+      <p>The content area contains the text associated with the Note. To edit
+         			 the content click in the text in the content area. After you have finished
+         			 editing the text you needn't do anything, but if you want to explicitly close
+         			 the editing space, click somewhere out of the editing space when done.
+      </p>
+      <p>Unfortunately, no formatting facilities for the text in the content
+         			 area are provided in Pliny. Since notes are generally likely to be relatively
+         			 short (if they are long then they will have structure that means that they
+         			 should perhaps be divided into separate notes). If you wish to introduce markup
+         			 for formatting I suggest that you use a scheme similar to that used to be
+         			 provided in older Wiki software: 
+         		  
+         <ul>
+            <li>leave a blank line between paragraphs</li>
+            <li>Start bulletted list items with a "*", leaving a space after the
+               				*-bullet.
+            </li>
+            <li>Number numbered list items in the format 1., 2. etc. leaving a
+               				space after the number-point combination.
+            </li>
+            <li>Mark text that should be in italics by surrounding them with an
+               				underline: <tt>_this is in italics_</tt>.
+            </li>
+            <li>Mark text that should be in bold by surrounding it with an
+               				asterisk <tt>*this should be in bold*</tt>.
+            </li>
+         </ul>
+      </p>
+      <h3>Reference Area</h3>
+      <p>This is the area where references to other Pliny resources are
+         			 displayed. The Reference area provides a working 2D space for laying out the
+         			 <a href="ref.referenceObject.html">reference objects</a>. There is more about
+         			 the Reference area <a href="ref.referenceObject.html">here</a>.
+      </p>
+      <h3>Drag Source Object</h3>
+      <p>The <img align="middle" src="images/icons/noteIcon.gif"> that appears to the
+         			 left of the title can be used in drag and drop objects as a drag source. If you
+         			 wish to include a reference to this open note in another reference object's
+         			 reference area, you can take drag this object into the reference area of the
+         			 other object and Pliny will create a reference object for you there. See the
+         			 section below on Drag and Drop in the material about the Note Editor (below)
+         			 for more details.
+      </p>
+      <h2>ToolBar</h2>
+      <p>The toolbar for the Note Editor (which Eclipse places in the main
+         		  toolbar area) contains tools that work with the Note Editor. Most of them are
+         		  used with the Reference Area and allow things to be done within it. The toolbar
+         		  for the Note Editor looks like this:
+      </p>
+      <p align="center"><img src="images/noteEditor-2.png"></p>
+      <p>The tools and their icons are: 
+         		
+         <ul>
+            <li><img align="middle" src="images/icons/referencersOn.gif">: Use this icon by
+               			 clicking on the down arrow symbol (<img align="middle" src="images/pull-down.gif">) to
+               			 its right rather than the icon itself. Clicking the down-arrow will cause Pliny
+               			 to generate a list of all resources managed by Pliny that refer to the current
+               			 note. To open one of these resources, choose it from the list.
+            </li>
+            <li><img align="middle" src="images/icons/undo.gif">: This icon allows you to
+               			 undo the previous action you have done in the Reference area. Undo can also be
+               			 chosen from the "Edit" menu, or requested using the standard keystroke for your
+               			 platform.
+            </li>
+            <li><img align="middle" src="images/icons/redo.gif">: This icon allows you to
+               			 redo an action you have just undone in the Reference area. Redo is also
+               			 available from the "Edit" menu, or can be requested by the standard keystroke
+               			 for redo.
+            </li>
+            <li><img align="middle" src="images/icons/noteIcon.gif">: This icon allows you
+               			 to create a new note and a note reference for it that will appear in the
+               			 Annotation area. You can use it in two ways: 
+               			 
+               <ol>
+                  <li>first click on the <img align="middle" src="images/icons/noteIcon.gif">
+                     				  button, then in the annotation area drag over the area there that you wish to
+                     				  be used for the space the reference is to occupy, or
+                  </li>
+                  <li>you can drag the <img align="middle" src="images/icons/noteIcon.gif">
+                     				  button itself into the annotation area. This will give you a "standard size"
+                     				  note which you can later change its size.
+                  </li>
+               </ol> After Pliny has responded and created a reference and new note
+               			 for you, you will want to type in the note name and its text in the newly
+               			 created space. Each time a new note is created the "create new note" state is
+               			 cleared, and you must push the <img align="middle" src="images/icons/noteIcon.gif">
+               			 again to create another note or drag a new note from the
+               			 <img align="middle" src="images/icons/noteIcon.gif"> button. There is a keyboard
+               			 shortcut that puts Pliny in "create new note" state as well: F5).
+            </li>
+            <li><img align="middle" src="images/icons/connectionIcon.gif">: This icon
+               			 allows you to create a connection between two references (a line joining them).
+               			 A connection is usually used to represent some sort of conceptual connection
+               			 between the two items.. To establish a connection line first click on the
+               			 <img align="middle" src="images/icons/connectionIcon.gif">, then click in the reference
+               			 that should hold the start of the line, and drag to the reference where the
+               			 line should end. Each time you wish to create a new connection you must first
+               			 push the <img align="middle" src="images/icons/connectionIcon.gif"> again. The keyboard
+               			 shortcut for this is F6.
+            </li>
+            <li><img align="middle" src="images/icons/allClose.gif">: Click on this icon to
+               			 cause all the references in this reference area to be minimized.
+            </li>
+            <li><img align="middle" src="images/icons/saveFile.gif">: Click on this icon to
+               			 write the contents and reference area of this note to an HTML file. This tool,
+               			 which is even more experimental than the rest of Pliny, implements some first
+               			 thoughts about how one could take the reference area of a note (which is
+               			 essentially a 2-D area) and map it into a text which is essentially 1-D. See
+               			 more about this tool in section<i> The Note Editor's Text-generation Tool</i>
+               			 (below).
+            </li>
+         </ul>
+      </p>
+      <h2>Drag and Drop</h2>
+      <p>An important element of Pliny's design was in the work involved in
+         		  trying to make the creation of notes as straight-forward as possible. To this
+         		  end we have added various drag and drop features to Pliny. Of course,
+         		  references can be dragged about in a note's reference area -- that is how you
+         		  make use of the 2D space the reference area provided to organise the notes.
+         		  However, drag and drop can also be used to copy materials from outside the note
+         		  editor into it, or from inside the note area to other areas. Here is a summary
+         		  of these drag and drop features available in the Note Editor:
+      </p>
+      <h3><i>Into</i> the note Editor
+      </h3>
+      <p>Here are the kind of things that can be dragged from elsewhere into
+         			 the note editor's reference area: 
+         		  
+         <ul>
+            <li>A reference to any resource can be dragged from the Resource
+               				Explorer to the 2D reference area. Pliny will interpret this as a request to
+               				create a reference to that resource there. A reference to a note in the Note
+               				Search View works the same way.
+            </li>
+            <li>If you have more than one editor open at the same time you can
+               				drag a reference from one into the other by dragging the reference's <i>drag
+                  				source object</i>. See the figure in the section <i>Out of the Note Editor</i>
+               				to see where the drag source objects are.
+            </li>
+            <li>Text can be selected from another program that supports Drag and
+               				Drop (such as Word) outside of Pliny and dragged onto the reference area of a
+               				Pliny note. Pliny will interpret this as a request to create a note and a
+               				reference to it in the area. If the dragged text begins with a short line of
+               				text that looks like a heading, Pliny will interpret this as the note's
+               				title.
+            </li>
+         </ul>
+      </p>
+      <h3><i>Out of </i>the note Editor
+      </h3>
+      <p>The note editor provides two kinds of drag source objects that can
+         			 be dragged from the note editor into another Pliny object. The following figure
+         			 shows them:
+      </p>
+      <p align="center"><img src="images/dnd-noteEditor.png"></p>
+      <p>Here we see Pliny displaying two notes (the help section "Dividing a
+         			 Pane: docking" in the topic <a href="intro.panes.html">Managing Panes</a>
+         			 describes how to split the Pliny window in this way). The top part contains the
+         			 note "History of Computing" and the bottom is displaying "Ethnography &amp;
+         			 History". A Pliny user can use one of the two drag source objects shown to make
+         			 a reference from something in one note to the other. 
+         		  
+         <ul>
+            <li>If the user wanted to insert a reference to "Ethnography &amp;
+               				History" in his/her "History of Computing" note, he should point at the drag
+               				source object belonging to the "Ethnography &amp; History" note (of the two
+               				marked in the figure above, this is the one to the left), and drag it into the
+               				reference area of the other note. Pliny will respond during the drag by showing
+               				you a grey box similar to that shown in the figure above. When you have placed
+               				the reference where you want it release the mouse button.
+            </li>
+            <li>If the user wanted to insert a reference to one of the objects in
+               				"Ethnography &amp; History"'s references this can also be done. Suppose the
+               				reference to "Ethnography + historiography" was to be copied. Its drag source
+               				object is in its reference display at the left end (see it highlighted above).
+               				Point the mouse pointer at it and drag that object to a place in the receiving
+               				note's reference area. <b>Note</b> that dragging between notes will <i>only</i>
+               				work when one points at the specific drag source object. If one points
+               				elsewhere in the references area Pliny will <i>not</i> understand it as a start
+               				of a request to drag a reference from one note to another -- it will see it as
+               				a request to move the object in its current reference space.
+            </li>
+         </ul>
+      </p>
+      <h2>The Note Editor's Text-generation Tool</h2>
+      <p>Pliny is meant to help you organise materials in ways that represent
+         		  issues of interest to you. When you have something that you wish to describe to
+         		  others you are likely to want to write an article about it. Pliny can be useful
+         		  in the article-creation process -- one can create a note which represents the
+         		  eventual article itself, and then use its reference area to bring to together
+         		  ideas that you think should appear in the article, and you can use the 2D
+         		  reference area itself, and connections bewteen the references to help you sort
+         		  out the relationships between the ideas represented by the materials you have
+         		  assembled. However, turning this into an artiple still involves some
+         		  significant amount of further work.
+      </p>
+      <p>Pliny does not do this conversion for you, but you can use a Note's
+         		  generating text tool to get all the notes you have assembled relative to this
+         		  article out into a single text file. From there you could use a word processor
+         		  to reorganise the notes and work on the text they contain until an article
+         		  appears.
+      </p>
+      <p><b>Note</b>: This tool is even more experimental than the rest of
+         		  Pliny and is likely to evolve considerably over time or perhaps be entirely
+         		  replaced by something better.
+      </p>
+      <h3>Steps to use the Tool</h3>
+      <p>To use the text generation tool, first click on the
+         			 <img align="middle" src="images/icons/saveFile.gif"> tool you find in the Note Editor's
+         			 toolbar. The following things will happen: 
+         			 
+         <ul>
+            <li>Pliny will present you with your operating system's standard
+               				  create file dialog box. Choose a directory to receive the file and name it here
+               				  in the way that you normally would any time this box appears, and click on the
+               				  'save' button (or choose 'cancel' to cancel). Note that the output Pliny
+               				  creates will be an HTML file.
+            </li>
+            <li>If a file with the name you give already exists in the
+               				  directory you have chosen, Pliny will ask you if you wish to replace it --
+               				  choose 'yes' to continue, or 'no' to cancel.
+            </li>
+            <li>Pliny will present you with the Text-generation tool's wizard
+               				  which allows you to control options for the textual generation. We will expand
+               				  this section of the documentation soon to provide a description of the options.
+               				  When done here, push 'finish' to close the wizard and start the file generation
+               				  process.
+            </li>
+         </ul>
+      </p>
+      <h3>What's in the generated file, and what can you do with
+         			 it?
+      </h3>
+      <p>The generated HTML file will not be very pretty! It is not, after
+         			 all, a finished text -- but simply a kind of dump of notes and references to
+         			 other Pliny objects into a text file. As such, the result is really meant to
+         			 act merely as a <i>starting point</i> from which article text can be more
+         			 conveniently written. The file begins with the note that is currently open, and
+         			 displays first its textual content. Then, it displays a list of items -- one
+         			 for each resource referenced on the main note's reference area. The contents of
+         			 the item are organised by sorting the items first vertically (so that objects
+         			 near the top of the reference area come out first), and then horizontally, so
+         			 that objects <i>exactly</i> side by side appear with the one to the left
+         			 appearing first. Options are provided to allow for a recursive generation -- to
+         			 display the reference area of resources referenced on the main note's reference
+         			 area, and so on potentially as many levels as the system can find. These
+         			 secondary references will appear indented within the list of items in the
+         			 generated file.
+      </p>
+      <p>You can certainly view this file in a browser, and perhaps cut and
+         			 paste materials from there into your word processor. With many versions of
+         			 Microsoft Word, and perhaps with other word processors too, you can ask them to
+         			 open the HTML file directly (the action might be different depending upon
+         			 whether you have asked Pliny to create it as an XHTML file or not -- try them
+         			 both to see which you like more). Once you see this Pliny-generated file in
+         			 your word processor you can begin the job of rearrangine the materials, writing
+         			 prose text inspired by the note materials, etc etc. Furthermore, the HTML that
+         			 is generated is well-formed XML, so an XML editor might also be able to open
+         			 the file.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

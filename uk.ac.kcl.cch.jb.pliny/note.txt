@@ -1,0 +1,33 @@
+getOrphanChildrenCommand linkableObjects: [LinkableObject: rect:49,13,123,120(66)]
+AddLinkableObjectsCommand:
+   container: null
+   resource: Resource: test.txt/ file:/jb.test.project/test.txt(6)
+   part: LinkableObject: rect:49,13,123,120(66)
+   rect: Rectangle(307, 65, 123, 120)
+
+MapContentHolderPart id=100 ->MapContentHolder -> Note 120 key 1116
+LinkableObjectPart id=99 -> LinkableObject key 67 -> Note id 102 key 1100
+MapContentHolderPart id=98 -> MapContentHolder->Note id 102
+
+====================================================================
+Teseting out drag and drop into a container
+
+does not work.
+
+One possible problem is mis-assigning of policies to the parts.  Note, 
+for example that ResourceObjectsContainerEditPolicy which is associated
+with the orphaning of parts is associated with MapContentHolderPart and
+RootResourcePart, but apparently not LinkableObjectPart.
+
+====================================
+attempt to add DirectEdit support to GEF's tree part objects
+
+defined new class DirectEditManagerForAbstractEditParts
+changed "source" from GraphicalEditPart to AbstractEditPart
+
+a possible serious problem, AncestorListener code no longer can
+work -- this is part of a GraphicalEditPart, but not AbstractEditPart
+
+defined new class AbstractDirectEditableTreeEditPart
+extending AbstractTreeEditPart, and adding abstract definitions for
+same two methods defined in IDirectEditablePart

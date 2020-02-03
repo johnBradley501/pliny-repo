@@ -1,0 +1,84 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Annotation View</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e4614">2.1.6 Annotation View</a></h1>
+      <h2>What's it for?</h2>
+      <p>The Annotation view provides a reference area that can be attached to
+         		  applications in Eclipse that are not Pliny aware. The view tracks the current
+         		  active editor and the object (usually, in Eclipse, the document) it is editing
+         		  and creates a Pliny resource that refers to that editor/object combination. It
+         		  then displays a reference area into which you can store references to Pliny
+         		  notes. (see the discussion about the <a href="ref.annotationArea.html">reference
+            		  area</a> for more details). Each time you return to the same editor/object
+         		  combination while using Eclipse the Annotation View will note this and bring
+         		  back the associated reference area that it was displaying last time you were
+         		  working on this document. <i>Note</i>: if you only use Pliny aware editors
+         		  (such as those you find in the "standalone" version of Pliny) then you will not
+         		  need the Annotation View, since all the editors you are using will have already
+         		  provided a place to attach annotations.
+      </p>
+      <p>Furthermore, since the view creates a Pliny resource that is linked to
+         		  each particular editor/object combination then the resource will appear in the
+         		  Resource Explorer. You can reopen the editor/object from there.
+      </p>
+      <p><i>Note</i> that although the Annotation View tracks all editor/object
+         		  combinations including Pliny editors and objects, it will not show a reference
+         		  area for Pliny editors since they provide their own reference or annotation
+         		  area already. As noted above, the Annotation View is really intended to be used
+         		  when Pliny is not being used in its standalone version, but instead has been
+         		  installed into a full version of Eclipse, or a simpler environment, and it is
+         		  useful with non-Pliny aware editors only. The Annotation View will not be very
+         		  useful if you are using Pliny in its standalone application format (rather than
+         		  as an Eclipse plugin), since only Pliny-aware editors are available to you
+         		  there.
+      </p>
+      <h2>Starting the Annotation View</h2>
+      <p>To start the Annotation view click on its icon in the main
+         		  toolbar:
+      </p>
+      <p align="center"><img src="images/av-ref-1.gif"></p>
+      <p>It will launch itself in a view pane. If you are using the Pliny
+         		  perspective at the time, this view pane will be to the right of the editor
+         		  window.
+      </p>
+      <p>Once launched the Annotation View will track the current active editor
+         		  and object. Each time you change to a new object in the main editor window the
+         		  Annotation View will open a different reference area for it. Since the
+         		  Annotation View tracks the current editor/object, it is not possible to have
+         		  the view display two reference areas at the same time.
+      </p>
+      <p>You can close the Annotation View at any time by clicking in the "X"
+         		  in its tab item at the top of the pane that contains it.
+      </p>
+      <p><i>Note</i> that the Pliny reference to the editor/object pair is
+         		  first created when the first object is put in the associated reference
+         		  area.
+      </p>
+      <h2>Commands</h2>
+      <p>The Annotation View provides a reference area, and the commands
+         		  available in the view correspond to those available in any reference area. See
+         		  the <a href="ref.annotationArea.html">reference area</a> section of this
+         		  documentation for more details.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

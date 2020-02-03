@@ -1,0 +1,895 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Using Pliny with Non-digital Materials</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e1461">1.2.2 Using Pliny with Non-digital Materials</a></h1>
+      <p>As you probably know by now, Pliny is a tool to assist you in annotation
+         		and note taking, and perhaps it is natural to think of using Pliny to annotate
+         		digital resources such as PDF files or web pages -- indeed the first tutorial
+         		(<a href="tut.plinyWithWeb.html">Using Pliny with Web-based materials</a>) has
+         		already described how this might be done. In this section we will show you how
+         		Pliny can be useful even in situations where the material you are reading is
+         		not in a digital form so you cannot do digital annotation. As you will shortly
+         		see, you can still use use Pliny to record notes about what we are reading.
+         		This section will show you how this is done, and along the way, suggest a
+         		strategy you might use to make the note taking most efficient.
+      </p>
+      <p>Pliny also allows you to import notes that you have previously created
+         		in a plain text file. This approach might be useful if you were using, say, a
+         		hand-held unit to record notes as you read and didn't have the full Pliny
+         		system available. See details in the section <i>Importing Data</i> in the
+         		materials about the <a href="ref.resourceExplorer.html">Resource
+            		Explorer</a>.
+      </p>
+      <p>If you are starting up Pliny for the first time you will find that Pliny
+         		will have some setting up tasks to do and the startup will take a little longer
+         		than usual. If you are using Pliny in its standalone format you will probably
+         		next see Pliny's "welcome screen" which you should close once you are ready to
+         		begin to use Pliny. When the setup is finished Eclipse will provide you with a
+         		screen layout similar to the following:
+      </p>
+      <p align="center"><img src="images/first-screen.gif"></p>
+      <p>You have put no data into Pliny yet, so there isn't very much to see
+         		(eventually, the Pliny screen will contain many more things than you are seeing
+         		here -- a general introduction to issues about how Pliny lays out things on the
+         		screen can be found in the help section <a href="getting.started.html">Getting
+            		Started with <i>Pliny</i></a>). However, Pliny's menu and its tool bars
+         		appear in the top area of the Pliny window, where you might expect such things
+         		to be (on the Macintosh, the menu appears, instead, in its usual place for the
+         		Macintosh, at the top of the screen). Pliny is also designed to start up with
+         		<i>Resource Explorer</i> showing down the left side of the window, although
+         		because we have done nothing with Pliny yet there really isn't much to see
+         		there either.
+      </p>
+      <p>Let us begin. For the purposes of this tutorial we will assume that you
+         		are reading the article "The Computer and the Concept of Text" by Susan Wittig
+         		(CHUM Vol 11 pp 211-215). The first stage of scholarly research supported by
+         		Pliny is in the recording of notes about what you are reading. We start by
+         		creating a bibliography note about the article itself.
+      </p>
+      <h2>The first Note</h2>
+      <p>Pliny provides several different ways to create notes, depending upon
+         		  the context in which you are operating. The very first note in Pliny, however,
+         		  is most readily created using the New Note button
+         		  <img align="middle" src="images/icons/noteIcon.gif"> found in the Resource Explorer's
+         		  toolbar. When it is pushed the Resource Explorer will display a its <i>New
+            		  Note</i> box (called a <i>Wizard</i> in Eclipse terminology):
+      </p>
+      <p align="center"><img src="images/re-new-note.gif"></p>
+      <p>In Pliny notes are a kind of <i>resource</i>, and resources must have
+         		  <i>names</i> so that they can be referenced. The New Note Screen asks us to
+         		  provide a name for the note we are creating. Since we have decided to use this
+         		  first note to contain bibliographic information about the piece we are reading,
+         		  it makes sense to use this new note's name as a brief bibliographic citation --
+         		  here this could be a Harvard-style citation: "Wittig 1978".
+      </p>
+      <p align="center"><img src="images/re-new-note-2.gif"></p>
+      <p>The resource explorer provides a mechanism whereby any further notes
+         		  we make will be automatically linked (in ways we will see shortly) to this
+         		  note. The note to which the other notes are linked is called the "referent".
+         		  Since we are going to be making notes about what we read from this article
+         		  next, this is a useful thing to do. To set it up, click the "Make referent?"
+         		  tick box.
+      </p>
+      <p align="center"><img src="images/re-new-note-3.gif"></p>
+      <p>When we are finished reading the Wittig piece and do not wish to
+         		  automatically link more notes to this one, we can clear the referent operation,
+         		  or set it to operate to support the next piece we are reading.
+      </p>
+      <p>You will have noted that there is a third option in the wizard screen
+         		  -- "Add to Bookmark list?". We will introduce this item later in this tutorial.
+         		  For now, leave the item unchecked. Thus, after you have provided the name and
+         		  chosen the referent option click on the "Finish" button in the bottom right
+         		  corner. Pliny will respond by creating the note you have requested and
+         		  displaying it in the editor panel. Here you can see the results, with parts of
+         		  the editor panel labelled below:
+      </p>
+      <p align="center"><img src="images/first-note-wittig-1978.gif"></p>
+      <p>Several things have changed on the screen, and it is worthwhile taking
+         		  a moment to have them pointed out: 
+         		
+         <ul>
+            <li>The resource explorer has changed the symbol to the left of the
+               			 Note heading to a small arrow symbol, reflecting the fact that there are now
+               			 notes (well, one anyway!) being held by Pliny, and
+            </li>
+            <li>the main editor pane now shows the newly created <i>Wittig 1978</i>
+               			 note. We will describe what is there in more detail almost immediately.
+            </li>
+         </ul>
+      </p>
+      <p>The editor pane that was previously grey now contains what is called
+         		  in Pliny terminology the <b>Note Editor</b> for <i>Wittig 1978</i>. The Noted
+         		  Editor divides its editor pane into several areas, labelled above. Three of
+         		  these parts reflect the fact that a note in Pliny has three major parts, (a) a
+         		  <i>name</i>, (b) some textual <i>content</i>, and (c) a <i>reference area</i>. 
+         		
+         <ul>
+            <li>At the very top of the pane is a tab showing the name of the note
+               			 currently available in the editor panel.
+            </li>
+            <li>Directly below the tab is the <b>Pliny Toolbar</b>, which contains
+               			 a text field, and various buttons and icons. These will be explained
+               			 shortly.
+            </li>
+            <li>Within the Pliny Toolbar is the <b>Note's Name Field</b>: Here,
+               			 unlike in the tab above, the name can be edited. If, for example, you had made
+               			 a typing mistake while typing in the name earlier in the New Note wizard you
+               			 could correct it here. To the left of the note name field is the now familiar
+               			 note icon <img align="middle" src="images/icons/noteIcon.gif">. This instance of the
+               			 icon is useful in certain drag and drop operations from here to other places
+               			 supported by Pliny, and its use will be described elsewhere.
+            </li>
+            <li>In the left area below the Pliny Toolbar is the <b>Note Content
+                  			 Field</b>: This is the place where you can type in the <i>content</i> of the
+               			 note. Click in it to get a typing cursor, and type in the bibliographic
+               			 reference for the Wittig article: 
+               			 
+               <blockquote><tt>Susan Wittig (1978). The computer and the Concept of Text. In
+                     				  Computers and the Humanities Vol 11 pp 211-215.<br></tt></blockquote> 
+               			 
+               <p>Since this is a bibliographic entry you will likely feel the urge
+                  				to try to make the name of the journal display in italics. Surprisingly,
+                  				perhaps, Pliny makes no provision for such a thing. (If I'd had significantly
+                  				more time to develop Pliny, support for the formatting of note contents could
+                  				be provided.) However, Pliny is not, after all, a word processor, and as I
+                  				think you will see that in time, a long, complex and formatted bit of text in
+                  a
+                  				note is actually a hint that you are using Pliny in ways that you will
+                  				eventually see as ineffective. So, for now, and admittedly with regret, we move
+                  				on after acknowledging that we cannot highlight text in a note and that
+                  				eventually we will find out why it is less of an issue than it might
+                  				seem.
+               </p>
+            </li>
+            <li>Also below the Pliny Toolbar, but at the right hand end is
+               			 the<b>Note Reference Area</b>: This is the place where other resources that you
+               			 wish to associated with this note can be recorded. We will discuss how to use
+               			 this area shortly. There is extensive description about how the reference area
+               			 works in the section <a href="ref.annotationArea.html">Annotation/Reference
+                  			 Area</a>, but I suggest that if this is your first look at Pliny that you
+               			 continue with the discussion in this section, and look at the detailed
+               			 information at a later time.
+            </li>
+         </ul>
+      </p>
+      <p>Note that the boundary between the note body area and the note
+         		  annotation area can be moved left or right. To do so place the mouse pointer
+         		  over the boundary. The pointer should change to
+         		  <img align="middle" src="images/horiz-resize-pointer.jpg">. Depress the main mouse
+         		  button and drag the boundary to where you want it to be. The new position is
+         		  associated with the information Pliny keeps about this note, and the boundary
+         		  will be placed where you have put it any time you look at this note in the
+         		  future.
+      </p>
+      <p>After you have typed in the note and moved the boundary between the
+         		  note and the annotation area a little to the left, you should see something
+         		  like this:
+      </p>
+      <p align="center"><img src="images/wittig-1978-2.gif"></p>
+      <p>The first note, which is acting at present like a bibliographic
+         		  reference to the article, has been created, and we are now ready to start
+         		  reading the text and recording some of our responses to it.
+      </p>
+      <p>If you read the previous tutorial (<a href="tut.plinyWithWeb.html">Using
+            		  Pliny with Web-based materials</a>) which showed you now to attach notes to a
+         		  web page you already know one way to proceed. The <i>Wittig 1978</i> note we
+         		  have just created has a reference area in the right-hand part of its editor
+         		  panel and it works in exactly the same way as the reference area does in
+         		  Pliny's web browser. Thus, you can simply create new notes in there to record
+         		  your observations as you read Wittig's article in exactly the same way you did
+         		  in the previous tutorial -- by clicking on the New Note icon (<img align="middle" src="images/icons/noteIcon.gif">) in the Note Editors's Pliny Toolbar,
+         		  dragging from this same New Note icon onto the reference area, or pushing the
+         		  F5 key as a shortcut, drawing out a new note area and typing your thoughts into
+         		  it. There is, however, an alternative mechanism using the "Referent" paradigm
+         		  that we set up for this note, and that can be more efficient -- particularly
+         		  when, at first, you don't wish to take the time and mental energy to organise
+         		  the references to the new notes you create on the screen. In the previous
+         		  section of this tutorial we have already set up the "referent" mechanism when
+         		  we clicked on the "Make referent" tickbox while we created the <i>Wittig
+            		  1978</i> note. In this next section we make use of the "referent" mechanism we
+         		  set up in this way.
+      </p>
+      <h2>Creating notes about the text using a Referent</h2>
+      <p>As you read this text you will discover things you wish to record in
+         		  Pliny about it. Suppose that as your first note you wish to record Wittig's
+         		  observation that traditional computer-based text analysis tools seem to operate
+         		  within the conceptual framework of the <i>New Criticism</i> -- a point Wittig
+         		  makes on page 211. 
+         		
+         <ul>
+            <li>Start by pushing the <i>New Note</i> button (<img align="middle" src="images/icons/noteIcon.gif">) <b>in the Resource Explorer pane</b> again
+               			 (you might well see the same Icon in other places on the screen, but these are
+               			 for other purposes that we will explain later). Once again the New Note Wizard
+               			 will appear:
+               <p align="center"><img src="images/re-new-note-4.gif"></p>
+            </li>
+            <li>This time Pliny has suggested a name for this note -- taking the
+               			 name from the note you created before, and adding some further, rather
+               			 nondescript, text "Note 1". It knows to relate this new note to the previous
+               			 one because, if you remember, we asked Pliny to make our first note the current
+               			 "referent", and this is one of the things Pliny does when a note is so
+               			 designated. If you wished to make the title of the note more significant you
+               			 could change it here before pushing the "Finish" button, but for now we will
+               			 push "Finish" -- and will fix the name to make it more meaningful shortly.
+            </li>
+            <li>As a result, Pliny will create a second note and display it to you:
+               			 
+               <p align="center"><img src="images/wittig-note2.gif"></p> 
+               			 
+               <p>Note that the right hand <i>reference area</i> in the note window
+                  				is not completely empty this time -- it contains what in Pliny terminology is
+                  				called a <i>reference</i> -- in this case to the first note we created called
+                  				"Wittig 1978". Again, this is one of the results of making "Wittig 1978" the
+                  				<i>referent</i> note. By putting this reference in here Pliny is providing us
+                  				with a reminder that this note was created as a response to the article
+                  				described in the reference note "Wittig 1978". We will see later that a second
+                  				consequence of making Wittig 1978 a referent is that it will also receive a
+                  				reference object from this note to it -- effectively establishing a
+                  				connection/reference in both directions.
+               </p>
+            </li>
+            <li>Now the note is ready for our comment. Here we decide to quote a
+               			 bit of Wittig, and we type our note into its <i>Content Field</i>: the white
+               			 area below and to the right of the Pliny toolbar:
+               			 
+               <p align="center"><img src="images/wittig-note2-a.gif"></p>
+            </li>
+            <li>Having now typed in this note we decide what its title should be:
+               			 "CBLA and New Criticism" (CBLA stands for "Computer Based Literary Analysis").
+               			 We can change the name of the note since the name area can be typed in. We
+               			 shall replace the "Note 1" text with our new title. Thus, we first drag with
+               			 the mouse over the relevent text in the note's title field in the Note
+               			 Editror's Pliny Toolbar: 
+               <p align="center"><img src="images/wittig-note2-b.gif"></p> 
+               			 
+               <p>... and, as one would when working in a word processor, type in
+                  				the new title to replace it. When we are finished typing in the new title we
+                  				indicate that we are not planning to make any more changes in the field by
+                  				clicking the mouse somewhere else on the screen. At that point the note name is
+                  				changed, and the tab at the top of the screen will be changed as well to
+                  				reflect this:
+               </p> 
+               <p align="center"><img src="images/wittig-note2-c.gif"></p>
+            </li>
+            <li>This first note we have made as we read <i>Wittig 1978</i> is now
+               			 finished.
+            </li>
+         </ul>
+      </p>
+      <p>As we continue to read Wittig's article we can use the same mechanism
+         		  we have just described over and over again to put new notes into Pliny -- click
+         		  on the <i>New Note</i> icon in the Resource Explorer to ask for a new note,
+         		  edit the title if we wish, and type our thought into the note's content
+         		  area.
+      </p>
+      <h2>Organising Notes</h2>
+      <p>After we have finished reading Wittig's article we will have put in a
+         		  number of notes. For each note we have created Pliny will have created a new
+         		  item in the editor pane, and there is likely to be several tabs (as many as
+         		  will fit) at the top of the editor pane: 
+      </p>
+      <p align="center"><img src="images/wittig-org-1.png"></p>
+      <p>In this figure the tab area is small, so only three tabs are showing,
+         		  but the number 2 after the chevron ("<tt>&gt;&gt;</tt>" -- shown just to the
+         		  right of the tabs themselves) shows that there are two more items open here
+         		  that do not have tabs showing. We want to move back to the "Wittig 1978" note
+         		  we first created. There are several ways to do this. If the name of our first
+         		  note appeared among the tab list at the top we need merely click on the tab to
+         		  bring it to the front. If it is not there, however, the best way at present is
+         		  to click on the chevron item, and click on its name in the list that then
+         		  appears:
+      </p>
+      <p align="center"><img src="images/wittig-org-2.png"></p>
+      <p>The material associated with the first note is brought to the front,
+         		  and we can immediately see that changes have been made there by Pliny while
+         		  we've been typing in our other notes about Wittig:
+      </p>
+      <p align="center"><img src="images/wittig-org-3.png"></p>
+      <p>The first note still has its textual content -- showing in the left
+         		  area --exactly as we have left it, but we can see that its right-hand reference
+         		  area now has several objects in it -- in fact there are 5 items there (one for
+         		  each note we created with <i>Wittig 1978</i> as the referent), although we can
+         		  see only 4 at present because of the size of the window. They are here as a
+         		  consequence of the <i>referent</i>action we requested near the beginning of
+         		  this tutorial. When a referent has been specified and is currently in
+         		  operation, Pliny automatically creates a reference as a link in both directions
+         		  -- to and from the referent to each new note.
+      </p>
+      <p>As you might recall, each of these boxes is called a <i>reference</i>
+         		  in Pliny since the box <i>refers</i> to a note stored in the system. If we look
+         		  at the first reference at the top of the reference area we can see that it
+         		  displays the name of the first note we created -- "Wittig 1978: CBLA and New
+         		  Criticism" -- in a dark green header area, and then some portion of the body of
+         		  the note in a lighter green area below. Pliny has rather arbitrarily set the
+         		  size of the entire reference so that, as it turns out, not all the textual
+         		  content of the note can be seen -- so it also displays a scroll-bar at the
+         		  right hand end of the lighter green area so that we can scroll the text and see
+         		  what appears below what is initially visible. There is extensive information
+         		  about references and reference objects <a href="ref.referenceObject.html">elsewhere</a> in this documentation, but I suggest
+         		  that if you are reading this tutorial for the first time that you continue
+         		  reading here instead, and consult it at a later point.
+      </p>
+      <p>Here the reference is coloured green, but you may remember that Pliny
+         		  put a reference to <i>Wittig 1978</i> (coloured blue that time rather than the
+         		  green we see now) in each note we created. You can think of references as
+         		  links. Why is this one green, and the others were blue? The colours are managed
+         		  by Pliny's <i>type</i> system, which is described in more detail elsewhere in
+         		  these help pages (see the help on the <a href="ref.typeManagerView.html">Type
+            		  Manager</a>). For now, it is sufficient to understand that Pliny knows that
+         		  the type of reference that points <i>from</i> a note to the source is different
+         		  in character from that which points from a source <i>to</i> a note, and the
+         		  colour is different to reflect this.
+      </p>
+      <p>The header area in this reference has had its width set by Pliny so
+         		  that it too narrow to see the entire title. If, however, you place the mouse
+         		  pointer on the item and leave it there for a moment Pliny will show you the
+         		  full name of the item as a tooltip. Although Pliny has initially laid out the
+         		  references so that it probably looks to you as if they are represented simply
+         		  as a list of reference boxes, in fact, the reference area in which they reside
+         		  is actually a 2 dimensional space, and each reference can be both resized and
+         		  moved about. Let us resize the first item so that its entire title can be seen.
+         		  To do this, click in the dark green title area of the first reference area.
+         		  This will cause this first reference to be <i>selected</i>, and as a
+         		  consequence, Pliny will display a set of reference handles around the box that
+         		  borders the reference area. There are 8 selection handled (in the 4 corners,
+         		  and in the middle of each side), and the 3 on the right side of the reference
+         		  are identified in this figure:
+      </p>
+      <p align="center"><img src="images/wittig-org-3a.gif"></p>
+      <p> Extend the width of this selected item by pointing a at the handle
+         		  box at the centre of the right end, and dragging it further to the right. Pliny
+         		  will expand the reference box to the size we thus indicate, and if we move it
+         		  far enough to the right then all the text will be able to be displayed in its
+         		  contents. Alternatively, we could have expanded the height of the reference
+         		  area bout we would have found that if we did this the reference area would
+         		  begin to display over top of the reference area (for <i>Wittig 1978: 3
+            		  notions</i>) below it.
+      </p>
+      <h3>Minimising and moving references in the reference area</h3>
+      <p>Although Pliny has laid out the references to the notes we made
+         			 about Wittig 1978 as a kind of vertical stack, we can use the 2-dimensional
+         			 reference area we find here as a way of grouping and organising the notes to
+         			 help us remember what we thought about the article. In the end, we will
+         			 recognise the 5 notes we made fit into two broader topics, and we will lay them
+         			 out in the reference area, and group them in such a way that this is evident.
+         			 Let us begin to set this up now.
+      </p>
+      <p>The first thing to note about references is that they can be
+         			 <i>minimized</i>. When minimized, Pliny displays them in a smaller box with
+         			 only the header area showing. The icon in the header area at the extreme right
+         			 end (<img align="middle" src="images/icons/closeNote.gif">) is the minimization button,
+         			 and when clicked causes Pliny to display this reference in its minimized
+         			 state:
+      </p>
+      <p align="center"><img src="images/wittig-org-3b.gif"></p>
+      <p>When minimized the reference object can still be dragged around in
+         			 the reference area, and it's width can be changed -- but its height will always
+         			 stay at the size that only displays the header area. Click on the icon at the
+         			 extreme end again -- which has now changed to
+         			 <img align="middle" src="images/icons/openNote.gif"> -- to change its stack back to the
+         			 non-minimized size. You can toggle between minimised and un-minimised state as
+         			 often as is useful to you in this way. Minimise a reference when you want it to
+         			 take up less space in your reference area. You will no longer be able to see
+         			 the note's contents when it is minimised but you can, after all, unminimize it
+         			 whenever you like, and as we shall see below, you can also "open" <i>it</i> up
+         			 in turn into a new editor (by double-clicking on the icon at the left end of
+         			 the object) so that you can see it's textual content and reference area in a
+         			 separate editor pane.
+      </p>
+      <p>Let us take advantage of the minimised form for all the references
+         			 so that we can make better use of the reference area's space. We could, of
+         			 course, click on the minimise icon for each reference in turn to minimise them
+         			 all. To achieve the same result more quickly, first type in the "select all"
+         			 command (Ctrl-A on a windows machine, Apple-A on a Macintosh) to select all of
+         			 the 5 references that are currently present. Then, click with the other mouse
+         			 button (or click with the Ctrl key depressed on a one-button Macintosh mouse
+         			 button) while the pointer is pointing at any of the then-selected references to
+         			 see the contextual menu:
+      </p>
+      <p align="center"><img src="images/wittig-org-3c.png"></p>
+      <p>The first item displayed here is the "Minimze selected" command.
+         			 Click on that to choose it, and all the selected references (in this case, all
+         			 of them since we had just done a "select all" command) will be minimised:
+      </p>
+      <p align="center"><img src="images/wittig-org-3d.PNG"></p>
+      <p>We can still only see four references in this figure, even though we
+         			 took 5 notes. Minimizing does not cause Pliny to close up the empty space that
+         			 minimising has created -- the reference area is a two dimensional <i>space</i>
+         			 rather than a list, after all. Since Pliny has placed the last reference (for
+         			 the 5th note) below the viewing area it is still down there. Of course if we
+         			 use the scroll bar to scroll down we'll find it.
+      </p>
+      <p>As we mentioned above, when we have finished reading Wittig's
+         			 article we observe our notes fall into two major themes. She starts by
+         			 observing the New Criticism flavour of much of the computer assisted text
+         			 analysis tools she was familiar with in 1978. The first of our three notes draw
+         			 upon that theme. She then puts reading in a semiotics framework and encourages
+         			 us to think about computer supported criticism tools that might operate in this
+         			 context instead. The other two of our five notes identify this.
+      </p>
+      <p>First, we drag the boundary between the note contents (with the
+         			 bibliographic citation) at the left edge of the editor area and the reference
+         			 area to the right so that we increase the size of the reference area. Then we
+         			 click somewhere in the reference area so that all the references stop being
+         			 selected. Now, we want to drag the references to new locations so that we can
+         			 use the visual display are to emphasize that they appear in two groups. To drag
+         			 a reference, point somewhere in the reference's title and drag with the mouse.
+         			 The reference will follow the pointer around on the screen. Let use this
+         			 technique to move the 5 references into two separate areas on the screen:
+      </p>
+      <p align="center"><img src="images/wittig-org-8.png"></p>
+      <p>As well as moving the items around we have lengthened some of them
+         			 so that in all cases the titles we gave to the notes they represent are
+         			 visible.
+      </p>
+      <p>Note that we can take advantage of this grouping to move them all
+         			 together as a set by selecting them all (you can drag out an area around (the
+         			 area boundary should be started outside of all the items you want to select) a
+         			 set of references -- a marquee box will appear) to select a set of items that
+         			 are close together), and once selected, they can be moved as a group by
+         			 dragging in the way you might expect.
+      </p>
+      <h3>Grouping by containment</h3>
+      <p>The positioning of the items in the reference space implies a
+         			 grouping. We can make this more evident by creating two new notes that are
+         			 associated with the two topics into which our notes fit, and then we can file
+         			 these references into these notes according to which topic they belong. A note
+         			 that is used to hold references to other notes is called a <i>containment
+            			 object </i>in Pliny.
+      </p>
+      <p>There are two ways to create containment objects, and we describe
+         			 the two techniques below:
+      </p>
+      <h4>Turning a note into a containment object</h4>
+      <p>The first way depends on the fact that any note in Pliny can act
+         				as a containment object by controlling how Pliny displays it for us. In this
+         				first technique we will: 
+         			 
+         <ul>
+            <li>Create a new note,</li>
+            <li>aski Pliny to display it as a containment object, and</li>
+            <li>move any object that it is to contain into it.</li>
+         </ul>
+      </p>
+      <p>We need to start with the first step, then: to create a note (and
+         				a reference) that appears <i>in</i> the reference space for this note. To
+         				achieve this most readily we should use the <i>New Note</i> icon (<img align="middle" src="images/icons/noteIcon.gif">) associated with this note editor. All the
+         				buttons associated with this editor are found in the right end of the Pliny
+         				toolbar, just below the tabs. The exact buttons may vary in different contents,
+         				but they will look very much like this:
+      </p>
+      <p align="center"><img src="images/wittig-org-9.gif"></p>
+      <p>There are several buttons here. They are described in detail in
+         				the <a href="ref.noteEditor.html">reference section</a> for the Note editor. For
+         				the moment we will focus on the "New Note" button we find there -- the button
+         				with the New Note icon (<img align="middle" src="images/icons/noteIcon.gif">) Remember
+         				that this New Note icon is <i>not</i> the same button that we see in the
+         				Resource Explorer, although it has the same icon. Whereas both the New Note
+         				icons in the Resource Explorer, and the one here (associated with the note
+         				editor) allow you to create a new note, the one associated with the note editor
+         				also allows you to immediately place a reference to it in the current reference
+         				area as well.
+      </p>
+      <p>After we push the New Note button Pliny is ready to create a new
+         				note (and new reference to it) in the reference space for "Wittig 1978". To
+         				then create the note and place the reference in the reference area drag out a
+         				rectangle there where you want the reference to sit. When you release the
+         				button the new note and its reference will appear:
+      </p>
+      <p align="center"><img src="images/wittig-org-10.png"></p>
+      <p>Now, we can change the name of the note we just created to reflect
+         				the first of the two topics we found in this paper. To do this double click in
+         				the reference object's title area (dark green, and currently showing "Wittig
+         				1978: Note 6") and type in a new name, say: "Wittig 1978: CBLA: limits of
+         				NewCrit base".
+      </p>
+      <p>We are now ready to do the second step we outlined above: to
+         				change this reference area so that it can act as a <i>container</i> for other
+         				notes. As you know by now a note has some content text (showing when open in
+         				the note editor in the left area) and a 2D reference area (showing in the
+         				right). When a reference for a note is first created it shows the title bar and
+         				the note's content text area. Here, Pliny reminds us that this reference area
+         				is displaying the Note's content by coloring it with a light green background.
+         				This newly created note has no content text, so this area is otherwise empty.
+         				We could type in some text here by double-clicking in the bottom part of the
+         				newly created reference object and typing in what we want to say -- we'll do
+         				this later in this tutorial for another note we create. Instead, however, we
+         				wish the bottom area of the reference object to show not the note's textual
+         				content, but instead the 2D reference area associated with it. To make Pliny do
+         				this push the "show reference area" button (<img align="middle" src="images/icons/showMap.gif">) in the title bar area of the reference. This
+         				will cause Pliny to show a bit of the 2D reference area of the note "Witting
+         				1978: CBLA: limits of NewCrit base". Since we have just created it a moment
+         				ago, it will also be empty, so the only visual effect will be that the green
+         				background disappears. In addition, the button changes to the "show contents
+         				text button" (<img align="middle" src="images/icons/showContents.gif">) so that we can
+         				switch back to the textual content area if we wish.
+      </p>
+      <p>Now that we have the reference/containment area for our new note
+         				visible we can carry out the third step described above: drag and drop the
+         				three notes related to the theme it represents into that area. We could point
+         				at each one in turn and drag it into the open reference area for a new note.
+         				Instead, let us do all three all at once: drag a selection retangle around the
+         				three notes, point at the title of any one of them, and then in this way drag
+         				the three of them into the reference area for our new note in one go. The
+         				result will be something like this:
+      </p>
+      <p align="center"><img src="images/wittig-org-11.png"></p>
+      <p>The references for the three notes are now contained <i>within</i>
+         				the reference area for note "CBLA: limits of newCrit base". In Pliny this type
+         				of change is called <i>re-parenting</i> to reflect the hierarchical nature of
+         				what we have just done: the three notes had Wittig 1978 as their parent before,
+         				but now they have "Witting 1978: CBLA: limits of NewCrit base" as their parent
+         				instead. We have dragged items into the "limits..." note's reference area, we
+         				could also drag one or more of them out again if we changed our mind about one
+         				of the references. When one sees a resource's reference area displayed like
+         				this one can move resources between the contained reference area and the
+         				containing reference area at will. However, we won't do this right now.
+      </p>
+      <h4>Using the <i>Group Objects</i> Command
+      </h4>
+      <p>We can repeat the process for the other two notes -- creating a
+         				new thematic note and assigning a name to it, changing its display to show the
+         				new note's reference area, and then dragging the two remaining notes into it.
+         				There is, however, a faster way to group notes together that is often
+         				appropriate: using the <i>Group objects</i> command. Select the two remaining
+         				notes that are outside of the "limits of NewCrit base", and click with the
+         				other mouse button (or, on a one-button Macintosh mouse, click while holding
+         				down the Ctrl key) to see the contextual menu. One of the choices there will be
+         				<i>Group Objects</i>:
+      </p>
+      <p align="center"><img src="images/wittig-org-11a.png"></p>
+      <p>Choose it. A a result, Pliny will do the whole job for us on its
+         				own: first, it will create a new note and a reference to it which covers the
+         				area containing the currently selected objects, then it will set it up so that
+         				the new note's reference area is visible (it becomes a <i>containment</i>
+         				object), and finally it will place the selected notes in it -- effectively
+         				setting up the containment all in one go:
+      </p>
+      <p align="center"><img src="images/wittig-org-11b.png"></p>
+      <p>Now we can update our containing note's name to reflect what it
+         			 contains. Double click on the name in the new note's title area to open it for
+         			 editing, and replace the name with "Wittig 1978: reading and semiotics": 
+      </p>
+      <p align="center"><img src="images/wittig-org-12.png"></p>
+      <p>We have restructured the five notes we collected with "Wittig 1978"
+         			 to remind us that they fall into two major themes -- three in one and two in
+         			 the other.
+      </p>
+      <h3>Adding a comment as a note</h3>
+      <p>Having grouped our original notes in this way we find we want to add
+         			 a further observation. Let us add a new note into the reference area, and put
+         			 the comment in it. We have added a new note and reference object once before
+         			 when we created our first containment object. As you might recall, we can do
+         			 this by first clicking on the New Note button (<img align="middle" src="images/icons/noteIcon.gif">) associated with the editor (in this toolbar
+         			 -- remember, not the one with the Resource Explorer):
+      </p>
+      <p align="center"><img src="images/wittig-org-9.gif"></p>
+      <p>Alternatively, we can use the F5 keyboards shortcut to tell Pliny
+         			 that we wish to create a new note in the current reference area. Either way,
+         			 you can then drag out an area where we want the new note's reference object to
+         			 appear:
+      </p>
+      <p align="center"><img src="images/wittig-org-13.png"></p>
+      <p>Then we can open both the new note's title and content areas (by
+         			 double-clicking in each in turn) and type in our comment, resulting in
+         			 something like:
+      </p>
+      <p align="center"><img src="images/wittig-org-14.png"></p>
+      <p>We now have: 
+         		  
+         <ul>
+            <li>a top note which is showing its textual content, and provides a
+               				comment;
+            </li>
+            <li>a second note which, by appearing as a containment object, is
+               				holding three notes that refer to the "limits of the NewCrit base"; and
+            </li>
+            <li>a second note also appearing as a containment object, and holding
+               				our two notes about "reading and semiotics".
+            </li>
+         </ul>
+      </p>
+      <p>We have now completed our work with <i>Wittig 1978</i> -- initially
+         			 recording our observations about the article in 5 notes, then grouping these
+         			 notes into two larger thematic categories, and finally adding a new note into
+         			 which we put a kind of overarching comment about Wittig 1978.
+      </p>
+      <h2>The Resource Explorer</h2>
+      <p>Now that we have made a few notes it is time to turn our attention
+         		  back again to the Resource Explorer. In Eclipse terminology this is a
+         		  <i>view</i>, and the Pliny screen is displaying it in a view pane that
+         		  currently happens to be placed on the left side edge of the Pliny screen
+         		  (although it could be dragged somewhere else in the Pliny window, or even out
+         		  of the Pliny window altogether to display in a window on its own). It looks
+         		  currently like this:
+      </p>
+      <p align="center"><img src="images/introRE-1.png"></p>
+      <p>We have already noted that as soon as we started creating notes, Pliny
+         		  placed a "&gt;" beside the Note folder to indicate that it was now holding some
+         		  notes for us. It is now time to examine how the Resource Explorer organises the
+         		  objects it holds. (There is more detail about the Resource Explorer's display
+         		  in its <a href="ref.resourceExplorer.html">reference section</a>.) 
+      </p>
+      <p>The first thing to note is that the Resource Explorer displays its
+         		  materials hierarchically with the top level being the <i>kind</i> of resource,
+         		  and since we have created several notes, the "&gt;" sign indicates that there
+         		  is something to see inside the "Note" folder. You can see other folders at the
+         		  top level: one called "Web Browser", "Image" and "PDF/Acrobat", representing
+         		  the other categories of data that this version of Pliny knows how to work with.
+         		  Pliny works with things it calls <i>resources</i>, of which "Notes" are just
+         		  one kind of resource. Another kind of resource is the web page, and when we
+         		  have web page information managed by Pliny a record of it will appear in the
+         		  "Web Browser" folder (see the tutorial <a href="tut.plinyWithWeb.html">Using Pliny
+            		  with Web-based materials</a> for more information about using Pliny to work
+         		  with web pages as resources). Pliny works out of the box with these kinds of
+         		  resources, but it can be extended in various ways to work with other kinds of
+         		  digital data, in which case the number of folders will increase here, for the
+         		  number of different kinds of resources that Pliny could then handle after it
+         		  was extended.
+      </p>
+      <p>You can see that there is also an object called "My Bookmarks" in the
+         		  Resource Explorer. It is not thought of as a resource type folder, and its
+         		  purpose and use is briefly described below.
+      </p>
+      <p>Returning now to the Note folder, if we click on the "&gt;" sign
+         		  another level will open up. Pliny groups resources by the first letter of their
+         		  names. Since all the resources we have created so far have names which begin
+         		  with "W" (for "Wittig"), there will be "W" level with a "&gt;" in front of it
+         		  (the number in parentheses following the code tells us how many notes with
+         		  names beginning with W there are -- currently 9). If we click on the "+" in
+         		  front of the W-folder it will open in turn and we will see all the Notes whose
+         		  names begin with "W":
+      </p>
+      <p align="center"><img src="images/introRE-2.png"></p>
+      <p>It happens that the pane is not wide enough to show the full name of
+         		  all the notes. However, if we place the cursor pointer over one of the names
+         		  Pliny will display the full name as a tooltip (here, the cursor sits over the
+         		  item "Wittig 1978: CBLA: limits of newCrit base"). If we want to see more
+         		  letters in the names in the pane itself we can simply move the boundary between
+         		  the Resource Explorer pane and the pane to the right beside it to give the
+         		  Resource Explorer more room on the screen:
+      </p>
+      <p align="center"><img src="images/introRE-3.png"></p>
+      <p>Before we look at how to make use of this list in the Resource
+         		  Explorer it is useful to take a moment to observe some of the implications of
+         		  how the notes are organised here. We know that we set up <i>Wittig 1978</i> as
+         		  the current referent, and that for this reason a note like <i>Wittig 1978:
+            		  CBLA: 3 notions</i> was automatically linked to <i>Wittig 1978</i> -- however,
+         		  the list the Resource Explorer does not immediately show this connection.
+      </p>
+      <p>Although we might be tempted to think of the relationship between,
+         		  say, the <i>3 notions</i> note and <i>Wittig 1978</i> as hierarchical (Wittig
+         		  1978 <i>owning</i> the other notes), it does not appear that way here, and
+         		  indeed Pliny relationships are organised so that an hierarchical relationship
+         		  is only one of several possible interpretations. Shortly we will see ways to
+         		  view the relationships as hierarchical if we wish. Instead, the hierarchical
+         		  folder system used in the Resource Explorer works according to rather more
+         		  basic system. The top level is always a list of the <i>kinds</i> of resources
+         		  that Pliny currently is managing. The second level is always a grouping of
+         		  resources, here by initial letter of their name, and the third level is always
+         		  groups of individual resources. You cannot, then, use the Resource Explorer to
+         		  explore conceptual hierarchies you have created by using containment (as we did
+         		  above) between your resources since they are always organised in this three
+         		  level relatively flat structure. Instead, think of the Explorer providing you
+         		  with a way to see <i>all</i> your resources entirely independantly of the
+         		  linking mechanisms you are creating between them, and allowing you to locate
+         		  one of them by its name.
+      </p>
+      <p>You can interact with the list here in several ways: 
+         		
+         <ul>
+            <li>First, by double clicking on the <i>icon</i>
+               			 <img align="middle" src="images/icons/noteIcon.gif"> in front of the name of one of the
+               			 notes you can ask Pliny to open it for you in the note editor.
+            </li>
+            <li>Second, by clicking in the <i>name</i> of any note you can open the
+               			 name for editing it, and thereby change the name. Note, however, that by
+               			 changing the name you will probably cause the item with the altered name to
+               			 move around in the list. If, for example, you changed the name of one of the
+               			 notes so that it no longer started with "W" then the Resource Explorer would
+               			 move the item to a new initial letter folder that reflected the new first
+               			 letter of the name as soon as you finished editing it.
+            </li>
+            <li>Third, you can delete a note you don't want any longer by selecting
+               			 it (clicking on it), and then pushing the Delete key or choosing "Delete" from
+               			 the "Edit" menu.
+            </li>
+            <li>Fourth, you can use drag-and-drop to create a reference from this
+               			 list in some other open resource's annotation area. We'll see an example of
+               			 this later in this tutorial.
+            </li>
+            <li>Fifth, you can see places where this note refers to other
+               			 resources, or other resources refer to it. At present, since there is little
+               			 material in the system, this is not perhaps terribly interesting, but as an
+               			 example, click on the "&gt;" object in front of "Wittig 1978". You will see two
+               			 sub-categories <i>Displayed In</i> and <i>Contains</i> appear. Open them both
+               			 by clicking on their "&gt;" object, and you will see:
+               			 
+               <p align="center"><img src="images/introRE-4.gif"></p> 
+               			 
+               <p>The list under <i>Displayed In</i> shows the resources in which a
+                  				reference to <i>Wittig 1978</i> appears. The list under <i>Contains</i> shows
+                  				the references that <i>Wittig 1978</i> contains itself. <i>Wittig 1978</i>
+                  				appears in the 5 notes shown in the list because, as you recall, Pliny had
+                  				<i>Wittig 1978</i> set as the referent when they were being created., and so
+                  				Pliny automatically put a link from the created note to its referent as a
+                  				matter of course. As you will recall, we also created two category notes within
+                  				<i>Wittig 1978</i> to the group the notes we made as we read the text, and then
+                  				added a third note to hold a comment about our reading. We can see these two
+                  				"grouping notes" and the comment in the <i>Contains</i> section for
+                  				<i>Wittig</i>. Where are the notes they in turn contain? If we open one of
+                  				these two grouping items under the <i>Contains</i> category (say, <i>Wittig
+                     				1978: reading and semiotics</i>) we will see the <i>Displayed In</i> and
+                  				<i>Contains</i> items for it, and if we opened this <i>Contains</i> item in
+                  				turn will see the two items we placed in the <i>reading and semiotics</i> note
+                  				earlier in this tutorial. In this way we can take an hierarchical view of our
+                  				materials.
+               </p>
+            </li>
+         </ul>
+      </p>
+      <h3>Finishing the "Referent" operation</h3>
+      <p>We have created our note-taking for <i>Wittig 1978</i>, and so we
+         			 should remove the referent setting to it, so that any other notes we
+         			 subsequently create will <i>not</i> be automatically assumed to be drawn from
+         			 <i>Wittig 1978</i>.
+      </p>
+      <p>To do this, we can make use of the Resource Explorer's contextual
+         			 menu. You will probably recall what a contextual menu is: we invoked it twice
+         			 when working in the Reference Area, and you have probably also seen it with
+         			 other programs you use. You call up the contextual menu by pushing the other
+         			 mouse button (on two button mice) or by holding down the Control key while
+         			 clicking (for Macintosh 1-button mice). It appears were the mouse pointer is.
+         			 In the Resource Explorer it will look something like this:
+      </p>
+      <p align="center"><img src="images/introRE-5.gif"></p>
+      <p>Exactly what items appear on the list will depend upon the context
+         			 in which it is clicked). However, since we currently have an active Referent,
+         			 the option "Clear the Reference" (highlighted above) will appear. If we click
+         			 on it "Wittig 1978" will be the referent no longer and will no longer be
+         			 automatically referenced in any new note we create.
+      </p>
+      <p>Note that if we reread the same article or continue reading it and
+         			 find that we want to add more notes we can reinstigate <i>Wittig 1978</i> as
+         			 the referent by choosing it in the Resource Explore and then choosing "Set the
+         			 Referent" from the contextual menu.
+      </p>
+      <h2>Creating Bookmarks</h2>
+      <p>As you create more and more notes in Pliny you will find that you will
+         		  need to organise them so that you can find them again. The Reference Manager's
+         		  resource folders allow you to access all the resources you have created, but
+         		  doesn't help you organise them very effectively. Suppose, for example, that you
+         		  want to keep track of the materials that you have read and for which you have
+         		  created notes?
+      </p>
+      <p>One way to facilitate this is to create a note called something like
+         		  <i>My Readings</i>, and store (in the note's reference area) references to the
+         		  materials you have read. By putting <i>My Readings</i> as an item accessible
+         		  from the the bookmarks list you provide, though it, one convenient entry point
+         		  for your resource collection. The folder <i>My Bookmarks</i> provides a place
+         		  where we can store high-level note items about the things that we have read
+         		  that we will want to consult often in the future.
+      </p>
+      <p>The steps for creating a bookmark item are: 
+         		
+         <ul>
+            <li>First, create the note <i>My Readings</i>. Use the <i>create
+                  			 note</i> button (<img align="middle" src="images/icons/noteIcon.gif">) in the Reference
+               			 manager, and name the note "<tt>My Readings</tt>" in the New Note wizard that
+               			 then appears. Before clicking "Finish", also tick the box beside the label
+               			 <i>Add to Bookmark List?</i>, as shown here:
+               <p align="center"><img src="images/introRE-6.gif"></p>
+            </li>
+            <li>Now, push the "Finish" button. As a result, the new note is
+               			 created, three things happen on the screen:
+               <p align="center"><img src="images/introRE-7.png"></p> 
+               			 
+               <ul>
+                  <li>First, the new note opens in the Eclipse editor pane.</li>
+                  <li>Second, the note appears in the "Note" folder of the Resource
+                     				  Explorer in the newly created "M" group.
+                  </li>
+                  <li>Finally, the "My Bookmarks" item in the "Resource Explorer"
+                     				  gains a "&gt;" to indicate that it now holds a reference to the note "My
+                     				  Readings".
+                  </li>
+               </ul>
+            </li>
+            <li> 
+               			 
+               <p>If we open the "My Bookmarks" item in the Resource Explorer we
+                  				will see the item "My Readings" appearing as a bookmark.
+               </p>
+               			 
+               <p align="center"><img src="images/introRE-8.png"></p> 
+               			 
+               <p>Currently it is the only one, but at a later point in your use of
+                  				Pliny you may find you wish to add other entry point notes as Bookmarks as
+                  				well. Note what "My Bookmarks" is for: it provides a place to save useful
+                  				"entry points" into your collection of Pliny objects. You can think of it as
+                  				similar to the bookmark factility provided in your web browser.
+               </p>
+            </li>
+            <li>Now we are ready to add a reference to <i>Wittig 1978</i> in our
+               			 new <i>My Readings</i> note. It will be the first thing we have read that we
+               			 have recorded in Pliny. The easiest way to do this is to use drag-and-drop from
+               			 the <i>Wittig 1978</i> entry in the Resource Explorer to the annotation area in
+               			 "My Readings". Place the mouse pointer at the <i>Witting 1978</i> entry,
+               			 depress the mouse button, and drag from there to some spot in the Reference
+               			 area for the <i>My Readings</i> note. Release the button when there, and a
+               			 reference to <i>Witting 1978</i> will appear: 
+               <p align="center"><img src="images/introRE-9.png"></p>
+            </li>
+            <li><i>My Readings</i> now contains a link to the first reading. The
+               			 reference object Pliny creates as a result of the drag and drop is perhaps a
+               			 little large (especially after we have entered here many items for the many
+               			 things we have read), we could either use the minimize button on the new
+               			 reference, or actually change the size by selecting the reference and dragging
+               			 on its size handles to shrink it to a more manageable size.
+            </li>
+         </ul>
+      </p>
+      <p>In summary,then, we here used on option on the Resource Explorer's
+         		  <i>New Note</i> wizard to add a newly created note called "My Readings" as a
+         		  bookmark, and we have stored a reference to the first item we have read on this
+         		  <i>My Reading</i>s note. In the future, then, as we do more readings, we can
+         		  add references to their Pliny items to <i>My Readings</i>, and then use the
+         		  <i>My Readings</i> note as a way to manage the materials we have been reading.
+         		  Furthermore, we have added <i>My Readings</i> as our first bookmark, so that we
+         		  can jump readily to the <i>My Readings</i> item anytime we like.
+      </p>
+      <p>A final note about <i>My Bookmarks</i> items: although we used a
+         		  wizard option when creating the <i>My Readings</i> note so that Pliny added the
+         		  note immediately to the bookmarks list at the same time that it created it,
+         		  there are also options on the Resource Explorer's contextual menu to add
+         		  selected resources to the bookmark collection, and to remove items that are
+         		  already there from the bookmark list.
+      </p>
+      <h2>Wrap Up</h2>
+      <p>We have now created a note describing an article we have read. We
+         		  recorded in Pliny notes that resulted from our reading of this article using
+         		  the <i>referent</i> paradigm provided by Pliny, and we noted that when the
+         		  referent mechansim is used Pliny puts links in the form of <i>reference
+            		  objects</i> in the <i>reference area</i> between the referent and the notes
+         		  subsequently created. We used the tools in Pliny to organise the note
+         		  references in the article-note so that they were grouped by topics we were
+         		  interested in. We examined now notes are organised in the <i>Resource
+            		  Explorer</i> and noted that although we can use the Explorer to locate all the
+         		  notes we created, it stores them alphabetically by name and this usually does
+         		  not represent a conceptual organisation of our notes. Finally, we created a new
+         		  note entitled <i>My Readings</i> and added it as a <i>Bookmark</i> item in the
+         		  Resource Manager so that it could act as an entry point into our note
+         		  collection. Finally, we used drag and drop between the Resource Manager and the
+         		  annotation area in the <i>My Readings</i> note to add a reference to the
+         		  article we read to this note.
+      </p>
+      <p>This marks the end of this tutorial. Our next tutorial, entitled
+         		  <a href="tut.plinyWithWeb.html">Using Pliny with Images</a> will introduce you
+         		  to Pliny's image annotation tool and how you will use it. If you have not
+         		  already done so, however, this might be a good time to review the material in
+         		  the section <a href="getting.started.html">Getting started with Pliny</a> which
+         		  gives you an overview of the areas of the Pliny screen (toolbars and panes in
+         		  particular) and how Pliny manages this area.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

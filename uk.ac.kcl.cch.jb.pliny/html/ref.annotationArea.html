@@ -1,0 +1,504 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Annotation/Reference Area</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e5425">2.2.1 Annotation/Reference Area</a></h1>
+      <p>Attaching references to notes, and the creation of annotations is a key
+         		elements of Pliny, so it is not surprising that many Pliny components have an
+         		area that is called the <i>Annotation Area</i> or the <i>Reference Area</i>.
+         		The two kinds of area are very similar -- the most important difference is that
+         		in the annotation area one gets to connect notes (or other types of resources)
+         		to specific parts of the resource one is working with by linking it to an
+         		anchor, whereas with the reference area one can only associate it with the
+         		entire resource by creating a note in a reference area attached to the
+         		resource.
+      </p>
+      <p>Thus, reference and annotation areas are almost the same. With the
+         		annotation area one is able to create anchors to attach a note to a specific
+         		part of the resource, with the reference area one cannot to this and no anchor
+         		tool is provided. In general, when a facility described here applies to both
+         		the reference and annotation area it will be mentioned without pointing this
+         		out. Some facilities apply only to the annotation area, and they will be
+         		labelled as such.
+      </p>
+      <h2>Parts of the Annotation/Reference Area</h2>
+      <p>Three kinds of objects can appear in the annotation/reference area: 
+         		
+         <ul>
+            <li><b>Resource Reference Objects</b>: are objects that refer to other
+               			 resources that Pliny manages. The commonest kind of reference is to a note --
+               			 but you can create references to other Pliny resources as well. See discussion
+               			 about reference objects in the section <a href="ref.referenceObject.html">Reference Object</a>.
+            </li>
+            <li><b>Anchors</b>: are rectangles that highlight an area on an image
+               			 or PDF page. They only can be drawn on annotation areas.
+            </li>
+            <li><b>Connections</b>: are arrows that can be drawn to indicate a
+               			 connection between reference objects or anchors. <i>Note</i>: early versions of
+               			 Pliny showed no arrowheads to provide the connection line with a direction --
+               			 but this has been changed with version 0.8.4.
+            </li>
+         </ul>
+      </p>
+      <p>You can see them illustrated and labelled (with orange labelling)
+         		  below:
+      </p>
+      <p align="center"><img src="images/refArea-1.gif"></p>
+      <p>There are 4 <i>reference objects</i> here. 
+         		
+         <ul>
+            <li>Two of the reference objects are coloured green, and one is blue
+               			 and one is orange. The colours come from the reference object's <i>type</i>:
+               			 all reference objects have a <i>type</i> associated with them, and colours for
+               			 display purposes are associated with the type. Thus, the colour tells you what
+               			 "type" of reference it is.
+            </li>
+            <li>Three of the reference objects are expanded so that we can see
+               			 their contents. One of them is minimized and only its title area is showing.
+               			 There is more information about reference objects in the section
+               			 <a href="ref.referenceObject.html">Reference Object</a>. 
+            </li>
+         </ul>
+      </p>
+      <p> There are two <i>connections</i> shown, one between a reference
+         		  object and an anchor, and another between two reference objects. Connections
+         		  can also be typed, and, like the reference objects, the colour indicates what
+         		  type has been associated. Finally, there is one anchor object, which can also
+         		  be typed.
+      </p>
+      <p>About types: see further discussion about types and their significance
+         		  in the reference section to the <a href="ref.typeManagerView.html">Type
+            		  Manager</a>.
+      </p>
+      <h2>Creation of Objects</h2>
+      <p>Objects are created in the annotation/reference in one of two ways: 
+         		
+         <ul>
+            <li><b>Creation Buttons</b>: By clicking on the appropriate button on
+               			 the toolbar. For the case of notes, this creates not only a new reference area,
+               			 but a new note that it refers to as well.
+            </li>
+            <li><b>Drag and Drop</b>: By dragging an reference object onto an
+               			 annotation/reference area where it currently does not already exist.
+            </li>
+         </ul>
+      </p>
+      <h3>Creation Buttons</h3>
+      <p> Creation buttons are provided in the toolbar for the
+         			 editor/annotator, and appears above the editor area in the Eclipse toolbar
+         			 area. You click on one of the buttons to indicate that you want to create a new
+         			 object of the kind indicated by the button, and then you drag an area in the
+         			 annotation/reference area to define the place where one wishes to create the
+         			 object and its size. Creation tools that appear in several tool bars are: 
+         		  
+         <ul>
+            <li><b>Note Creation Tool</b>:
+               				<img align="middle" src="images/icons/noteIcon.gif">: click on this item to create a
+               				new note and a reference to the note. Keyboard shortcut: F5
+            </li>
+            <li><b>Connection Creation Tool</b>:
+               				<img align="middle" src="images/icons/connectionIcon.gif">: click on this item to
+               				create a new connection. After choosing the tool one can indicate what is to
+               				connect by pointing the mouse at the source end of the connection, holding down
+               				the mouse button and dragging to the target end of the connection. When the
+               				mouse button is released the connection will be made. Keyboard shortcut:
+               				F6
+            </li>
+            <li><b>Annotation Creation Tool</b>:
+               				<img align="middle" src="images/icons/annotationIcon.gif">: click on this tool (not
+               				available in the Note Editor or the Web Browser since anchors cannot be created
+               				there) as a short-cut way to create a new anchor, note and connection between
+               				them. You will draw out the area where the anchor is to sit, and Pliny will
+               				place the note and link for you, but you are free to then move the placement of
+               				the note if you wish. Keyboard shortcut: F7
+            </li>
+            <li><b>Anchor Creation Tool</b>:
+               				<img align="middle" src="images/icons/anchorIcon.gif">: click on this item to create a
+               				new anchor. This tool is not avialable for reference areas because no anchors
+               				can be created on them. Keyboard shortcut F8.
+            </li>
+         </ul>
+      </p>
+      <h3>Drag and Drop</h3>
+      <p>Drag and Drop in Pliny always copies an object rather than moves it.
+         			 When the drag finishes in the reference/annotation area it is used to create
+         			 reference objects for the object that was dragged in. There are 4 different
+         			 possible sources for a drag and drop into a reference/annotation area:
+      </p>
+      <p align="center"><img src="images/refArea-2.gif"></p>
+      <p>Describing the sources from left to right: 
+         		  
+         <ul>
+            <li>One may drag a resource item from the Resource Explorer onto the
+               				annotation/reference area. The result is that Pliny creates a new reference to
+               				the selected resource and places it in the area where the drag ended.
+            </li>
+            <li>One may drag text from a drag-and-drop-aware piece of software
+               				(here, shown as Microsoft Word, but other aware software will also support
+               				this). This will cause Pliny to take the selected text and use it to create a
+               				new note, and then create a reference to that note in the area where the drag
+               				ended. Note that in this case, because the selected text included text that
+               				appears to be a title, Pliny will take the title and use it as the name of the
+               				note it creates.
+            </li>
+            <li>If you have two editors/annotators open at the same time you can
+               				drag from the drag source for the resource into the other resource. Here, the
+               				drag source is linked to the note "Wittig 1978" and as a result Pliny would
+               				create a new reference to "Wittig 1978" and place it in the destination
+               				annotation area.
+            </li>
+            <li>If you have two editors/annotators open at the same time you can
+               				also drag from the drag source for one of the reference objects in the other
+               				resource. Here, the drag source linked to the reference to "Wittig 1978: CBLA
+               				and New Criticism" has been dragged -- thus a reference to this note will be
+               				placed in the new area. If using drag and drop between two different editors
+               				(as shown above) be sure that you drag the <i>icon</i> specifically. If you
+               				start your drag from other parts of the object's title area you will be asking
+               				Pliny to move the object in the current reference area, not drag it to a new
+               				one. Drag and drop between reference areas <i>only</i> works when the icon is
+               				specifically dragged about.
+            </li>
+         </ul>
+      </p>
+      <p>A drag can be cancelled before it is finished (after the mouse
+         			 button has been depressed, but before it is released) by pushing the
+         			 <tt>Esc</tt> key.
+      </p>
+      <h2>Selecting objects</h2>
+      <p>Editing of objects is dependant upon the object first being selected.
+         		  Pliny shows a selected anchor or reference by putting its "selection handles"
+         		  around it. Here is a picture of a selected reference:
+      </p>
+      <p align="center"><img src="images/refArea-3.gif"></p>
+      <p>The selection shows up as a heavier black border with little boxes, or
+         		  handles, placed within it.
+      </p>
+      <p>It shows a selected connection by putting a selection handle at each
+         		  end of the connection:
+      </p>
+      <p align="center"><img src="images/refArea-4.gif"></p>
+      <h3>Ways to select objects</h3>
+      <p>A reference, anchor or connection is selected by pointing at it with
+         			 the mouse pointer (in the case of a reference, one points to the reference head
+         			 area) and clicking once on the mouse.
+      </p>
+      <p>More than one item may be selected at a time. There are two ways to
+         			 achieve this: 
+         		  
+         <ul>
+            <li><i>Adding to the selection</i>: If one holds down the shift key
+               				while selecting an object the new item is added to the previous selection (or
+               				removed from the previous selection if already selected).
+            </li>
+            <li><i>Drag selection</i>: One can drag over an area to select all
+               				objects contained within it. The drag-select operation must not begin over any
+               				displayed object.
+            </li>
+         </ul>
+      </p>
+      <h2>Editing of Objects</h2>
+      <p>Once one has selected objects of interest there are various things one
+         		  can do with them: 
+         		
+         <ul>
+            <li><b>Deleting</b>: You can delete selected references, anchors or
+               			 connections by pushing the delete key or by choosing Delete from the Edit
+               			 menu.
+            </li>
+            <li><b>Resizing references/anchors</b>: You can resize anchors or
+               			 references by dragging on a selection handle.
+            </li>
+            <li><b>Moving references/anchors:</b> You can reposition anchors or
+               			 reference by pointing in the title area or a reference or anywhere on the
+               			 perimeter of an anchor and dragging.
+            </li>
+            <li><b>Operations on the content of a reference</b>: See the reference
+               			 object section for information about the kind of things you can do to a
+               			 reference object.
+            </li>
+            <li><b>Cut/Copy</b>: You can cut/copy references and anchors from one
+               			 place and paste them in elsewhere using the usual cut/copy/paste methods.
+            </li>
+            <li><b>Minimize</b>: You can minimize a set of selected reference
+               			 objects by clicking on the "Minimize all" button from the toolbar (<img align="middle" src="images/icons/allClose.gif">) or choosing "Minimize Selected" from the
+               			 contextual menu.
+            </li>
+            <li><b>Moving connections</b>: You can change either end of a
+               			 connection so that it points to a different reference/anchor object. To do this
+               			 drag the relevent end of the connection to the new object.
+            </li>
+            <li><b>Contextual Menu</b>: The contextual menu operations apply to
+               			 selected objects. See the next section for information about the Contextual
+               			 Menu.
+            </li>
+         </ul>
+      </p>
+      <h2>Context Menu Commands</h2>
+      <p>Pliny's reference/annotation area have what Eclipse calls a "context
+         		  menu" available. To see it select one or more object and while they are
+         		  selected click on the other mouse button (or, on the one-button Macintosh,
+         		  click while depressing the Ctrl button). The contextual menu will appear:
+      </p>
+      <p align="center"><img src="images/refArea-5.gif"></p>
+      <p>In this figure only the commands available from Pliny for reference
+         		  objects are showing, but it is possible that other commands contributed by
+         		  other Eclipse plugins might also appear in your list, depending upon what
+         		  objects you have selected.
+      </p>
+      <p>You can choose one of the operations from the menu by moving the mouse
+         		  to choose the item and pushing the mouse button. The chosen operation will be
+         		  applied to all items selected at the time for which they are suitable. The
+         		  operations from the context menu are: 
+         		
+         <ul>
+            <li><b>Minimize selected</b>: applies to selected references only, but
+               			 minimises all of them -- so that they appear with only they title area
+               			 showing.
+            </li>
+            <li><b>Maximise selected</b>: applies to selected references only, but
+               			 expands all of them -- so that they show both their title area and content or
+               			 map area. The size after expansion is the size they were before they were
+               			 minimised.
+            </li>
+            <li><b>Open selected</b>: applies to selected references only, and
+               			 opens the selected objects so that each gets its own editor object -- the Note
+               			 Editor, Web Browser, Image Annotator or PDF Annotator -- as appropriate.
+               			 Alternatively, an associated object can be opened simply by double-clicking on
+               			 its icon that appears at the top left corner of the reference object (see more
+               			 about this below).
+            </li>
+            <li><b>Reverse link direction</b>: only appears when connections are
+               			 among the selected items, and causes the direction of the selected links to be
+               			 reversed.
+            </li>
+            <li><b>Change type to current</b>: changes the type associated with
+               			 selected objects to the "current type". See the section on <i>types</i> for
+               			 more details.
+            </li>
+            <li><b>Set type to</b>: if chosen the list of defined types appears,
+               			 and you can choose one from the list. All the selected objects have their type
+               			 changed to the selected one.
+            </li>
+            <li><b>Group Objects</b>: This object is only available when more than
+               			 one reference is selected. It creates a new note and first takes the selected
+               			 objects and moves them into the new note's reference area. It then displays a
+               			 reference to the new note in the original reference area. The visual effect is
+               			 that the selected objects get put into a new group object. You can see the
+               			 effect from these "before/after" views (where originally two note references
+               			 were selected of the three shown): 
+               			 
+               <center><br><br><table border="0">
+                     <tr>
+                        <th>Before</th>
+                        <th>After</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p align="center"><img src="images/refArea-6.gif"></p>
+                        </td>
+                        <td>
+                           <p align="center"><img src="images/refArea-7.gif"></p>
+                        </td>
+                     </tr>
+                  </table><br><br></center> 
+               			 
+               <p>The two selected objects have been put in a new group object which
+                  				is roughly the size of the area the selected objects occupied before. The one
+                  				unselected object (here "Rockwell 2005") remains outside the group.
+               </p> 
+               			 
+               <p>There are several things to note here: 
+                  			 
+                  <ul>
+                     <li>First, Pliny gives the group object it created an invented name
+                        				  ("My Readings: New Group") that you are most likely to want to change to be
+                        a
+                        				  name that describes the group you have just formed. As for other names, double
+                        				  click on it to type in a new name.
+                     </li>
+                     <li>The size of the reference object is calculated from the area
+                        				  over which the selected objects where originally spread, with some further
+                        				  minor adjustments in size. As is the case with any reference, its size can be
+                        				  changed as well if you wish by selecting it and dragging its handles.
+                     </li>
+                     <li>Finally, the new group object is actually a reference to a Note
+                        				  -- but showing its reference area so that it functions as a container for other
+                        				  objects. If you wish to associate some text with this group note you can change
+                        				  its display here by clicking on its "display
+                        				  note content" icon (<img align="middle" src="images/icons/showContents.gif">) and then
+                        				  type it in.
+                     </li>
+                  </ul>
+               </p>
+            </li>
+            <li><b>Align Vertically</b>: Arranges selected items vertically so that
+               			 they display as a stack. 
+               			 
+               <center><br><br><table border="0">
+                     <tr>
+                        <th>Before</th>
+                        <th>After</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p align="center"><img src="images/refArea-8.gif"></p>
+                        </td>
+                        <td>
+                           <p align="center"><img src="images/refArea-9.gif"></p>
+                        </td>
+                     </tr>
+                  </table><br><br></center> 
+               			 
+               <p>Note that the ordering of the objects in the stack is the same as
+                  				the vertical ordering of the selected objects that have been arranged.
+               </p> 
+               			 
+               <p>Although the items how appear to be a stack they are still items
+                  				in the 2D space of the reference area, and will not "act" as a stack when
+                  				changed in size of moved about. of course, this command can be re-invoked if
+                  				necessary after the objects have been resized or moved.
+               </p>
+            </li>
+            <li><b>Align Horizontally</b>: Arranges selected items horizontally so
+               			 that they appear as a row, aligned by their tops. This command is similar to
+               			 "Align Vertically", just described.
+            </li>
+            <li><b>Optimise Size</b>: This command only works (at present) with
+               			 note objects that are displaying their textual content. It changes the height
+               			 of the object so that all the text is visible (without needing a scroll bar),
+               			 and that little or no empty space is wasted at the bottom of the textual
+               			 content. 
+               			 
+               <center><br><br><table border="0">
+                     <tr>
+                        <th>Before</th>
+                        <th>After</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           <p align="center"><img src="images/refArea-10.gif"></p>
+                        </td>
+                        <td>
+                           <p align="center"><img src="images/refArea-11.gif"></p>
+                        </td>
+                     </tr>
+                  </table><br><br></center> 
+               			 
+               <p>It can be applied against many notes simultaneously, if all are
+                  				selected at the time the command is invoked.
+               </p>
+            </li>
+            <li><b>Change type to current</b>: A Reference object has a <i>type</i>
+               			 associated with it which can be used to assert something about the role of the
+               			 reference object in the context in which it appears. There is always a
+               			 "current" type which will be used each time a new item is set up, and by
+               			 default this current type will be the "default" (unspecified) type and usually
+               			 coloured green. However, in the <a href="ref.typeManagerView.html">Type Manager
+                  			 View</a> one can make any type you have the "current type". Use this command
+               			 to change the type of the selected items to whatever is currently set as "the
+               			 current type".
+            </li>
+            <li><b>Set type to...</b>: Click on this item to set the selected
+               			 reference object or objects to a type. If you click on this item a drop-down
+               			 submenu appears beside the main contextual menu showing a list of available
+               			 types. 
+               <p align="center"><img src="images/refArea-12.gif"></p> 
+               			 
+               <p>Choose the one you want from this list. The list displayed will
+                  				most likely be different from that shown in the figure above -- it depends what
+                  				types you have defined. If you want something other than what is available in
+                  				the list available, you can create new types using the
+                  				<a href="ref.typeManagerView.html">Type Manager</a>.
+               </p>
+            </li>
+         </ul>
+      </p>
+      <h2>Managing types by dragging and dropping them from the Type
+         		  Manager
+      </h2>
+      <p>Recall that a type of reference can be assigned to any reference
+         		  object, and the contextual menu provides two ways to specify the type to be
+         		  assigned to reference objects: <i>Change type to current</i>, and <i>Change
+            		  type to...</i> (described in more detail immediately above this section of this
+         		  document). However, there is a quicker way to manage types if the Type Manager
+         		  view is open: it can be used as a kind of "type menu" to assign types to
+         		  reference objects by means of dragging and dropping (DnD) them into your
+         		  reference area. Making these changes by DnD is often quite efficient to do, and
+         		  is usually faster than changing the types via the contextual menu commands.
+      </p>
+      <p>There are two kinds of results that can be produced by the dragging
+         		  and dropping of types from the Type Manager: 
+         		
+         <ul>
+            <li>you can use drag and drop to <b>change a type of an existing
+                  			 reference object</b> (or a link between reference objects):
+               			 
+               <p align="center"><img src="images/refArea-13.gif"></p> 
+               			 
+               <p>In the figure above, the <i>source document</i> type displayed in
+                  				the Type Manager has been dragged to the header of the reference object for
+                  				"Wittig 1978". By doing this one changes the type of the Wittig 1978 reference
+                  				to <i>source document</i>, and thus changes its display colour to that
+                  				associated with the <i>source document</i> type:
+               </p>
+               			 
+               <p align="center"><img src="images/refArea-14.gif"></p> 
+               			 
+               <p>Please note that it is important that you drop the type onto the
+                  				<i>reference header</i>, not the reference body. The point indicated by the
+                  				arrow head during the dragging operation is what matters here.
+               </p> 
+               			 
+               <p>Dragging a type from the Type manager can also be used to change a
+                  				linking line, by dropping the type onto the line itself.
+               </p>
+            </li>
+            <li>you can use drag and drop to <b>create a new note of the specified
+                  			 type</b>. To do this, drag the type to any point in the reference area which is
+               			 <i>not</i> in a header for an existing reference object, or a link between
+               			 objects:
+               <p align="center"><img src="images/refArea-15.gif"></p> 
+               			 
+               <p>Here the user has dropped the <i>example of</i> type in on a spot
+                  				in the reference area not already occupied by another reference object. As a
+                  				result, Pliny will interpret this as a request to create a new note at the
+                  				indicated spot, and set its reference object's type to the selected <i>example
+                     				of</i> type:
+               </p>
+               <p align="center"><img src="images/refArea-16.gif"></p> 
+               			 
+               <p>The newly created note starts off with a reference which has been
+                  				assigned the type <i>example of</i>, and, as a consequence, has the colours of
+                  				the <i>example of</i> type.
+               </p> 
+               			 
+               <p>Note that if you wish to create a note of a selected type, you
+                  				<i>must</i> drag it to somewhere on the target reference area that is not
+                  				already occupied by the header of an existing reference object -- otherwise,
+                  				Pliny will interpret the drop as a request to <i>change</i> the type of the
+                  				reference object, rather than the creation of a new item altogether.
+               </p>
+            </li>
+         </ul>
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<welcomePage title="Pliny" format="wrap">
+<intro>This page will help familiarize you with the the Pliny Note Manager. 
+To get started, read the sections below and click on the related links.</intro>
+<item><b>Introduction to Pliny</b> 
+  The Pliny Note Manager is a tool intended to help you create and manage
+  notes about things that you read. To learn more about Pliny check 
+  <topic id="/uk.ac.kcl.cch.jb.pliny/toc.xml">Pliny's help pages</topic>. 
+  </item>
+<item><b>Pliny's tutorials</b> 
+  Several tutorials about how to use Pliny are included in the help pages.
+  If this is your first exposure to Pliny I would suggest that you take a look
+  at these.  They can be found in 
+  <topic id="/uk.ac.kcl.cch.jb.pliny/toc.xml" href="html/ref.plinyTutorials.html">Pliny's tutorial pages</topic>. 
+  </item>
+<item><b>Pliny's Perspective</b>
+  If you are using Pliny from within Eclipse (rather than "standalone"), it is best used within its own Eclipse "perspective".
+  (The term "perspective" is used here in the Eclipse sense: as a screen layout).  You can launch it
+  by clicking
+<action pluginId="uk.ac.kcl.cch.jb.pliny" class="uk.ac.kcl.cch.jb.pliny.actions.OpenPlinyPerspectiveAction">here</action>.
+  </item>
+</welcomePage>

@@ -1,0 +1,696 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Resource Explorer</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e3043">2.1.1 Resource Explorer</a></h1>
+      <h2>What's it for</h2>
+      <p>Pliny's Resource Explorer is both one of the starting points for using
+         		  Pliny, and one of the places that you will turn to to manage the materials you
+         		  give to it. It focuses on giving access to all of Pliny's resources -- notes,
+         		  Web pages, PDF files, Images and other resources which have been set up to
+         		  interact with Pliny. Most users will find it convenient to have the Resource
+         		  Explorer on the screen at all times.
+      </p>
+      <p>Usually it will always appear on the screen when Pliny is being used.
+         		  However, if it is not already on the screen one can open it by clicking on the
+         		  Resource Explorer button (<img align="middle" src="images/icons/resourceExplorer.gif">)
+         		  on the main Pliny toolbar:
+      </p>
+      <p align="center"><img src="images/re-ref-0.gif"></p>
+      <h2>Visual display and operation</h2>
+      <p>The Resource Explorer is a <i>View</i> in Eclipse terminology. Each
+         		  Eclipse view can be displayed only once on the screen (unlike an Eclipse editor
+         		  which can appear many times and can be associated with different objects, or
+         		  even more than once with the same object). Views are usually displayed around
+         		  the central editing area, and although the Pliny perspective places the
+         		  Resource Explorer on the left edge of the Eclipse window it can be moved to a
+         		  different place in the window if you wish. It is designed to work best in a
+         		  window space that is longer than it is wide, so usually it should be placed on
+         		  the left or right side of the Eclipse screen rather than the top or bottom.
+      </p>
+      <p>When first opened the Explorer looks like this:</p>
+      <p align="center"><img src="images/re-ref-1.png"></p>
+      <p>The tab area at the top of the view will always show "Resource
+         		  Explorer" (although, of course, if the area is too narrow, Pliny will truncate
+         		  the name so that only a part of it is visible). To the right of the tab are the
+         		  minimize (<img align="middle" src="images/icons/closeNote.gif">) and maximize
+         		  (<img align="middle" src="images/icons/openNote.gif">) icons, which can be clicked on
+         		  to reduce the size of the Resource Explorer to a minimum or expand it to the
+         		  full size of the Pliny window. There is more information about these buttons in
+         		  the section "the Minimize and Maximize buttons" in <a href="intro.panes.html">Managing Panes </a>.
+      </p>
+      <p>Below the top tab area is a grey bar which is the toolbar area
+         		  provided for the Resource Explorer. The four tool icons are described in the
+         		  <i>Tools</i> part of the "Commands" section below.
+      </p>
+      <p>The main area of the Resource Explorer's panel can contain three
+         		  different displays. Which one you see is based on the tag you choose at the
+         		  bottom of the Resource Explorer's panel: 
+         		
+         <ul>
+            <li><b>By Type</b>: this displays all the resources Pliny manages for
+               			 you, and organises them by the type of resource. This is the display that the
+               			 Explorer starts with when first opened.
+            </li>
+            <li><b>By Date</b>: this also displays all the resources Pliny manages
+               			 for you, but they are organised by their date of creation. This organisation is
+               			 useful if you are looking for an object you created some time ago and you can
+               			 roughly remember when it was created.
+            </li>
+            <li><b>Search</b>: this option does not offer a complete list of all
+               			 resources. Instead, you can type in the beginning of a resource's name, and in
+               			 this tab Pliny will show you all the Resources with titles that begin with your
+               			 letters. Use this to quickly look a resource by its name.
+            </li>
+         </ul>
+      </p>
+      <p>The display for all three tabs contains a hierarchical display in
+         		  which the resources Pliny manages for you are displayed. The display is
+         		  hierarchical, and exactly how it appears graphically will depend upon the kind
+         		  of computer you are using (the figure above shows the hierarchical display as
+         		  it is on a Windows 10 machine) because Pliny uses the display mechanisms your
+         		  operating system provides for hierarchical displays if it can.
+      </p>
+      <p>At present Pliny always starts up by showing the "By Type" tab as the
+         		  one in front. Look later in this item for information about how the "By Date"
+         		  display mechanism works, although Pliny will remember the last tab you were
+         		  looking at when you shut Pliny down, and will restart with the same tab showing
+         		  next time you start up again. We begin here by describing how the Resource
+         		  Explorer's "By Type" tab's hierarchical display is organised.
+      </p>
+      <p>When the Resource Explorer is first started up again the display shows
+         		  only the top level of the hierarchy. For each item of that top level that
+         		  contains another level the display shows the "open" icon (here a "&gt;" -- but
+         		  this might be different under other GUIs such as older versions of Windows, or
+         		  on the Macintosh). We describe the information at each level in the hierarchy
+         		  in the following sections:
+      </p>
+      <h3>Top level: The Resource Type Level</h3>
+      <p>The top level has one level for each <i>kind of resource</i> that
+         			 Pliny manages, and the top level for the <i>My Bookmarks</i> group. <i>My
+            			 Bookmarks</i> acts somewhat differently from the others and is described in its
+         			 own subsection below. The others however (there are 4 in the figure above)
+         			 indicate that Pliny is currently managing some Note, Web Browser, Image and
+         			 PDF/Acrobat resources for you. If Pliny also held resources linked to other
+         			 kinds of information the kinds would appear here as well.
+      </p>
+      <h3>Second level: The Initial Letter Level</h3>
+      <p>If one clicks on the top open level icon one sees the second
+         			 level:
+      </p>
+      <p align="center"><img src="images/re-ref-2.gif"></p>
+      <p>... here we clicked on the "Web Browser" top level. Note that its
+         			 "+" open icon has changed to a "-" close icon. If clicked on again it will
+         			 close the 2nd level display. The entries shown at the 2nd level under all
+         			 resource types are derived from the first letter of the name of the resources.
+         			 We can see here that we have Web Browser resources with names beginning with
+         			 "C" (3 of them), "H" (2 of them) and "O" (one of them).
+      </p>
+      <h3>Third Level: The Resource Level</h3>
+      <p>If we open one of the 2nd level items we will see all the items at
+         			 the third level that it contains. Suppose we click on the "C" item under "Web
+         			 Browser". We will see:
+      </p>
+      <p align="center"><img src="images/re-ref-3.gif"></p>
+      <p>Here we see the names of the three resources that are both Web
+         			 Browser resources and begin with the letter "C". Note that the name of the last
+         			 item extends past the right edge of the Resource Explorer's panel. We can see
+         			 the full name by pointing at it and leaving the pointer pointing at it for a
+         			 momemt. Eclipse will respond by displaying the associated "tool tip" -- here
+         			 the full name of the item:
+      </p>
+      <p align="center"><img src="images/re-ref-4.gif"></p>
+      <p>We can open any of the resources we see at this level by double
+         			 clicking on the item's Icon.
+      </p>
+      <h3>Fourth Level: Containment Groups</h3>
+      <p>The fourth and fifth hierarchical levels have to do with
+         			 containment. In Pliny, containment refers to reference objects that appear in
+         a
+         			 resource's reference/annotation field. Here is a screen shot of the Web Browser
+         			 page <i>CRSBI: Font Page img 1</i> that we have been using for our
+         			 illustations:
+      </p>
+      <p align="center"><img src="images/re-ref-4a.png"></p>
+      <p>The reference area to the right shows that two notes have been
+         			 recorded. In Pliny terminology, these two notes are <i>contained</i> within the
+         			 browser page's resource. It is important to realise that it is not so much that
+         			 this web page contain two <i>notes</i>, but that it contains <i>references</i>
+         			 to those two notes that might be, in turn, contained in one or more other
+         			 resources as well.
+      </p>
+      <p>Now that we have briefly introduced containment, we are ready to
+         			 look at the fourth and fifth display levels within the Resource Explorer. The
+         			 fourth hierarichal level looks like this:
+      </p>
+      <p align="center"><img src="images/re-ref-5.gif"></p>
+      <p>and shows the "containment" information associated with a resource.
+         			 There are always two items at this level: 
+         		  
+         <ul>
+            <li><b>Displayed In</b>: contains a list of items that refer to this
+               				item in their reference/annotation area. In the figure there is no "+" icon
+               				showing to the left of the Displayed in item because this item is not
+               				referenced in any other's reference/annotation area.
+            </li>
+            <li><b>Contains</b>: shows the list of items that are contained in
+               				this item's reference/annotation area.
+            </li>
+         </ul>
+      </p>
+      <h3>Fifth Level: Containment List</h3>
+      <p>The fifth level shows the list of items that are contained (or
+         			 contain) the item. If we open "Contains" for the <i>CRSBI: Font Page img 1</i>
+         			 item we see:
+      </p>
+      <p align="center"><img src="images/re-ref-6.gif"></p>
+      <p>We can see that the reference area for the web page "CRSBI: Font
+         			 Page img 1" contains two items: one called "Chipped Frame" and the other "Lily
+         			 Ornamentation".
+      </p>
+      <h3>Lower Levels</h3>
+      <p>Attached to each item contained in <i>CRSBI: Font Page img 1</i> are
+         			 further levels, but they repeat the containment information displayed above.
+         			 Below Chipped Frame, for example, one will see "Displayed in" and "Contains",
+         			 and inside it the list of resources in which <i>Chipped Frame</i> appears or
+         			 that <i>Chipped Frame</i> contains itself. The sublevels can continue
+         			 indefinately.
+      </p>
+      <h3>My Bookmarks</h3>
+      <p>The last item at the top level is labelled "My Bookmarks" and it
+         			 works differently from the other items. Any resource that Pliny manages can be
+         			 designated as a "bookmark" by you, and if it is it appears under the My
+         			 Bookmarks item (as well as in its place like other notes in the folders
+         			 structure described above. The following figure shows the My Bookmarks item
+         			 open with two items showing as bookmarks (a note <i>My Images</i> and a note
+         			 <i>My Readings</i>):
+      </p>
+      <p align="center"><img src="images/re-ref-7.gif"></p>
+      <p>Store as bookmarks items that you want to directly access at any
+         			 time through the resource explorer. For example, you may want to use Pliny to
+         			 file resources under a filing scheme of your own devising. The top level items
+         			 in your own scheme might appear here as bookmarks.
+      </p>
+      <p>For an item to appear as a bookmark you must ask Pliny to designate
+         			 it as such. See the <i>commands</i> section for information about how to do
+         			 this.
+      </p>
+      <h2>Viewing the Resource Explorer "By Date"</h2>
+      <p>Clicking on the "By Date" tab at the bottom of the Resource Explorer's
+         		  pane area will cause it to switch to the view which organises Pliny resource
+         		  items by the date they were created:
+      </p>
+      <p align="center"><img src="images/re-ref-8a.gif"></p>
+      <p>There is always a folder for objects created today first. Following
+         		  that are folders that group material together by time period, followed by the
+         		  number of items they contain shown in parentheses. For example, we can see that
+         		  in May 2007 639 notes were created in Pliny. If the May 2007 folder is opened
+         		  we will see folders for each day in which Pliny resources were created, and
+         		  then we can finally open one of the days to see the created resources
+         		  themselves:
+      </p>
+      <p align="center"><img src="images/re-ref-8b.gif"></p>
+      <p>Here the user has opened first the May 2007 folder, and then within it
+         		  the "Mon, 21 May 2007" folder, and sees the 12 resources created on that day.
+         		  Note that of the 12 created, two are resources for web pages (the first and the
+         		  last displayed), and the others as all Notes.
+      </p>
+      <p>Resource items that appear in the Resource Explorer's "By Date"
+         		  display can be used in the same way as described for the "By Type" display
+         		  (Level 3 above). We can double-click on any of the resource items icon to open
+         		  it. We can view the containment data for any item by clicking on the "+" button
+         		  in front of it.
+      </p>
+      <h2>Viewing the Resource Explorer's "Search" tab</h2>
+      <p>The Search tab can be used when you want to quickly locate a Resource
+         		  by its name. When you first open it you will see this:
+      </p>
+      <p align="center"><img src="images/re-ref-16.gif"></p>
+      <p>Start typing the name of the resource you are looking for into the
+         		  Search box. Nothing will happen until you reach the 2nd letter, but then Pliny
+         		  will show you all resources with names that begin with the two letters you
+         		  type:
+      </p>
+      <p align="center"><img src="images/re-ref-17.gif"></p>
+      <p>Continue to type in more letters if you wish to refine the selection
+         		  upon which the list is based more:
+      </p>
+      <p align="center"><img src="images/re-ref-18.gif"></p>
+      <p>There is no need to type in the entire name of the Resource. When you
+         		  see the item you want you can stop typing. Any item in the list can be used by
+         		  you in any of the ways that the Resource Explorer permits. You can, for
+         		  example, double click on the item's icon to open it, drag it to another part of
+         		  Pliny to create a reference to it there, delete a selected item with the Delete
+         		  key, or you can double click on the name and type in a new name for it
+         		  (although, if the new name begins with letters other than the pattern you have
+         		  already provided (here "<tt>mus</tt>"), the item will then disappear out of the
+         		  displayed list since, with its new name, it no longer matches the name pattern
+         		  you have specified.)
+      </p>
+      <h2>Commands</h2>
+      <p>One can interact with the Resource Explorer in several ways: 
+         		
+         <ul>
+            <li>by means of Icons on the toolbar,</li>
+            <li>by means of the contextual menu,</li>
+            <li>by means of menu commands and keyboard shortcuts,</li>
+            <li>by means of direct editing, and</li>
+            <li>by means of drag and drop.</li>
+         </ul>
+      </p>
+      <h3>Toolbar</h3>
+      <p>The Resource Explorer's toolbar appears under the Resource Explorer
+         			 tab:
+      </p>
+      <p align="center"><img src="images/re-ref-8.png"></p>
+      <p>and it contains five icons: 
+         		  
+         <ul>
+            <li><b>New Note Command</b> (<img align="middle" src="images/icons/noteIcon.gif">): invokes a one screen wizard which allows
+               				you to create a new note in Pliny. Furthermore, if, at the time the New Note
+               				command is invoked, more than one item is selected in the Resource Explorer
+               				tree that represents a Pliny Resource, then the references to all selected
+               				Resources will also be added to the new note's Reference Area. 
+               				
+               <p>The wizard looks like this:</p>
+               <p align="center"><img src="images/re-ref-9.gif"></p> 
+               				
+               <p>The fields provided here are: 
+                  				
+                  <ul>
+                     <li><b>Name for Note</b>: Provide the name for the new note here.
+                        					 A name is obligatory. In certain situations a name may be suggested, and
+                        					 already appear in this field -- but you are free to change it if you wish.
+                     </li>
+                     <li><b>Add to Bookmark List?</b> Tick the box if you wish the
+                        					 note you are creating to be added to your bookmarks.
+                     </li>
+                     <li><b>Make Referent?</b> Tick this box if the note you are
+                        					 creating is to be used as a referent. A reference note affects the notes that
+                        					 are created after it -- in each note created subsequently a reference to this
+                        					 note is made, and in the referent note a reference is to the subsequent note.
+                        					 This feature is useful when one is creating notes about a single source. The
+                        					 reference note becomes a note about the source, and the subsequent notes (which
+                        					 will be comments about the source) will refer to the source they are about
+                        					 automatically. See the tutorial <a href="tut.nonDigital.html">Using Pliny with
+                           					 Non-digital Materials</a> for an example of how creating notes with a
+                        					 referent could be useful.
+                     </li>
+                  </ul>
+               </p>
+            </li>
+            <li><b>Export Pliny Data</b> (<img align="middle" src="images/icons/export.gif">): Click on this icon when you wish to export
+               				data out of Pliny into a file. Pliny provides support for two formats: (1) its
+               				own archive format (PLA), and (2) a Topic Map format (XTM). See the section
+               				<i>Exporting and Importing</i> for details. At present all the data Pliny is
+               				holding is exported. There is at present no way to export data from a selected
+               				set of resources.
+            </li>
+            <li><b>Import Pliny Data</b> (<img align="middle" src="images/icons/import.gif">): Click on this icon to import data from files
+               				into Pliny. Pliny supports two formats for importing of data: (1) its own
+               				archive format (PLA), and a plain text format (txt). See the section
+               				<i>Exporting and Importing</i> for details. At present all imported data is
+               				added to materials already held by Pliny. There is at present no way to use
+               				imported data to completely replace data already in Pliny.
+            </li>
+            <li><b>Create as full/minimized reference</b> (<img align="middle" src="images/icons/openNote.gif">): When a new reference is created in Pliny it
+               				is created either "full size" (showing both title and contents) or "minimized"
+               				(showing title only). Click here to change from full-size creation to minimized
+               				or vice-versa. The icon showing shows what is currently set: this icon shows
+               				that Pliny will create full size references. 
+            </li>
+            <li><b>Open the Pliny Resource Holder</b> (<img align="middle" src="images/icons/resHolderView.gif">): Click on this to set up the Pliny
+               				Resource Holder view. This view can be used to temproarily hold a reference to
+               				a Pliny resource and is useful when copying references to Pliny objects from
+               				one place to another. It is described on the help page for the
+               				<a href="ref.resourceHolderView.html">Pliny Resource Holder view</a>.
+            </li>
+         </ul>
+      </p>
+      <h3>The Contextual Menu</h3>
+      <p>You invoke the Resource Explorer's contextual menu by clicking on
+         			 the right (other) mouse button (or, on the Macintosh, click while holding down
+         			 the Ctrl key). It looks like this:
+      </p>
+      <p align="center"><img src="images/re-ref-10.gif"></p>
+      <p>The list of items will vary depending upon (a) whether an item is
+         			 selected or not, and what is selected, and (b) what other Eclipse plugins
+         			 installed with Pliny might have a useful tool to contribute. To choose an item
+         			 from the menu point at it with the mouse and click.
+      </p>
+      <p>The set of possible Contextual Menu commands are: 
+         		  
+         <ul>
+            <li><b>Create Note...</b>: use this command to request a new note to
+               				be created. It operates in exactly the same way as the Resource Explorer's
+               				toolbar icon.
+            </li>
+            <li><b>Add to Bookmarks</b>: This command will appear when one or
+               				more items are selected within the explorer, and the items are not currently
+               				bookmarks. Choose this item to make the selected item(s) bookmarks so that they
+               				will appear in the Bookmarks display.
+            </li>
+            <li><b>Remove from Bookmarks</b>: This command will appear when one
+               				or more items are selected that are currently acting as bookmarks. Choose this
+               				item to remove them from the bookmark list. It does not delete the item
+               				itself.
+            </li>
+            <li><b>Set the Referent</b>: This command will appear when one item
+               				is selected. Choose it if you want the item to act as a referent: a note that
+               				subsequent notes you create will automatically refer to. Use the "Clear the
+               				Referent" command when you subsequently want to turn this option off. See the
+               				tutorial <a href="tut.nonDigital.html">Using Pliny with Non-digital
+                  				Materials</a> for an example of how creating notes with a referent could be
+               				useful.
+            </li>
+            <li><b>Clear the Referent</b>: This command will appear when a
+               				resource is set to act as a referent. An item can be designated a referent when
+               				either that option was previously chosen in the "New Note" wizard screen, or
+               				when the "Set the Referent" item was previously chosen. Choosing this item
+               				stops the current referent as acting as one any more.
+            </li>
+            <li><b>Update resource's URL</b>: This command will appear when a
+               				selected Web Browser item is chosen. It allows you to update the URL associated
+               				with the item and is useful if a page's URL has been changed on the World Wide
+               				Web.
+            </li>
+         </ul>
+      </p>
+      <h3>Menu Commands, Keyboard Shortcuts</h3>
+      <p>Several keyboard commands (shortcuts) are supported within the
+         			 Resource Explorer: 
+         		  
+         <ul>
+            <li><b>Undo/Redo</b>: Choose Undo from the Edit menu (or type the
+               				appropriate key sequence for your machine) to undo a previous command you have
+               				given to the Resource Explorer. Redo will repeat the command that you just
+               				undid. In general Pliny supports multiple-undo.
+            </li>
+            <li><b>Delete</b>: Push the delete key (or choose <i>Delete</i> from
+               				the edit menu) to delete selected resource items from Pliny. When you push the
+               				delete key Pliny will respond with a confirmation dialog box to be sure that
+               				you want to delete the item. Delete items are undoable. The delete key has a
+               				different function when you are editing the name of a resource -- then it is
+               				used as textual delete -- to delete selected text or the character following
+               				the insertion point.
+            </li>
+            <li><b>Copy</b>: push the copy key to copy a reference to the current
+               				selected resource item (or items) to the clipboard. Paste can then be used to
+               				paste this reference into, say, a reference area.
+            </li>
+            <li><b>Double-click</b>: on a resource (either the name, or the icon
+               				in front of it) to open it in the "editor pane".
+            </li>
+            <li><b>Single-Click</b>: on the name of a resource to allow you to
+               				edit it. This is <i>direct Edit</i> -- described in the next section.
+            </li>
+         </ul>
+      </p>
+      <h3>Direct Edit</h3>
+      <p>You can change the name of a resource in the Resource Explorer. To
+         			 indicate that you wish to do so single-click on the resource's name. Pliny will
+         			 respond by displaying the name in reverse colouring and providing a blinking
+         			 insertion point:
+      </p>
+      <p align="center"><img src="images/re-ref-11.gif"></p>
+      <p>If you type immediately you will be replacing the entire name with a
+         			 new name. Alternatively, you can move the insertion point in the name to make
+         			 textual changes to only a part of it.
+      </p>
+      <p>When you are finished editing the name click elsewhere to indicate
+         			 that the editing is done. Pliny will respond by updating the name. Remember
+         			 that if you change the name the item may change its location in the list (since
+         			 Pliny shows the names of resources here in alphabetical order), or move to
+         			 another initial letter (if you changed the first letter of the name)!
+      </p>
+      <h2>Drag and Drop</h2>
+      <p>The Resource Explorer provides drag and drop support both as a source
+         		  (dragging out) and a target (dragging in).
+      </p>
+      <h3>Dragging Out (Source)</h3>
+      <p>Any resource item displayed by the Explorer can be used a source for
+         			 a drag. A drag from a resource item in the Resource Explorer to a target
+         			 reference area is interpreted by Pliny as a request to create a reference to
+         			 that item in the target.
+      </p>
+      <p>An item can also be dragged to the
+         			 <a href="ref.resourceHolderView.html">Resource Holder</a> view to create a
+         			 temporary reference that could be used later in the Pliny session.
+      </p>
+      <h3>Dragging In (Resource Explorer as the Target)</h3>
+      <p>There are four kinds of target items in the Resource Explorer: 
+         		  
+         <ul>
+            <li><b>A Resource Item</b>: You can drag an item representing a
+               				resource to another resource. This is interpreted as a request to create a
+               				reference to that item in the target item:
+               <p align="center"><img src="images/re-ref-12.png"></p> 
+               				
+               <p>The above figure shows three different possible sources that can
+                  				  be used. If the middle drag source (from the Note "Leaf Motif") is dragged to
+                  				  the item "Lily Ornamentation" in the Resource Explorer a reference to it will
+                  				  be created. If the "drag source" from Leaf Motif: About is dragged to "Lily
+                  				  Ornamentation" then a reference to "Leaf Motif: About" will be created in "Lily
+                  				  Ornamentation". Finally, note that a one object in the Resource Explorer can
+                  be
+                  				  dragged to another source. If the "Leaf Motif" item in the Explorer is dragged
+                  				  to "Lily Ornamentation" also in the Explorer, then a reference to "Leaf Motif"
+                  				  will be created in "Lily Ornamentation".
+               </p> 
+               				
+               <p>Note that when an object is dragged to to a Resource Item the
+                  				  placement of that created resource on the items' resource/annotation area is
+                  an
+                  				  issue. If a reference (in the above figure the right-most drag source is an
+                  				  example) is dragged, then its position in the source is used to place it in
+                  the
+                  				  target as well. If, however, the reference is created as a result of the
+                  				  dragging of an object which represents a resource (as it is for the other two
+                  				  sample drag sources in the above figure), then no position or size can be
+                  				  implied. In these situations Pliny places the newly created reference near the
+                  				  top left of the destination reference/annotation area, and makes it a standard
+                  				  size -- even if this overlaps or obscures another reference that is already
+                  				  there.
+               </p>
+            </li>
+            <li><b>To the "Image" folder</b>: an image or a web page can be
+               				dragged to the <i>Image</i> folder in the Resource Explorer. This is
+               				interpreted as a request to import one or more images into Pliny's image
+               				annotator. For more information about this see the section <i>Importing an
+                  				Image</i> in the section <a href="ref.imageAnnotator.html">Image
+                  				Annotator</a>.
+            </li>
+            <li><b>To the "PDF/Acrobat" folder</b>: a PDF file from your machine
+               				or fetched over the WWW can be dragged to the <i>PDF/Acrobat</i> folder in the
+               				Resource Explorer. This is interpreted as a request to import it into Pliny's
+               				PDF annotator. For more information about this see the section <i>Importing a
+                  				PDF file</i> in the section <a href="ref.pdfAnnotator.html">PDF
+                  				Annotator</a>.
+            </li>
+            <li><b>To the "My Bookmarks" folder</b>: You can create a new
+               				bookmark by dragging the Pliny object you wish to bookmark to the bookmark
+               				folder. You can start the drag from any draggable object that represents the
+               				item, including: 
+               				
+               <ul>
+                  <li>the draggable top left icon in any reference item,</li>
+                  <li>any resource listed elsewhere in the Resource Explorer, </li>
+                  <li>any annotator's drag and drop object, or</li>
+                  <li>from an item in the Pliny Resource Holder view.</li>
+               </ul>
+            </li>
+         </ul>
+      </p>
+      <h2>Exporting and Importing Pliny Data</h2>
+      <p>One accesses Pliny's exporting and importing mechanisms through the
+         		  export (<img align="middle" src="images/icons/export.gif">) and import (<img align="middle" src="images/icons/import.gif">) icons on the Resource Explorer's toolbar.
+      </p>
+      <h3>Exporting Pliny Data</h3>
+      <p>Data can be exported in two formats: 
+         		  
+         <ul>
+            <li><b>PLA format</b>: a zip-file format containing various cache
+               				objects and a master XML file that can be re-imported back into Pliny, and will
+               				recreate all the resource, reference, type and object data. Use this format to
+               				backup and archive your Pliny data.
+            </li>
+            <li><b>XTM format</b>: an XML format that represents much of the
+               				Pliny data as a <a href="http://xml.coverpages.org/topicMaps.html">Topic
+                  				Map</a>. Not all the information that Pliny holds about its objects finds its
+               				way into the Topic Map, and furthermore Topic Maps can describe its objects in
+               				ways that are not compatible with Pliny -- thus, although you can export data
+               				into a Topic Map format, you cannot import from a Topic Map again. Use this
+               				format if you wish to move material out of Pliny into a system that understands
+               				Topic Maps. 
+               				
+               <p><i>Note</i>: Pliny can generate an enriched Topic Map if you
+                  				  take advantage of Pliny's <i>type</i> mechanisms. See the section about them in
+                  				  the reference section to Pliny's <a href="ref.typeManagerView.html">Type
+                     				  manager</a> for more information.
+               </p>
+            </li>
+         </ul>
+      </p>
+      <p>When you request a data export by clicking on the export icon
+         			 (<img align="middle" src="images/icons/export.gif">) Pliny responds by showing you its
+         			 export file dialog box:
+      </p>
+      <p align="center"><img src="images/re-ref-13.gif"></p>
+      <p>This dialog box is a conventional "file save" box, and its
+         			 appearance will be different on different computing systems. Here we see the
+         			 format as it is on a Windows XP machine. Use this box in the usual way to place
+         			 the file where you want it on your machine and to provide a suitable filename.
+         			 
+      </p>
+      <p>Note the "Save as type" option near the bottom. This is where we
+         			 indicate whether we are writing out a PLA (Pliny archive) or XTM (Topic Map)
+         			 file. Pliny starts off assuming that you want to create a Pliny Archive (PLA)
+         			 file. Choose the other option "TopicMap File" (this is shown in the figure
+         			 above) to request an archive to be created in XTM format.
+      </p>
+      <p>When you push the "Save" button Pliny will check to see if the file
+         			 you specify already exists. If it does it will confirm that you want to
+         			 overwrite it. If you do, or if the file name does not already exist, Pliny will
+         			 move directly to its export process. The export process might well take a
+         			 little time to run. If it does so Pliny will display a dialog box showing you
+         			 that the exporting process is under way. It will go away when the exporting is
+         			 finished.
+      </p>
+      <h3>Importing Pliny Data</h3>
+      <p>Data can be imported from two formats: 
+         		  
+         <ul>
+            <li><b>PLA format</b>: an zipfile storage format that can be exported
+               				from Pliny (see the section <i>Exporting Data</i> just above this one), and
+               				will recreate all the resouce, reference, type and object data. Use this format
+               				to restore your Pliny data.
+            </li>
+            <li><b>Plain Text format</b>: A text format for notes. You can create
+               				this format in a plain-text editor such as NotePad outside of Pliny and then
+               				import the material in this format. A colleague creates notes as he is reading
+               				on the train into a hand-held device. By creating notes about what he is
+               				reading in this way he can subsequently import them into Pliny when he gets
+               				home. There is more information about how to format the Plain Text format in
+               				the section <i>Plain Text Import Format</i> below.
+            </li>
+         </ul>
+      </p>
+      <p>When you request a data import by clicking on the export icon
+         			 (<img align="middle" src="images/icons/import.gif">) Pliny responds by showing you its
+         			 import file dialog box:
+      </p>
+      <p align="center"><img src="images/re-ref-14.gif"></p>
+      <p>The dialog box is the normal "open file" dialog box used by your
+         			 operating system (the one showing here comes from Windows XP). Use it to locate
+         			 the file you wish to import.
+      </p>
+      <p>If you have chosen a PLA import then the import will proceed
+         			 immediately.
+      </p>
+      <p>If, alternatively, you have chosen a plain text import then you will
+         			 next see the Text Importing dialog box:
+      </p>
+      <p align="center"><img src="images/re-ref-15.gif"></p>
+      <p>There are three things you can set here: 
+         		  
+         <ul>
+            <li><b>Starting point</b>: specify a resource that is to receive a
+               				reference for items that will be created as a result of the importing.
+               				Generally materials in a text file contain text for notes, and some of the
+               				notes will be referents. If there are referents, the starting point note will
+               				receive a reference for each referent that is created. You can choose a
+               				<i>starting point</i> from your bookmarked resources.
+            </li>
+            <li><b>Marker for Note</b>: notes are separated from each other in a
+               				text file by a text marker that appears in the first position of a line.
+               				Specify here the marker you wish to use to announce the beginning of a new
+               				note. Note that by default a single equal sign is used for this purpose. There
+               				must be a text marker.
+            </li>
+            <li><b>Marker for Referent Note</b>: it is possible that you have
+               				read several different works in creating your text import file -- in which case
+               				the notes will come from different sources. In this situation you may wish to
+               				record information about each source as a referent. Provide here the marker to
+               				be used to announce a note which is also to act as a referent for notes that
+               				follow. Be default a pair of equal signs is used for this purpose.
+            </li>
+         </ul>
+      </p>
+      <p>After you have provided information in this text importing wizard
+         			 you should push "Finish" which wil begin the text importing process.
+      </p>
+      <h3>Plain Text Import Format</h3>
+      <p>A plain text file contains information which Pliny will interpret as
+         			 a set of notes it is to create. It needs to be a "plain text" file (on windows
+         			 machines these can be created by NotePad, for example). It is common for a
+         			 single file to contain more than one note. If so, notes are separated from each
+         			 other by a <i>note marker</i> -- a sequence of characters that appears at the
+         			 very beginning of the line to announce the beginning of a new note. You can set
+         			 the marker to be a string of characters when you fill in the Text Importing
+         			 Wizard (see the previous section), but by default the note marker is "=". A
+         			 note title can be put on the same line, following the note marker. Thus a
+         			 typical note might look like this:
+      </p>
+      <blockquote><pre style="background-color=#FFFFE0">= Wittig 1978: CBLA: text as linear
+text is linearly defined -&gt; "syntagmatic analysis" 
+(Allen Dundes), or "metanymic" anlysis (Roman Jakobson)
+
+Claude Levi-Strauss points out ...
+"emphasizes [...] the diachronically-ordered components 
+of the text" ... "invariably surface-structure features, 
+and of relatively little consequence in the decoding 
+of the text"
+
+instead "paradigmatic deep-structural analysis" is needed. (p 212).
+
+Wittig:
+"these works are built upon network relationships far 
+too complex to be reduced to a linear structure".
+</pre></blockquote>
+      <p>The first line begins with the note marker ("=") to announce a new
+         			 note. Following it on the same line is the name to be associated with the note,
+         			 here "<tt>Wittig 1978: CBLA: text as linear</tt>". Subsequent lines contain the
+         			 body of the note. Note that blank lines will appear as a part of the note's
+         			 body. Indeed, all material following the note marker will appear in the note
+         			 until either the file ends, or another note marker is found.
+      </p>
+      <p>The <i>referent maker</i> (by default "<tt>==</tt>") can be used to
+         			 announce the beginning of a new note that is also to act as a referent. Usually
+         			 a referent note describes the material that was read as the source for the
+         			 notes that follow. A typical referent entry would be:
+      </p>
+      <blockquote><pre style="background-color=#FFFFE0">== Wittig 1978
+Susan Wittig (1978). The computer and the Concept of Text. 
+In Computers and the Humanities Vol 11 pp 211-215.
+</pre></blockquote>
+      <p>As before, the title for the referent (here "<i>Wittig 1978</i>")
+         			 appears on the same line as the referent marker, and the lines following it
+         			 contain the body of the referent note.
+      </p>
+      <p>If a referent is used it should precede the notes to which it
+         			 applies. If you wish to include notes derived from more than one source you can
+         			 put the referent for the first source in at the beginning of the file, followed
+         			 by the notes that belong to it, then the referent for the second source,
+         			 followed by its notes, and so on.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

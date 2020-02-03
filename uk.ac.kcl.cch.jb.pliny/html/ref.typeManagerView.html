@@ -1,0 +1,345 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Type Manager View</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e5050">2.1.9 Type Manager View</a></h1>
+      <h2>What's it for?</h2>
+      <p>Reference objects and connections in a reference/annotation area can
+         		  each be assigned a <i>type</i> -- the <i>type</i> allows one to assert the kind
+         		  of reference or connection it is, and by "kind" we mean the nature of the
+         		  relationship between the the two objects that are connected by the reference
+         		  object or the connection. The Type Manager View allows you to define what types
+         		  you want to have and to associated attributed to these types: 
+         		
+         <ul>
+            <li><b>Name</b>: You can assign a name to the type.
+            </li>
+            <li><b>Colours</b>: You can assign colours that Pliny is to used
+               			 whenever it displays a reference object or connection that is assigned your
+               			 type.
+            </li>
+            <li><b>Roles</b>: You can define roles that the two objects connected
+               			 by the reference object or connection should be asserted as having.
+            </li>
+         </ul>
+      </p>
+      <p>In addition, Pliny maintains a <i>current type</i> which it
+         		  automatically assigns to new reference objects and connections when they are
+         		  created. With the Type Manager you can set the current type to one of the types
+         		  you have defined. Of course although the current type is automatically assigned
+         		  to a newly created reference object or connection when it is first created it
+         		  can subsequently be changed. To change it after it has been created select the
+         		  item you want to change, and then choose "Set Type To..." from the contextual
+         		  menu which you request by clicking with the other mouse button.
+      </p>
+      <h2>Starting the Type Manager View</h2>
+      <p>You can ask for the note search view to be displayed by pushing the
+         		  Type Manager View icon (<img align="middle" src="images/icons/typeIcon.gif">) in
+         		  Pliny's main toolbar very near the top of Pliny's window:
+      </p>
+      <p align="center"><img src="images/types-ref-1.gif"></p>
+      <p>Normally the Note Search View will appear at the right end of Pliny's
+         		  window:
+      </p>
+      <p align="center"><img src="images/types-ref-2.gif"></p>
+      <p>If you don't like having the type manager taking up space at the right
+         		  side of Pliny, then you can drag its tab to the left end -- where it will stack
+         		  on top of other views already there, or to the top and bottom of the screen
+         		  (although it is designed to work best in a portrait- rather than
+         		  landscape-oriented space. You can even drag it outside of Pliny's window
+         		  altogether. See the discussion about this in the section "Moving viewpanes out
+         		  of the Pliny main window" in the topic <a href="intro.panes.html">Managing
+            		  Panes</a>.
+      </p>
+      <h3>The drop-down button</h3>
+      <p>The Type Manager View icon has a drop-down button (<img align="middle" src="images/pull-down.gif">) beside it. Use this as a shortcut way to change
+         			 the current type to one of the types you have available. If you click on this
+         			 button a menu will appear:
+      </p>
+      <p align="center"><img src="images/types-ref-3.gif"></p>
+      <p>You will see a list of all the types you have currently available to
+         			 you (ordered alphabetically by type name). Your list may well be different from
+         			 this (when you first start using Pliny your list will have only two items in
+         			 it, for example, since Pliny starts up with only two types defined for you --
+         			 any others in the list will have to be ones you have created yourself, or have
+         			 brought in through importing items from an import file).
+      </p>
+      <p>The item in the list you see with the dot to its left is the
+         			 <i>current type</i>. Click on one of the items in the list to make it the new
+         			 current type. From then on until you change the <i>current type</i> again or
+         			 until you close down Pliny, the type you have set will be associated with each
+         			 newly created reference object or connection.
+      </p>
+      <h2>Parts of the Type Manager View</h2>
+      <p>The Type Manager view (with its parts labelled) is:</p>
+      <p align="center"><img src="images/types-ref-4.gif"></p>
+      <p>The parts are: 
+         		
+         <ul>
+            <li><b>Tab</b>: The Type Manager View's tab always contains the text
+               			 "Type Manager".
+            </li>
+            <li><b>New Type Icon</b>: Click on the New Type Icon (<img align="middle" src="images/icons/typeIcon.gif">top right side of the view's pane) to request
+               			 that a new Type to be created. The New Type Wizard will begin to guide you
+               			 through the process of specifying a name, colours and roles. See the Commands
+               			 section for more details.
+            </li>
+            <li><b>List of Types</b>: The main part of the view is a table area
+               			 where all the types Pliny currently has avialable is shown -- one type per row.
+               			 There are three columns in the table: 
+               			 
+               <ul>
+                  <li><b>Current Type</b>: The left column will indicate which type
+                     				  is the current type. The current type has the icon
+                     				  <img align="middle" src="images/icons/typeIcon.gif"> in it.
+                  </li>
+                  <li><b>Type Colours</b>: There are 4 colours associated with a
+                     				  type, the icon-like image shown here combines two of them: the header colours
+                     				  (the ones used in the head area of a reference object, or for the connection
+                     				  line).
+                  </li>
+                  <li><b>Type Name</b>: The name of the type is shown here. You can
+                     				  click on the name and then type to change it.
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </p>
+      <h2>Commands</h2>
+      <p>One can interact with the Type Manager in several ways: 
+         		
+         <ul>
+            <li>by means of the Icon on the toolbar,</li>
+            <li>by means of the contextual menu,</li>
+            <li>and by means of menu commands and keyboard shortcuts,</li>
+         </ul> 
+      </p>
+      <p>Drag and Drop operations into or out of the Type Manager and direct
+         		  editing are not supported.
+      </p>
+      <h3>Toolbar</h3>
+      <p>There is only one icon on the Type Manager's menu:</p>
+      <p align="center"><img src="images/types-ref-5.gif"></p>
+      <p>Click on it when you wish to create a new type. It invokes the Type
+         			 Wizard to allow you to provide a name, set colours for it, etc. See the <i>Type
+            			 Wizard</i> section below for details.
+      </p>
+      <h3>Contextual Menu</h3>
+      <p>Invoke the contextual menu by clicking on a type in the list with
+         			 the other mouse button, or on one-button Macintosh holding down the Ctrl key
+         			 while clicking. The contextual menu is generated that connects with the
+         			 selected type in the Type Manager:
+      </p>
+      <p align="center"><img src="images/types-ref-6.gif"></p>
+      <p>The commands are: 
+         		  
+         <ul>
+            <li><b>Make '<i>&lt;type&gt;</i>' Current</b>: make the chosen item
+               				the current type-- the type that will be used whenever any new reference object
+               				or connection line is drawn in a reference or annotation area.
+            </li>
+            <li><b>Edit attributes of <i>'&lt;type&gt;</i>'</b>: click here to
+               				invoke the Type Wizard on the current type. The wizard will then allow you to
+               				change the attributes (colours, name, etc) attached to the selected type. See
+               				the section on the <i>Type Wizard</i> below for details.
+            </li>
+            <li><b>Delete '<i>&lt;type&gt;</i>'</b>: click here to delete a type.
+               				Pliny will check to see if the type you are trying to delete is currently
+               				attached to any reference objects or connection lines. If it is Pliny will ask
+               				you to choose a type to be assigned as a replacement. You can also then cancel
+               				request to delete.
+            </li>
+            <li>Create a new type: This option is not related to the current
+               				type. It works exactly like the "make new type" icon in the toolbar and allows
+               				you to create a new type. It invokes the Type Wizard -- see the section about
+               				it below for details.
+            </li>
+         </ul>
+      </p>
+      <h3>Menubar and Keyboard Operations</h3>
+      <p>Only two menubar/keyboard operations are supported: 
+         		  
+         <ul>
+            <li><b>Delete</b>: deleting a type may be requested either from
+               				Edit/Delete or by pressing the Delete key while a type is selected. Pliny will
+               				check to see if the type you are trying to delete is currently attached to any
+               				reference objects or connection lines. If it is Pliny will ask you to choose a
+               				type to be assigned as a replacement. You can also then cancel request to
+               				delete.
+            </li>
+            <li><b>Double-Click</b>: a double-click on any type makes it the
+               				current type -- the type that will be used whenever any new reference object or
+               				connection line is drawn in a reference or annotation area.
+            </li>
+         </ul>
+      </p>
+      <h3>The Type Wizard</h3>
+      <p>The Type Wizard is invoked when you are creating a new type or
+         			 changing the attribute of an existing one. It is the place where you can
+         			 specify: 
+         		  
+         <ul>
+            <li>The type's name</li>
+            <li>The colours associated with the type</li>
+            <li>The Roles associated with the type. Roles are involved when one
+               				exports data from Pliny into a Topic Map.
+            </li>
+         </ul>
+      </p>
+      <p>There are two screens associated wtih the Type Wizard. The first
+         			 screen looks like this:
+      </p>
+      <p align="center"><img src="images/types-ref-7.gif"></p>
+      <p>The colours section probably requires more explanation. Associated
+         			 with a type are two sets of colours -- four colours in all. The first set is
+         			 used to display the <i>title area</i> in a reference object and the colour
+         			 associated with a collection line. The second set is used to display the
+         			 <i>content/body</i> of a reference object:
+      </p>
+      <p align="center"><img src="images/types-ref-9.gif"></p>
+      <p>In both cases there are two colours involved -- the colour to
+         			 display the <i>text</i> and the colour to display the <i>background</i>. In our
+         			 example, then, the four colours are: 
+         		  
+         <ul>
+            <li>Title text: the colour of the title text is white.</li>
+            <li>Title backgound: the colour of the title background is dark
+               				orange
+            </li>
+            <li>Body text: the colour of the body text is black</li>
+            <li>Body background: the colour of the body background is light
+               				orange.
+            </li>
+         </ul>
+      </p>
+      <p>There are, then, four buttons to select colours -- two to the right
+         			 of the <i>Title Colours</i> area, and two to the right of the <i>Body
+            			 Colours</i> area. Click on one of them to specify the appropriate colour. You
+         			 will get, as a response, the standard colour selection tool provided by your
+         			 operating system and can use it to change the colour as you wish.
+      </p>
+      <p>There is also a <i>Contrast Text</i> button: use it to ask Pliny to
+         			 choose a contrasting colour for the background colour. I have found, however,
+         			 that Pliny has even worse colour sense than I do -- so you will probably find
+         			 that after you have asked Pliny to choose the text colour for you that you will
+         			 then want to go and do it yourself.
+      </p>
+      <p>If you only wish to provide a name and colours for your type, click
+         			 on the <i>Finish</i> button to close the wizard. However, there is a second
+         			 screen for information about the current type, but it is only relevant if you
+         			 plan to export your data into a Topic Map. If you plan to do this you probably
+         			 don't need to be told what a Topic Map is! However, if you are reading here
+         			 about Pliny you may not know what a Topic Map is (indeed, don't have to know to
+         			 use Pliny in a way that will be helpful to you). For those who don't know,
+         			 however, a Topic Map is an ISO standard that Google describes as "an ISO
+         			 standard for describing knowledge structures and associating them with
+         			 information resources". We will not discuss them in any more detail here, but
+         			 there is an excellent introduction to the base concepts behind topic maps at
+         			 Steve Popper's <a href="http://www.ontopia.net/topicmaps/materials/tao.html">the TAO of Topic
+            			 Maps</a>).
+      </p>
+      <p> Pliny allows you to export your Pliny materials as a topic map (see
+         			 the brief discussion about this in the section "Exporting and Importing Data"
+         			 in the reference section to the <a href="ref.resourceExplorer.html">Resource
+            			 Explorer</a>). If you wish to do this you may wish to manage how Pliny's
+         			 generated Topic Map expresses roles associated with your Pliny types. This is
+         			 the purpose of the Topic Map wizard's second screen, and you can see it by
+         			 clicking on the <i>Next</i> button while looking at the wizard's first screen.
+         			 It looks like this:
+      </p>
+      <p align="center"><img src="images/types-ref-8.gif"></p>
+      <p>Both references and connection lines are exported by Pliny into a
+         			 <i>topic map</i> as an <i>association</i> -- used here as a technical <i>topic
+            			 map</i> term meaning an element that relates two topics together. Topics in an
+         			 association usually take on roles in the assocation that specify the nature of
+         			 the relationship between the topics that participate in the topic. If, for
+         			 example, a topic map about people recorded geneological relationships, then one
+         			 of the assocations between person topics would be "parent/child", and the two
+         			 obvious roles it would have is "who are the parents" and "who is the child".
+         			 You can use this second screen in the wizard to specify roles that you want to
+         			 be provided in your exported Topic Map.
+      </p>
+      <p>Note that the screen shows two almost identical parts, one for the
+         			 source and one for the target. 
+         		  
+         <ul>
+            <li>For a reference object, the source is the containing object. If
+               				our Vico Frontispiece resource contains a note describing one of the objects in
+               				the frontispeice image, then the source is the Vico Frontispiece resource
+               				itself;
+            </li>
+            <li>for a reference object, the target is the contained object.
+               				Continuing our example just mentioned, the note describing the object is the
+               				target;
+            </li>
+            <li>for a connection line: the starting end of the line is the
+               				source; and
+            </li>
+            <li>for a connection line: the ending end of the line is the
+               				target.
+            </li>
+         </ul>
+      </p>
+      <p>Let us now focus for the moment on the Source half of the 2nd wizard
+         			 screen (the target part is almost exactly the same): 
+         		  
+         <ul>
+            <li>There is a radio button in front of <i>Invent Role Name of "~
+                  				Source"</i>: When this is chosen Pliny will create a topic and give it a name
+               				by taking the name of the type and attaching "<tt> Source</tt>" to the end, and
+               				will then use this created topic as the source role.
+            </li>
+            <li>If the radio button in front of <i>Use chosen resource for the
+                  				Target role</i>:is clicked, then you must specify Pliny resource (usually a
+               				note) which is to act as the role for your source. Then the remaining areas of
+               				the Source section will become active: 
+               				
+               <ul>
+                  <li>Type the name of the resource you want to designate as the
+                     					 role source in the one-line field immediately below the <i>Use chosen
+                        					 resource...</i> label. As you type the scrolling area below will fill with
+                     					 existing Pliny resources whose names begin with the letters you have typed so
+                     					 far. If you see in the list of existing resources the resource you wish to use
+                     					 as the source role specification, choose it from the bottom area to say "this
+                     					 is the resource I want to specify".
+                  </li>
+                  <li>If no resource turns up in the bottom, you can ask Pliny to
+                     					 create a new Pliny note for you, using as its name the name you have typed in
+                     					 so far. If you wish this to happen make sure the <i>New?</i> box is
+                     					 ticked.
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </p>
+      <p>The target half of the wizard page operates in the same way as the
+         			 source part except that you use it to specify an item that is to take on the
+         			 role for targets attached to this type.
+      </p>
+      <h2>Using the Type manager as a "type palette"</h2>
+      <p>The type manager can be used as a kind of type palette to easily
+         		  assign references to Pliny items to a type. See the Section <i>Managing types
+            		  by dragging and dropping them from the Type Manager</i> in
+         		  <a href="ref.subComponents.html">Pliny SubComponents</a> for details.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

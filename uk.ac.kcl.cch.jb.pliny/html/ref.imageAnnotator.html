@@ -1,0 +1,349 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Image Annotator</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e3612">2.1.2 Image Annotator</a></h1>
+      <p>This section provides a reference section for the Pliny's image
+         		annotator. If you are unfamiliar with how to use the image annotator within
+         		Pliny, you might wish to see <a href="tut.plinyWithImages.html">the tutorial on
+            		this subject</a>. 
+      </p>
+      <h2>What's it for</h2>
+      <p>The Image Annotator can be used whenever you wish to annotate an
+         		  image. It will launch in the large central "working are" in the Pliny
+         		  window.
+      </p>
+      <h2>Importing an Image</h2>
+      <p>An image must be imported into the Pliny system before it can be
+         		  annotated. The importing process does two things: 
+         		
+         <ul>
+            <li>It caches a copy of the image in Pliny's own storage area. Pliny
+               			 always uses the image in its cache whenever it shows it to you.
+            </li>
+            <li>It creates an image resource which is Pliny's way of addressing the
+               			 image itself.
+            </li>
+         </ul>
+      </p>
+      <p>You import the image by dragging a reference to it, or from a web page
+         		  containing the image and dropping it on the Image folder in the Resource
+         		  Explorer:
+      </p>
+      <p align="center"><img src="images/image-import.png"></p>
+      <p>This invokes the image importer which does somewhat different things
+         		  depending upon which of the three kinds of sources you give it.
+      </p>
+      <h3>Importing from an Image FIle</h3>
+      <p>If you drag an image icon from the folders representing your
+         			 machine's storage onto the Image folder, the following things happen: 
+         		  
+         <ul>
+            <li>The image is cached.</li>
+            <li>A Pliny resource for the image is created.</li>
+            <li>The resource is given a name based on the filename of the image.
+               				You will probably want to change the resource's name.
+            </li>
+            <li>The image annotator opens.</li>
+         </ul>
+      </p>
+      <p>You are now ready to start annotating the image.</p>
+      <h3>Importing from a Web Page</h3>
+      <p>You can request the importing of an image from a web page in three
+         			 ways: 
+         		  
+         <ul>
+            <li>When looking at the web page in Pliny's embedded browser you can
+               				either click the Image button (<img align="middle" src="images/icons/imageIcon.gif">)
+               				or drag the drag source to the Image folder in the Resource Explorer:
+               				
+               <p align="center"><img src="images/image-import-browser.png"></p>
+            </li>
+            <li>When viewing a web page in an external browser you can drag the
+               				icon because the URL in the location field to the Image folder in the Resource
+               				Explorer:
+               <p align="center"><img src="images/image-tut-2.png"></p>
+            </li>
+            <li>If you have either the HTML page or a shortcut to it on your hard
+               				disk you may drag it's icon to the Image folder in the Resource Explorer:
+               				
+               <p align="center"><img src="images/image-import-file.png"></p>
+            </li>
+         </ul>
+      </p>
+      <p>What the importer does in all these cases is the same: 
+         		  
+         <ul>
+            <li>Suitable images (images larger than 150x150 pixels) are each
+               				treated as potentially separate image resources. If two or more candidates are
+               				found, Pliny asks you which ones you wish to import:
+               <p align="center"><img src="images/image-tut-1a.png"></p> 
+               				
+               <p>Click on the "Include?" check box to ask for an image to be
+                  				  included. After you have finished choosing items, and you click on the "OK"
+                  				  button, each selected image is then cached.
+               </p>
+            </li>
+            <li>For each selected image a Pliny image resource is created. It is
+               				given a name derived from the title of the web page.
+            </li>
+            <li>A web page resource for the source web page is created if it does
+               				not already exist, and a reference to it is put on the image(s). It is given a
+               				name derived from the title of the web page.
+            </li>
+            <li>A note resource is created from the text found on the web page,
+               				and a reference to it is put on the image(s). It is given a name derived from
+               				the title of the web page.
+            </li>
+            <li>Each image created in this way is opened in the Editor pane.</li>
+         </ul>
+      </p>
+      <h3>Importing an image from a web page</h3>
+      <p>You can import a single image from a web page by pointing the mouse
+         			 pointer at the image and dragging it to the Image folder in the Resource
+         			 Explorer. In this case the importer will: 
+         		  
+         <ul>
+            <li>Cache the image</li>
+            <li>Create a Pliny image resource referring to this image.</li>
+            <li>Name the resource according to the URL for the image. You will
+               				probably wish to edit the name.
+            </li>
+            <li>Open the image in the image annotator.</li>
+         </ul>
+      </p>
+      <h2>Screen components</h2>
+      <p>Here is a typical display of the Image Annotator, with its parts
+         		  labelled:
+      </p>
+      <p align="center"><img src="images/image-parts.png"></p>
+      <p>The Image annotator has four major areas that appear on the screen: 
+         		
+         <ul>
+            <li>As for all objects that appear in Pliny's main working area, a tab
+               			 shows above the editor pane, and identifies the image. The name showing there
+               			 comes from the name of the image resource. If you wish to change the name of
+               			 the resource you can do so by editing it in the Image Resource Name field, or
+               			 in the <a href="ref.resourceExplorer.html">Resource Explorer</a>.
+            </li>
+            <li>Below the tab is the main working area (called elsewhere the Pliny
+               			 toolbar because all of Pliny's annotation and notetaking tools have it). It
+               			 contains (left to right): 
+               			 
+               <ul>
+                  <li>this image's "Drag and Drop Object" (this is described
+                     				  below).
+                  </li>
+                  <li>a field in which the image resource's name is shown (here
+                     				  labelled "Image Resource Name") -- change the name by editing the field, 
+                  </li>
+                  <li>A working toolbar area provides a set of tools that you can use
+                     				  to create objects in the annotation area. For more information about it, see
+                     				  the description below.
+                  </li>
+                  <li>a "spinner" labelled "Image Size Control" in the figure above
+                     				  which is used to control the displayed size of the image -- click on the
+                     				  spinner's up or down arrows, or type in a value (between 10 and 100) to change
+                     				  the size of the image's display (this described immediately below),
+                  </li>
+               </ul> 
+            </li>
+            <li>Below this area, and the main working area in the pane, is the
+               			 <i>Annotation Area</i>. Here the image appears, and the annotations attached to
+               			 it can be created and edited. It works in a way that is very similar to the
+               			 Note Editor's and embedded Web Browser's <i>Reference Area</i> except that the
+               			 annotation and note materials appear combined with the image they belong to.
+               			 There is more about the Annotation Area and how to work in it in
+               			 <a href="ref.annotationArea.html">its description</a>.
+            </li>
+         </ul>
+      </p>
+      <h3>The Image Size Spinner</h3>
+      <p>The image size control appears as a "spinner", shown here:</p>
+      <p align="center"><img src="images/image-size-spinner.gif"></p>
+      <p>The number in the spinner shows the size (as a percentage) of the
+         			 image showing vs the full size of the image. The number showing here ("15")
+         			 should be read, then, that the image showing below is shrunk to 15% of the full
+         			 size of the image. To change the size of the image you can either replace the
+         			 number showing with a different number by clicking into the box and typing in
+         			 the new number (values 10 to 100 for 10% to 100% can be set). You can also
+         			 change the number by clicking (and perhaps holding) on the up arrow or down
+         			 arrow buttons to the right size of the spinner. Note that the image size will
+         			 not actually change until you <i>release</i> the up or down arrow.
+      </p>
+      <h2>ToolBar</h2>
+      <p>The toolbar for the Image Annotator (which Eclipse places in the main
+         		  toolbar area) contains tools that work with the Annotator. Most of them are
+         		  used with the Annotation Area and allow things to be done within it. The
+         		  toolbar for the Image Annotator looks like this:
+      </p>
+      <p align="center"><img src="images/image-toolbar.png"></p>
+      <ul>
+         <li><img align="middle" src="images/icons/referencersOn.gif">: Use this icon by
+            			 clicking on the down arrow symbol (<img align="middle" src="images/pull-down.gif">) to
+            			 its right rather than the icon itself. Clicking the down-arrow will cause Pliny
+            			 to generate a list of all resources managed by Pliny that refer to the current
+            			 image. To open one of these resources, choose it from the list.
+         </li>
+         <li><img align="middle" src="images/icons/undo.gif">: This icon allows you to
+            			 undo the previous action you have done in the Annotation area. Undo can also be
+            			 chosen from the "Edit" menu, or requested using the standard keystroke for your
+            			 platform.
+         </li>
+         <li><img align="middle" src="images/icons/redo.gif">: This icon allows you to
+            			 redo an action you have just undone in the Annotation area. Redo is also
+            			 available from the "Edit" menu, or can be requested by the standard keystroke
+            			 for redo.
+         </li>
+         <li><img align="middle" src="images/icons/noteIcon.gif">: This icon allows you
+            			 to create a new note and a note reference for it that will appear in the
+            			 Annotation area. You can use it in two ways: 
+            			 
+            <ol>
+               <li>first click on the <img align="middle" src="images/icons/noteIcon.gif">
+                  				  button, then in the annotation area drag over the area there that you wish to
+                  				  be used for the space the reference is to occupy, or
+               </li>
+               <li>you can drag the <img align="middle" src="images/icons/noteIcon.gif">
+                  				  button itself into the annotation area. This will give you a "standard size"
+                  				  note which you can later change its size.
+               </li>
+            </ol> After Pliny has responded and created a reference and new note
+            			 for you, you will want to type in the note name and its text in the newly
+            			 created space. Each time a new note is created the "create new note" state is
+            			 cleared, and you must push the <img align="middle" src="images/icons/noteIcon.gif">
+            			 again to create another note or drag a new note from the
+            			 <img align="middle" src="images/icons/noteIcon.gif"> button. There is a keyboard
+            			 shortcut that puts Pliny in "create new note" state as well: F5).
+         </li>
+         <li><img align="middle" src="images/icons/annotationIcon.gif">: This icon
+            			 creates a full annotation for you. An annotation consists of a note, a
+            			 reference to the note (on this image), an anchor the note refers to and a
+            			 connection line between them. To use it, first click on the
+            			 <img align="middle" src="images/icons/annotationIcon.gif"> button, then drag over the
+            			 area over the image where you wish the anchor to be placed. Pliny will respoind
+            			 by creating the anchor, a note and note reference and a linking line. You can
+            			 then type in the note title and text in the newly created reference and can
+            			 move the note to another place on the screen if you wish. Each time a new
+            			 annotation is created the "create new annotation" state is cleared, and you
+            			 must push the <img align="middle" src="images/icons/annotationIcon.gif"> again to
+            			 create another annotation. The annotation button is a convenience only -- using
+            			 it is exactly equivalent to using the anchor button (<img align="middle" src="images/icons/anchorIcon.gif">) to create the anchor, the note button
+            			 (<img align="middle" src="images/icons/noteIcon.gif">) and the connection button
+            			 (<img align="middle" src="images/icons/connectionIcon.gif">) to join them together. The
+            			 keyboard shortcut for this function is F7.
+         </li>
+         <li><img align="middle" src="images/icons/anchorIcon.gif">: This icon creates
+            			 an anchor area for you. To use it first click on the
+            			 <img align="middle" src="images/icons/anchorIcon.gif"> as a button, then in the
+            			 annotation area drag out the area where you wish the anchor to appear. Pliny
+            			 will respond by creating the anchor for you. Each time a new anchor is created
+            			 the "create new anchor" state is cleared and you must push the
+            			 <img align="middle" src="images/icons/anchorIcon.gif"> again to create another anchor.
+            			 The keyboard shortcut for this is F8.
+         </li>
+         <li><img align="middle" src="images/icons/connectionIcon.gif">: This icon
+            			 allows you to create a connection between two objects that appear in the
+            			 annotation area (a line joining them). A connection is usually used to
+            			 represent some sort of conceptual connection between the two items.. To
+            			 establish a connection line first click on the
+            			 <img align="middle" src="images/icons/connectionIcon.gif">, then click in the reference
+            			 or anchor that should hold the start of the line, and drag to the reference or
+            			 anchor where the line should end. Each time you wish to create a new connection
+            			 you must first push the <img align="middle" src="images/icons/connectionIcon.gif">
+            			 again. The keyboard shortcut for this function is F6
+         </li>
+         <li><img align="middle" src="images/icons/allClose.gif">: Click on this icon to
+            			 cause all the references in this reference area to be minimized.
+         </li>
+      </ul>
+      <h2>Drag and Drop</h2>
+      <p>An important element of Pliny's design was in the work involved in
+         		  trying to make the creation of notes and annotations as straight-forward as
+         		  possible. To this end we have added various drag and drop features to Pliny. Of
+         		  course, references or anchors can be dragged about in a image's annotation area
+         		  -- that is how you make use of the 2D space the annotation area provided to
+         		  organise the notes. However, drag and drop can also be used to copy materials
+         		  from outside the image annotator into it, or from inside the image annotator to
+         		  other areas. Here is a summary of these drag and drop features available in the
+         		  annotator:
+      </p>
+      <h3><i>Into</i> the Annotator
+      </h3>
+      <p>Here are the kind of things that can be dragged from elsewhere into
+         			 the annotation area: 
+         		  
+         <ul>
+            <li>A reference to any resource can be dragged from the Resource
+               				Explorer to the 2D annotation area. Pliny will interpret this as a request to
+               				create a reference to that resource there. A reference to a note in the Note
+               				Search View works the same way.
+            </li>
+            <li>If you have more than one editor open at the same time you can
+               				drag a reference from one into the other by dragging the reference's <i>drag
+                  				source object</i>. See the figure in the section <i>Out of the Annotator</i> to
+               				see where the drag source objects are.
+            </li>
+            <li>Text can be selected from another program that supports Drag and
+               				Drop (such as Word) outside of Pliny and dragged onto the annotation area.
+               				Pliny will interpret this as a request to create a note and a reference to it
+               				in the area. If the dragged text begins with a short line of text that looks
+               				like a heading, Pliny will interpret this as the note's title.
+            </li>
+         </ul>
+      </p>
+      <h3><i>Out of </i>the Annotator
+      </h3>
+      <p>Like the other editors in Pliny the annotator provides a <b>drag
+            			 source object</b> for its <i>own</i> image resource in the top left area in its
+         			 Pliny toolbar:
+      </p>
+      <p align="center"><img src="images/image-dnd-object.png"></p>
+      <p> If you wish to create a reference to this particular image resource
+         			 within another resource you can drag this object to the place you wish it to
+         			 appear, or you can locate the source image resource in the Resource Explorer
+         			 and drag it from there.
+      </p>
+      <p>Furthermore, the image annotator has an annotation area, and
+         			 references contained in that area can be dragged to the annotation or reference
+         			 areas of other resources by dragging the drag source object in the reference.
+         			 Here is an example:
+      </p>
+      <p align="center"><img src="images/image-dnd.gif"></p>
+      <p>Here we see Pliny displaying a note at the bottom and an image at
+         			 the top (the help section "Dividing a Pane: docking" in the topic
+         			 <a href="intro.panes.html">Managing Panes</a> describes how to split the Pliny
+         			 window in this way). Suppose that the user wishes to add a reference to the
+         			 "Leaf Motif" note in the image to the "Leaf Motif: About" note at the bottom.
+         			 To do this the user should point the mouse pointer at the Leaf Motif reference
+         			 object's drag source object in the top area and drag it to the bottom area.
+         			 When the mouse bottom is released Pliny will create a new reference to the same
+         			 object here. <b>Note</b> that dragging between notes will <i>only</i> work when
+         			 one points at the specific drag source object -- here the
+         			 <img align="middle" src="images/icons/noteIcon.gif">icon in the Note's reference
+         			 object. If one points elsewhere in the reference's object Pliny will <i>not</i>
+         			 understand it as a start of a request to drag a reference from one note to
+         			 another -- it will see it as a request to move the object in its current
+         			 reference space.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

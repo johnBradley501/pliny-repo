@@ -1,0 +1,247 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Eclipse UI Basics</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e126">1.1.1 Eclipse UI Basics</a></h1>
+      <p><i>Pliny</i> can operate both as a standalone application, and as a
+         		plugin to a fuller version of <i>Eclipse</i>. Much of the operation is the same
+         		in both cases, but there are differences in aspects of the screen layout since
+         		elements on the screen when <i>Pliny</i> is run within a full version of
+         		Eclipse will have many non-Pliny elements supporting the other "non-Pliny"
+         		things that other plugins in a full Eclipse allow you to do. In this section,
+         		however, we will show the screen as it looks when <i>Pliny</i> is run
+         		standalone. In many other examples within these documents, however, you may see
+         		screen shots taken when <i>Pliny</i> is run within a full version of
+         		Eclipse.
+      </p>
+      <p>The basic screen layout for <i>Pliny</i> as shown when run standalone on
+         		a Windows machine (see topic later on this page about how it looks on the
+         		Macintosh) is shown below:
+      </p>
+      <p align="center"><img src="images/screen1.gif"></p>
+      <p>Pliny operates as a part of Eclipse, and certain aspects of the screen
+         		layout have to do with the way that Eclipse deals with the screen: 
+         	 
+         <ul>
+            <li> 
+               		  
+               <p><b>Menu Bar</b>: The top area of the screen/Eclipse window contains
+                  			 a conventional menu bar. On a Windows machine it looks like this:
+               </p>
+               		  
+               <p align="center"><img src="images/menu-bar.gif"></p> 
+               		  
+               <p> (On the Macintosh, eclipse shows its menu bar at the very top of
+                  			 the screen, as is normal for applications on the Macintosh). You use the menu
+                  			 bar in the same way that you use it on other programs you are familiar with --
+                  			 select an menu with the mouse and then select an item from the drop-down menu
+                  			 that results. The menu here provides a relatively standard set of functions,
+                  			 including, under the File menu, the <i>Exit</i> command which ends
+                  			 <i>Pliny</i>.
+               </p>
+            </li>
+            <li><b>Toolbar</b>: Directly below the menu area one sees a row of icons
+               		  split, left and right, into two groups. This area near the top of Pliny's
+               		  window is called in Eclipse-talk the "<i>Toolbar</i>". It looks like this:
+               		  
+               <p align="center"><img src="images/toolbar1.gif"></p> 
+               		  
+               <p>A tool bar provides a set of icons that, when clicked on, carry out
+                  			 actions for you. There is more information about toolbars
+                  			 <a href="intro.toolbars.html">here</a>.
+               </p>
+            </li>
+            <li><b>Panes:</b> The large central area of the screen and directly below
+               		  the toolbar is the principal display area of Eclipse and Pliny. In the screen
+               		  above it is divided into two <i>panes</i> -- a relatively narrow one to the
+               		  right, and the larger area to the left. In the figure above the narrow left
+               		  panel contains Pliny's <i>Resource Explorer</i> view -- you can see Eclipse
+               		  trying to show you this name as "Resource Explo..." in the <i>tab area</i>; the
+               		  top left corner; of the view's panel. The larger left area is what Eclipse
+               		  considers its <i>editor pane</i> and we can see there an image of the
+               		  frontispiece of Vico's <i>New Science</i> with various annotations added to it.
+               		  Often in computing one equates "editor" with "text editor", although as you can
+               		  see here, Pliny's editors often provide facilities other than those needed
+               		  simply to edit text. In general, the editor pane provides access to things that
+               		  are in Pliny called <i>resources</i>.
+            </li>
+            <li><b>Editor Pane</b>: In Eclipse, and therefore in Pliny as well, the
+               		  editor pane can hold more than one open resource. 
+               		  
+               <ul>
+                  <li><b>Tabs</b>: At the top of the editor page is a set of tabs that
+                     				identify what resources are currently open there. The tabs contain an icon that
+                     				indicates the kind of resource it is, and its name. There are three tabs
+                     				showing, so three Pliny resources are open, with names "Vico Frontispiece",
+                     				"Simweb dimension 1 outliers" and "Simweb sample image: Intro". The tab in
+                     				white belongs to the item currently displaying on the screen -- in this case
+                     				the materials for the "Vico Frontispiece" resource. Note that the first
+                     				resource tab shows an <img align="middle" src="images/icons/imageIcon.gif"> icon, and
+                     				the following two tabs show a <img align="middle" src="images/icons/noteIcon.gif">
+                     				icon. This reflects that fact that the first tab is attached to the display of
+                     				Image resources, and the other two tabs are for a Note resource. The
+                     				significance of the kinds of resources will be explained later.
+                  </li>
+                  <li>You can <i>close</i> any of the open resources (removing it from
+                     				the set of currently open resources) by clicking on the X showing in the tab to
+                     				the right of the resource name "Vico Frontespiece".
+                  </li>
+                  <li>Knowing how to manage the contents of panes and how they are
+                     				displayed on the screen is essential to the effective use of Eclipse in
+                     				general, and Pliny in particular. The section <a href="intro.panes.html">Managing
+                        				Panes</a> provides more detailed information about this.
+                  </li>
+               </ul>
+            </li>
+            <li><b>Perspective</b>: In Eclipse a particular layout of panels is
+               		  called in a <i>perspective</i>, and the name of the perspective we are seeing
+               		  here is the <i>Pliny perspective</i>. If you are running Pliny not as a
+               		  standalone program but instead within a mix of other applications within
+               		  Eclipse you will probably find that Eclipse provides you with a number of
+               		  different screen layouts -- each one designed for a specific type of task or
+               		  application. In the standalone version only the Pliny perspective is available
+               		  and there is no need to show you what perspective is active. However, in the
+               		  full version of Eclipse the currently active perspective is named in the upper
+               		  right corner of the screen.
+            </li>
+            <li>The border between the two panes can be moved by you. To do so place
+               		  the mouse pointer in the strip that separates the two panes. The mouse pointer
+               		  should change to "<img align="middle" src="images/horiz-resize-pointer.jpg">". You can now, by holding down the main
+               		  mouse button, drag the boundary to the right or the left.
+            </li>
+         </ul>
+      </p>
+      <h2>Views and Editors</h2>
+      <p>Eclipse supports two kinds of displays that appear in panes:
+         		  <i>views</i> and <i>editors</i>. Thus, each of Pliny's major user components is
+         		  classified as either a view or an editor as well. Although the distinction
+         		  between view and editor is often relevant for traditional Eclipse applications,
+         		  it is less comfortable within Pliny itself. However, there are some differences
+         		  between how views and editors behave that is useful to understand, and in this
+         		  section we will describe the difference: 
+         		
+         <ul>
+            <li><b>Editors</b>: Eclipse is designed in such a way that for the user
+               			 an editor is meant to be the centre of focus when work is being done. Eclipse
+               			 will allow you to operate more than one annotator/editor at a time (perhaps
+               			 each one open to different things), but they all must be displayed in Eclipse's
+               			 editor pane, which usually takes up most of the screen. 
+               			 
+               <p>In the context of Pliny, the idea that the editors are the centre
+                  				of focus for work is preserved. Pliny is a tool for creating and managing notes
+                  				and annotation. It is this activity that is the centre of the user's attention
+                  				when s/he is using Pliny. Thus, various tools that allow you to create and
+                  				manage notes and annotations are all created as Eclipse editors. These are
+                  				Pliny's <a href="ref.noteEditor.html">Note Editor</a>, the embedded
+                  				<a href="ref.webBrowser.html">Web Browser</a>, and the
+                  				<a href="ref.imageAnnotator.html">Image-</a> and <a href="ref.pdfAnnotator.html">PDF annotators</a>. Note that although these are all
+                  				editors from Eclipse's perspective, only the Note Editor actually has the word
+                  				"editor" in its name.
+               </p> 
+               			 
+               <p>Furthermore, although all editors must share a single pane,
+                  				several instances of any particular editor may be open at the same time, and
+                  				each instance is distinguished by its Tab. Thus, if 3 different notes and 2
+                  				images are open at a point in a Pliny session, all of them must appear in the
+                  				editor pane. If there is horizontal space to show them all, five tabs will
+                  				appear at the top of the editor pane, three of them referring to the three
+                  				Pliny notes and two to two Pliny-managed images.
+               </p>
+            </li>
+            <li><b>Views</b>: In Eclipse a view supports the central work that goes
+               			 on in the Editor with various kinds of supplementary services. Views may be
+               			 spread between one or more panes (never in the editor pane), and usually the
+               			 view panes are arranged around the central editor pane. Pliny's views are the
+               			 the <a href="ref.resourceExplorer.html">Resource Explorer</a>,
+               			 <a href="ref.containmentView.html">Containment View</a>,
+               			 <a href="ref.resourceHolderView.html">Resource Holder View</a>,
+               			 <a href="ref.noteSearchView.html">Note Search View</a>,
+               			 <a href="ref.typeManagerView.html">Type Manager View</a> and the
+               			 <a href="ref.annotationView.html">Annotation View</a>. 
+               			 
+               <p>Although views may be spread between several panes, only one
+                  				instance of any particular Pliny view may be open at a time -- there cannot be
+                  				two instances of the <i>Resource Explorer</i> available at one time, for
+                  				example.
+               </p>
+            </li>
+         </ul>
+      </p>
+      <p>Eclipse normally defines a particular relationship between an editor
+         		  or view and the pane in which it appears on the screen, and this rule derives
+         		  from the uniqueness of the editor pane: All editors must share the editor pane,
+         		  and there may only be one editor pane, whereas a set of views may be
+         		  distributed between a number of separate panes. Thus, it is important to
+         		  remember that although separate editors must be stacked into a single pane --
+         		  the editor pane -- and the views may also be stacked into a single pane (or
+         		  more than one), an editor and a view cannot share a single pane -- all the
+         		  editors must appear in the single editor pane, and the views must appear in one
+         		  or more view panes.
+      </p>
+      <p>The following illustration (which shows Pliny at a point where several
+         		  editors and views are open at the same time) illustrates some aspects of the
+         		  relationships between panes and editors/view. The panes have been identified
+         		  within the illustration by surrounding them with orange borders, and attaching
+         		  an orange label to them. Of course, these orange labels and boxes would not be
+         		  displayed by Pliny itself:
+      </p>
+      <p align="center"><img src="images/views-editors.gif"></p>
+      <p>Points to observe about this figure: 
+         		
+         <ul>
+            <li>First, although the Pliny window will always have an Editor Pane,
+               			 it needn't always have any View Panes. The Editor Pane will take up whatever
+               			 space is not occupied by the View Panes. Here we see three View Panes, however
+               			 when you start up Pliny for the first time you will at first see only one View
+               			 Pane (to the left of the Editor Pane area), and even this can be closed and
+               			 removed from the screen if you wish. The section <a href="intro.panes.html">Managing Panes</a> tells you how to get more than one View
+               			 Pane operating if you wish.
+            </li>
+            <li><b>Editor Pane</b>: Note first the editor pane (which is shown here
+               			 as surrounded on three sides by view panes) contains three open editors -- you
+               			 can see their three tabs at the top of the editor pane. The editor pane has
+               			 open editors for <i>Vico Frontispiece</i>, <i>Sibweb dimension...</i> and
+               			 <i>Simweb sample i...</i>. At the time this screen image was taken <i>Vico
+                  			 Frontispiece</i> was currently at the front of the stack of open editors, so
+               			 only its display is visible in the editor pane.
+            </li>
+            <li><b>View Panes</b>: Surrounding the editor pane on three sides are
+               			 three view panes. The top left view pane is displaying the <i>Resource
+                  			 Explorer</i> view, the top right pane displays the <i>Type Manager</i> view,
+               			 and the bottom pane displays the <i>Containment</i> view. You can see their
+               			 names in the tabs area showing at the top of each view Pane area. We will see
+               			 in the section <a href="intro.panes.html">Managing Panes</a> that the spatial
+               			 relationship between the view panes and the editor pane can be altered by
+               			 dragging and dropping them -- indeed, two views can share the same pane, but
+               			 when the screen looks like it does above one cannot open more than the one
+               			 instance of, say, the <i>Resource Explorer</i> since at this time it is already
+               			 displaying.
+            </li>
+         </ul>
+      </p>
+      <p>Now that you have seen the main layout of the screen and been
+         		  introduced to editors and views, go to the <a href="intro.toolbars.html">Toolbar</a> section to read more about the toolbars, or
+         		  the <a href="intro.panes.html">Managing Panes</a> section to find out more about
+         		  how to manage Pliny panes.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

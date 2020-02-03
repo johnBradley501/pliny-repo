@@ -1,0 +1,155 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Reference Object</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e5848">2.2.2 Reference Object</a></h1>
+      <p>One can use Pliny's Annotation Area to structure and manage references
+         		to notes, images, etc. References to notes appears in the Annotation area as
+         		<i>reference objects</i>. In this section we describe how the reference object
+         		appears, and describes its parts.
+      </p>
+      <p>Most of the time you will see reference objects displaying references to
+         		notes, but it is also possible to see a reference object to things other than
+         		notes. Here are examples of a reference to an image (on the left) and a
+         		reference to a note (on the right):
+      </p>
+      <center><br><br><table border="0">
+            <tr>
+               <th>Image Reference</th>
+               <th>Note Reference</th>
+            </tr>
+            <tr>
+               <td>
+                  <p align="center"><img src="images/reference-img.gif"></p>
+               </td>
+               <td>
+                  <p align="center"><img src="images/reference-note.gif"></p>
+               </td>
+            </tr>
+         </table><br><br></center>
+      <p>Note the similarities and differences. The elements of the reference
+         		object are described below. However, in both reference objects one can see the
+         		title area (shown in both figures in green, but the colour used depends upon
+         		the type of the reference), with the title of the referenced resource in the
+         		centre. The main area of the reference object shows the "content" of the
+         		reference. For notes this is the note's content. For the image, a thumbnail
+         		appears. For some reference objects Pliny is unable to show any content. In
+         		this case, this area will be empty.
+      </p>
+      <h2>Parts of the Reference Object</h2>
+      <p>Here are the parts of the Reference Object:</p>
+      <p align="center"><img src="images/reference-parts.gif"></p>
+      <p> 
+         	 
+         <ul>
+            <li>The reference object is divided into two major parts. The top area --
+               		  shown above in dark green -- is called the <i>Title Area</i>. Below the title
+               		  area is the <i>Content Area</i>.
+            </li>
+            <li><b>Resource Title</b>: References are used to display Pliny
+               		  resources, and all Pliny resources have titles. It is the title of the
+               		  referenced resource that is shown here. You can change the title of the linked
+               		  resource by double clicking on it, and then editing the title as you wish. Note
+               		  that the title belongs to the <i>referenced resource</i>, not to the reference
+               		  itself, so if you edit the resource's name here you will find that all
+               		  references to that resource will show the changed name.
+            </li>
+            <li><b>Contents Area</b>: In both these examples there is "content" that
+               		  Pliny is able to show -- for the note it is the note text, and for the image it
+               		  is a thumbnail of the image. For some kinds of data Pliny is not able to
+               		  display content, in which case the content area will be empty. You can
+               		  double-click on a note's content to open it for editing, but there is no way to
+               		  edit the thumbnail edit -- Pliny does not provide tools to edit images.
+            </li>
+            <li><b>Drag Source / Object Opener</b>: The icon in the top left corner
+               		  identifies the kind of object it refers too: the icon
+               		  <img align="middle" src="images/icons/imageIcon.gif"> identifies an image, and the icon
+               		  <img align="middle" src="images/icons/noteIcon.gif"> identifies a note, for example.
+               		  Other icons, for other kinds of data, might appear here. This icon also
+               		  provides two functions: 
+               		  
+               <ol>
+                  <li>It is a drag source object, and can be used in a a drag-and-drop
+                     				operation to copy the reference to another reference area, and
+                  </li>
+                  <li>If double-clicked, it will open the object it references. In the
+                     				figure above, for example, it would open the Note Editor on the note with name
+                     				"Basics of Eclipse".
+                  </li>
+               </ol>
+            </li>
+            <li><b>Minimization Icon</b>: The top right corner contains the
+               		  minimization icon (<img align="middle" src="images/icons/closeNote.gif">). This icon is
+               		  clickable, and requests that Pliny should switch from the current expanded
+               		  display to the minimised version -- the minimized display shows only the
+               		  reference header. When the header is showing minimised the icon in the top
+               		  right corner is the expand icon (<img align="middle" src="images/icons/openNote.gif">).
+            </li>
+            <li><b>Reference List Icon</b>: Alt-Click on this icon (<img align="middle" src="images/icons/referencersOn.gif">) to bring up the contextual menu. When
+               		  the contextual menu is invoked while the pointer is pointing at the Reference
+               		  List Icon, Pliny will generate a list of other resources that hold references
+               		  to this object:
+               <p align="center"><img src="images/reference-referent.png"></p> 
+               		  
+               <p>The generated menu contains a list of items (here four notes) that
+                  			 refer to the original note (here "Ramsay and Rockwell ..."). In the example
+                  			 above we can see that this note is referenced by notes called "Engelbartizing
+                  			 the DH", "Bibliographic refernences", etc. You can click on any item in this
+                  			 <i>referent list</i> to open it. Note that the current item (in which the
+                  			 reference object we are now looking at is shown) will <i>not</i> appear in the
+                  			 list even though it too, of course, contains a reference to this particular
+                  			 note.
+               </p> 
+               		  
+               <p>If the object does not appear in any other reference area, Pliny
+                  			 will report "no items to display."
+               </p>
+            </li>
+            <li><b>Map Icon</b>: Not all references have the Map Icon in their title
+               		  (Note that it does not appear in the image reference, as shown above). If it is
+               		  there, however, you can click on it to switch the view between the the object's
+               		  Content and its reference area. The icon here acts as a toggle. When the map
+               		  icon is showing (<img align="middle" src="images/icons/showMap.gif">) you can click on
+               		  it to which to the "map" view of the reference. 
+               		  
+               <p>The map view is a miniature reference area. When a reference is
+                  			 showing the associated reference area it looks like this:
+               </p>
+               		  
+               <p align="center"><img src="images/reference-map.gif"></p> 
+               		  
+               <p>Here the reference object "Basics of Eclipse" shows that this note
+                  			 contains a reference to two other notes "Panels" and "Icons". You can treat
+                  			 this area as any other annotation area -- you can create new notes into the
+                  			 area for example. You can also drag notes from outside it or from other sources
+                  			 into it or drag objects out.
+               </p> 
+               		  
+               <p>Note that the Map icon has changed to the text contents icon
+                  			 (<img align="middle" src="images/icons/showContents.gif">) when the map view is in
+                  			 operation. Click here to switch back to the text contents view.
+               </p>
+            </li>
+         </ul>
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

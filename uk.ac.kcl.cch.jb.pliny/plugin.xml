@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension-point id="resourceExtensionProcessor" name="Resource Extension Processor" schema="schema/resourceExtensionProcessor.exsd"/>
+   <extension-point id="browserToolbarContribution" name="NoteMan browser toolbar Contribution" schema="schema/browserToolbarContribution.exsd"/>
+   <extension-point id="exportManager" name="Pliny Exporter Manager" schema="schema/exportManager.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="uk.ac.kcl.cch.jb.pliny.category"
+            name="Pliny"/>
+      <view
+            category="uk.ac.kcl.cch.jb.pliny.category"
+            class="uk.ac.kcl.cch.jb.pliny.views.ResourceExplorerView"
+            icon="icons/resourceExplorer.gif"
+            id="uk.ac.kcl.cch.jb.pliny.resourceExplorer"
+            name="Resource Explorer"/>
+      <view
+            category="uk.ac.kcl.cch.jb.pliny.category"
+            class="uk.ac.kcl.cch.jb.pliny.views.AnnotationView"
+            icon="icons/annotationViewerIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.annotationView"
+            name="Annotation View"/>
+      <view
+            category="uk.ac.kcl.cch.jb.pliny.category"
+            class="uk.ac.kcl.cch.jb.pliny.containmentView.ContainmentView"
+            icon="icons/containmentIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.containmentView"
+            name="Containment View"/>
+      <view
+            category="uk.ac.kcl.cch.jb.pliny.category"
+            class="uk.ac.kcl.cch.jb.pliny.views.NoteSearchView"
+            icon="icons/searchIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.searchView"
+            name="Note Search View"/>
+      <view
+            category="uk.ac.kcl.cch.jb.pliny.category"
+            class="uk.ac.kcl.cch.jb.pliny.views.TypeManagerView"
+            icon="icons/typeIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.typeManager"
+            name="Type Manager"/>
+      <view
+            category="uk.ac.kcl.cch.jb.pliny.category"
+            class="uk.ac.kcl.cch.jb.pliny.views.ResHolderView"
+            icon="icons/resHolderView.gif"
+            id="uk.ac.kcl.cch.jb.pliny.resHolderView"
+            name="Resource Holder">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="uk.ac.kcl.cch.jb.pliny.actionSets"
+            label="Pliny"
+            visible="true">
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.OpenTypeManagerAction"
+               icon="icons/typeIcon.gif"
+               id="uk.ac.kcl.cch.jb.pliny.openTypeManager"
+               label="Open Type Manager"
+               style="pulldown"
+               toolbarPath="Normal"
+               tooltip="Open Pliny&apos;s Type Manager"/>
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.OpenNoteSearchAction"
+               icon="icons/searchIcon.gif"
+               id="uk.ac.kcl.cch.jb.pliny.openNoteSearch"
+               label="Open Note Searcher"
+               style="push"
+               toolbarPath="Normal"
+               tooltip="open Pliny&apos;s Note Searcher"/>
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.OpenContainmentViewAction"
+               icon="icons/containmentIcon.gif"
+               id="uk.ac.kcl.cch.jb.pliny.openContainmentViewAction"
+               label="Open Containment View"
+               style="push"
+               toolbarPath="Normal"
+               tooltip="Open Pliny&apos;s Containment View"/>
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.OpenAnnotationViewerAction"
+               icon="icons/annotationViewerIcon.gif"
+               id="uk.ac.kcl.cch.jb.pliny.openAnnotationViewerAction"
+               label="Open Annotation View"
+               style="push"
+               toolbarPath="Normal"
+               tooltip="Open Pliny&apos;s Annotation View"/>
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.OpenBrowserForPlinyAction"
+               icon="icons/browserIcon.gif"
+               id="uk.ac.kcl.cch.jb.pliny.webBrowser"
+               label="Open Web Browser"
+               style="push"
+               toolbarPath="Normal"
+               tooltip="Launch Pliny&apos;s integrated Web Browser"/>
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.OpenResourceExplorerViewAction"
+               icon="icons/resourceExplorer.gif"
+               id="uk.ac.kcl.cch.jb.pliny.openResourceExplorer"
+               label="Open Resource Explorer"
+               style="push"
+               toolbarPath="Normal"
+               tooltip="Open Pliny&apos;s Resource Explorer"/>
+         <action
+               class="uk.ac.kcl.cch.jb.pliny.actions.CreateNoteAction"
+               icon="icons/noteIcon.gif"
+               id="uk.ac.kcl.cch.jb.pliny.createNoteAction"
+               label="New Pliny Note"
+               menubarPath="file/fileStart"
+               style="push"
+               toolbarPath="Normal"/>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="uk.ac.kcl.cch.jb.pliny.editors.NoteEditor"
+            contributorClass="uk.ac.kcl.cch.jb.pliny.editors.NoteEditorActionBarContributor"
+            default="false"
+            icon="icons/noteIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.noteEditor"
+            name="Note Editor"/>
+      <editor
+            class="uk.ac.kcl.cch.jb.pliny.browser.BrowserEditor"
+            contributorClass="uk.ac.kcl.cch.jb.pliny.browser.BrowserEditorActionBarContributor"
+            default="true"
+            extensions="*.html"
+            icon="icons/browserIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.browserEditor"
+            name="Pliny Browser"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="uk.ac.kcl.cch.jb.pliny.editors.NoteEditorInputFactory"
+            id="uk.ac.kcl.cch.jb.pliny.noteEditorInputFactory"/>
+      <factory
+            class="uk.ac.kcl.cch.jb.pliny.browser.BrowserEditorInput"
+            id="uk.ac.kcl.cch.jb.pliny.browser.elementFactory"/>
+      <factory
+            class="uk.ac.kcl.cch.jb.pliny.editors.ResourceEditorInputFactory"
+            id="uk.ac.kcl.cch.jb.pliny.resourceEditorInputFactory"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="uk.ac.kcl.cch.jb.pliny.PlinyPerspectiveFactory"
+            icon="icons/pliny-icon16.gif"
+            id="uk.ac.kcl.cch.jb.pliny.perspective"
+            name="Pliny"/>
+   </extension>
+   <extension point="org.eclipse.help.toc">
+   	<toc file="toc.xml" primary="true" />
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="uk.ac.kcl.cch.jb.pliny.newWiz.category"
+            name="Pliny"/>
+      <wizard
+            canFinishEarly="true"
+            category="uk.ac.kcl.cch.jb.pliny.newWiz.category"
+            class="uk.ac.kcl.cch.jb.pliny.views.utils.NewNoteWizard"
+            hasPages="true"
+            icon="icons/noteIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.newNoteWizard"
+            name="Pliny Note"/>
+   </extension>
+   <extension point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+   <category name="Pliny" id="pliny.category"/>
+   <cheatsheet
+		name="Getting started with Pliny"
+		category="pliny.category"
+		contentFile="gettingStarted.xml"
+		id="uk.ac.kcl.cch.jb.pliny.cheatSheet.gettingStarted">
+		<description>How to get started using Pliny</description>
+	</cheatsheet>
+   
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="uk.ac.kcl.cch.jb.pliny.GeneralPreferencesPage"
+            id="uk.ac.kcl.cch.jb.pliny.preferencePage"
+            name="Pliny">
+      </page>
+   </extension>
+   <extension
+         point="uk.ac.kcl.cch.jb.pliny.exportManager">
+      <processor
+            class="uk.ac.kcl.cch.jb.pliny.utils.PlinyArchiveExporter"
+            description="Pliny Export Files"
+            extension="pla"
+            name="Pliny Export Files">
+      </processor>
+      <processor
+            class="uk.ac.kcl.cch.jb.pliny.utils.PlinyTMExporter"
+            extension="xtm"
+            name="TopicMap Files">
+      </processor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Getting Started with Pliny">
+  <intro href="/uk.ac.kcl.cch.jb.pliny/toc.xml">
+    <description>Pliny is a tool to help you maintain notes
+    about materials you read.  This "getting started" page sets
+    up the screen layout for Pliny use (sets the "Pliny Perspective")
+    and points you at some tutorials that will get you help you
+    get started.</description>
+  </intro>
+  <item title="Opening the Pliny Perspective" skip="true">
+     <description>If you don't already have the Pliny perspective
+     open, you can establish it here.  Eclipse will remember the
+     Pliny perspective next time you start Eclipse, so if you use
+     Eclipse only for Pliny you shouldn't have to do this again.</description>
+     <action class="uk.ac.kcl.cch.jb.pliny.actions.OpenPlinyPerspectiveAction" pluginId="uk.ac.kcl.cch.jb.pliny"/>
+  </item>
+  <item title="Beginning the tutorials"
+  href="/uk.ac.kcl.cch.jb.pliny/html/ref.plinyTutorials.html">
+     <description>Now that the Pliny perspective has been set, select
+     the (?) button to the left to enter the Pliny tutorials.</description>
+  </item>
+</cheatsheet>

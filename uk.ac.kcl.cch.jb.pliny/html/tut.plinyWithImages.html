@@ -1,0 +1,459 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Using Pliny with Images</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e2211">1.2.3 Using Pliny with Images</a></h1>
+      <p>So far in these tutorials we have seen how to use the imbedded web
+         		browser and the note editor as a place to attach personal notes. With the image
+         		and PDF annotation tool, however, we move from linking notes in a general way
+         		to another resource (via a note or web-page's <i>reference area</i>) to
+         		attaching a note to a <i>specific location</i> in a resource. We distinguish
+         		this from note taking by calling this process <i>annotation</i>. Both Pliny's
+         		image and PDF annotation tools allow a resource can be attached to <i>a
+            		specific 2D area</i> on an image or on a page in a PDF file.
+      </p>
+      <h2>Importing Images</h2>
+      <p>To use the image annotation editor in Pliny on an image one must first
+         		  associate the tool with the image you wish to annotate -- the image becomes a
+         		  Pliny <i>resource</i>, and the process is called "importing an image into
+         		  Pliny". This task is can be done through any one of three mechanisms: 
+         		
+         <ul>
+            <li>If you have located the image in Pliny's embedded web browser, you
+               			 can use a tool it provides to set up the image so that it can be annotated. (we
+               			 will discuss this method in more detail in just a moment)
+            </li>
+            <li>If you have located the image in another web browser you can use
+               			 drag and drop facilities provided within the Resource Explorer to import the
+               			 image.
+            </li>
+            <li>If you have the image on your own computer you can also use the
+               			 Resource Explorer's drag and drop facilities to import the image for
+               			 annotation.
+            </li>
+         </ul>
+      </p>
+      <p>In all three cases a copy of the image will be cached in Pliny's data
+         		  storage area for its internal use, so it will not matter to Pliny whether the
+         		  image continues to be where it was imported from or not.
+      </p>
+      <p>We describe these three alternatives below.</p>
+      <h3>Setting up the Image from the Embedded Browser</h3>
+      <p>Suppose you have located a web page in Pliny's imbedded browser that
+         			 contains an image that you wish to annotate. Here is such an image (well, the
+         			 top of it anyway!), from the <i>Corpus of Romanesque Sculpture in Britain and
+            			 Ireland</i> (<a href="http://www.crsbi.ac.uk"><tt>http://www.crsbi.ac.uk</tt></a>): 
+      </p>
+      <p align="center"><img src="images/image-tut-1.png"></p>
+      <p>It shows a capital of a column in the church of St. Michael in
+         			 Blewbury, Berkshire.
+      </p>
+      <p>To load the image into Pliny locate the "Make into Image" button in
+         			 the browser's control panel (<img align="middle" src="images/icons/imageIcon.gif">) and
+         			 press it. This invokes Pliny's image importing process which takes the HTML
+         			 page currently displayed by the browser, processes it to locate appropriate
+         			 image or images on the page, and sets it/them up as one or more image
+         			 resources. See the subsection below <i>What the importer does</i> in this
+         			 tutorial to find out what happens in more detail.
+      </p>
+      <p>Sometimes, as in this case, Pliny finds more than one image that
+         			 might be a candidate for importing on a particular web page. If so, Pliny will
+         			 create a dialog box which lists the possible images and allows you to choose
+         			 the one or ones you wish to import. Here is the dialog box Pliny shows us for
+         			 the web page showing above:
+      </p>
+      <p align="center"><img src="images/image-tut-1a.png"></p>
+      <p>Pliny shows us two images as thumbnails. Obviously (to us!) the
+         			 first one is the one we want to import. Choose the first one by clicking in its
+         			 selection box and click on the OK button. If there had been more than one image
+         			 from a web page that you want to import you can simply choose more than
+         			 one.
+      </p>
+      <h3>Setting up the Image from another web Browser</h3>
+      <p>If you find an image of interest in a web browser outside of Pliny
+         			 you can use drag and drop action to load the image from there into Pliny as
+         			 well. The following diagram illustrates the process:
+      </p>
+      <p align="center"><img src="images/image-tut-2.png"></p>
+      <p>In your web browser locate the Location Bar which will be showing
+         			 you the URL of the page you are currently viewing. The illustration shows the
+         			 location bars as they appear in Internet Explorer and FireFox. To the left of
+         			 the URL you will see an icon (here indicated with a orange box). Point your
+         			 mouse pointer at it and drag it until you can drop it on top of the Image
+         			 folder in Pliny's Resource Explorer. This act will be interpreted as a request
+         			 to Pliny to take the HTML referenced by the URL and load appropriate image(s)
+         			 that it finds referenced there into Pliny.
+      </p>
+      <p>If you prefer, you can ask Pliny to load only a particular image you
+         			 found on the web page and ignore the contents of the rest of the page. To do
+         			 this, point your mouse pointer at the particular image you wish to load and
+         			 then drag it to the Image folder in Pliny's Resource Explorer.
+      </p>
+      <h3>Setting up the Image from your hard disk</h3>
+      <p>You can also import an image that you hold on you machine's own disk
+         			 by locating its icon in a folder and dragging that icon to the Image folder in
+         			 Pliny's Resource Explorer. 
+      </p>
+      <h3>What the importer does</h3>
+      <p>Dragging and dropping either an image or a URL to an HTML page that
+         			 contains an image (as described above) starts up Pliny's image importer. If we
+         			 invoked the importer with our example HTML page examples above the importer
+         			 will generate a Pliny image resource, and automatically open it for us,
+         			 resulting in:
+      </p>
+      <p align="center"><img src="images/image-tut-3.png"></p>
+      <p>At first glance the result looks very similar to the original
+         			 HTML-driven display. Like the Pliny web browser, Pliny's image annotation tool
+         			 has a large area to display the resource (here, an image), and above it is
+         			 Pliny's tool bar that contains a set of annotation tools to the right, and the
+         			 name of the current resourse in a field close to the top left area. However,
+         			 although one can see similiarites between Pliny's web browser, and its
+         			 annotation tool, there are also some immediately visible important differences:
+         			 
+         		  
+         <ul>
+            <li>First, the focus in an Pliny image resource is on the image --
+               				not an HTML page containing an image. Just the imported image is visible here,
+               				and the header materials that came from the HTML on the web page is no longer
+               				above the image, for example.
+            </li>
+            <li>Second, Pliny has created an Image resource that refers to this
+               				image. Like all other resources in Pliny, it has a name, and you can see the
+               				name both in the Pliny toolbar near the top of the editing frame: "S nave
+               				arcade, bay 2, E capital - The Corpus of Romanesque Sculpture", and in the tab
+               				above that. Since the image resource was created from a web page, Pliny took
+               				this title of the associated web page and used it as a name for the image
+               				resource it was creating too.
+            </li>
+            <li>Finally, because the focus is on the image and not the HTML page
+               				it came from, the importer creates two resources and places references to them
+               				on the image display. 
+               				
+               <ul>
+                  <li>The first one (with the green banner) is a note the importer
+                     					 creates for you with all the text it found on the HTML page it was given. Pliny
+                     					 cannot interpret HTML in a very sophisticated way so the text is relatively
+                     					 plain. Often you need to fix it up further, and indeed we shall fix it up
+                     					 shortly in this tutorial.
+                  </li>
+                  <li>The second one (with the blue banner) at is currently sitting
+                     					 on top of the green noe is a reference to a web page resource that points to
+                     					 the web page. As long as this object is here we can always use it to go back
+                     to
+                     					 the original web page by opening its attached resource.
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </p>
+      <p>As we shall see shortly, the two references that the importer has
+         			 automatically created for us can be removed (by clicking on them to select them
+         			 and then pushing the Delete key) if we don't find them useful, or they can be
+         			 moved/resized. Furthermore, the first of the two is a note and so its contents
+         			 can be altered for our purposes.
+      </p>
+      <p>Note here that the importer was given a full HTML page that
+         			 contained an image -- not just a specific image itself. If the HTML page
+         			 contains more than one appropriate image than the importer will create more
+         			 than one image resource from that web page. Here, however, the HTML page
+         			 contained only one appropriate image so only one image was imported. What is
+         			 meant by "appropriate image" here? The main criteria is size. Images are often
+         			 used on HTML pages purely for decoration, and generally these images for
+         			 decoration are small. Thus, the image importer ignores images smaller than
+         			 100x100 pixels in size. If you find that the importer has loaded several images
+         			 from a page and you only want one the easiest solution is to simply use the
+         			 Resource Explorer to locate and delete the unwanted ones.
+      </p>
+      <h2>Fixing up the newly-loaded Image Resources</h2>
+      <p>Now that we have an image resource we might well want to fix up what
+         		  the image importer has created for us: 
+         		
+         <ul>
+            <li>First, we'll move the two resource references the importer created
+               			 for us so that they are sitting above the picture rather than over it. Point
+               			 the mouse pointer at each title in turn and drag it to the top of space, above
+               			 the image.
+            </li>
+            <li>Second, we'll alter the text of the note (in green) the importer
+               			 created so that it better describes the source of the image. Its content is
+               			 derived from the CRSBI web page, and contains some useful information, but also
+               			 a large amount of text for navigation buttons such as "Home" and "Search". We
+               			 can edit the content by double-clicking on the context to open it as a "direct
+               			 edit", and then we can change it as we like.
+            </li>
+            <li>Finally, we change the name of the image resource itself to
+               			 something a little shorter and perhaps more meaningful for our purposes. Click
+               			 in the name field for the resource near the top of the window in the Pliny
+               			 toobar and change it to "CRSBI: St Michael, Blewbury, Berkshire".
+            </li>
+         </ul>
+      </p>
+      <p>This results in:</p>
+      <p align="center"><img src="images/image-tut-4.png"></p>
+      <p>It is important to understand that the importer has created three
+         		  different resources for us: 
+         		
+         <ul>
+            <li>The main resource is the image resource that represents the image
+               			 itself -- the one we will begin to annotate shortly. We see it in the above
+               			 figure in an <i>image annotation pane</i>. Note the image icon (<img align="middle" src="images/icons/imageIcon.gif">) in the tab area above the Pliny image
+               			 annotator pane, which indicates that it is an image resource.
+            </li>
+            <li>The importer has also created a web page resource that refers to
+               			 the the source of the image. We can see it through the blue reference the
+               			 importer has put on the page for us -- it has the WWW icon (<img align="middle" src="images/icons/browserIcon.gif">) in its top left corner to indicate that
+               			 it is a reference to a web page.
+            </li>
+            <li>Finally, the importer created a note in which it put the text of
+               			 the HTML page it was reading at the time of the import. We have just edited it
+               			 down so that it describes the object in the church from which the image was
+               			 taken. It appears here in green and it's type icon is the Note icon:
+               			 <img align="middle" src="images/icons/noteIcon.gif"></li>
+         </ul>
+      </p>
+      <p>Although the importer has created three resources for us, and provided
+         		  them initially all with the same name -- derived from the HTML title -- they
+         		  are actually three separate resources. We just changed the name of the image
+         		  resource itself, but we can also change the name of the other two as well as we
+         		  see fit.
+      </p>
+      <h2>Adding an Annotation</h2>
+      <p>Suppose we wish to note the use of a leaf motif in the carving on the
+         		  capital. With the image annotator we can create an annotation to do this. An
+         		  annotation in Pliny contains three parts: 
+         		
+         <ul>
+            <li>An <i>anchor</i>: a link to a part of the object being annotated.
+               			 Since we are here annoting an image, the link will be an area on the
+               			 image.
+            </li>
+            <li>A <i>note</i> containing the text of the annotation.
+            </li>
+            <li>A <i>line</i> that connects the anchor to its note.
+            </li>
+         </ul>
+      </p>
+      <p>To create the annotation we first must click on the Annotation button
+         		  in the toolbar:
+      </p>
+      <p align="center"><img src="images/image-tut-5.png"></p>
+      <p>Alternatively, we could push the F7 key which acts as a keyboard
+         		  shortcut to the <i>Create Annotation</i> action. Having clicked on this icon to
+         		  indicate that we wish to create an annotation we use the mouse to drag out over
+         		  the area where we wish the anchor to appear:
+      </p>
+      <p align="center"><img src="images/image-tut-6.png"></p>
+      <p>.. and then release the mouse button when we have defined the area
+         		  where the anchor is to go. As a result, Pliny will create (i) the anchor where
+         		  we have requested it, (ii) an empty note, and (iii) a line that connects
+         		  them:
+      </p>
+      <p align="center"><img src="images/image-tut-7.png"></p>
+      <p>Pliny has placed a anchor area, link, and note on the image. We now
+         		  have some fixups to do: 
+         		
+         <ul>
+            <li>First, should move the location of the note off to the side of the
+               			 image and perhaps shrink the size of the note itself so that it does not
+               			 obstruct so much of the image. As we have described in previous tutorials, you
+               			 can move the note by pointing at the note's title bar and dragging it with the
+               			 ouse. You can resize it by clicking on the note to select it and then drag the
+               			 handles that appear to the new size. As we move the note reference object to
+               			 the side of the image itself the line connecting to the note to the anchor
+               			 stays connected. Pliny knows that the line is a connector between the note and
+               			 the anchor and will ensure that it remains attached.
+            </li>
+            <li>Having placed the note in a better place, we can change the title
+               			 of the note Pliny has just created for us to "Leaf Motif", and
+            </li>
+            <li>then we should add the text of our note into its body.</li>
+         </ul>
+      </p>
+      <p>This results in:</p>
+      <p align="center"><img src="images/image-tut-8.png"></p>
+      <p>We have moved the note part of the annotation -- but the anchor part
+         		  is also resizable and moveable if needbe. So, if we didn't get it placed
+         		  exactly right, we can fix that.
+      </p>
+      <h2>Annotations, Notes, Connections and Anchors</h2>
+      <p>We have described an annotation as consisting of a note, an anchor and
+         		  a connection between them. Although there is a single button that can be pushed
+         		  to create an annotations 3 components in one go, the three pieces can be
+         		  separated created as well through buttons on the image annotator's annotation
+         		  area toolbar: 
+         		
+         <ul>
+            <li><i>Note Button</i> (<img align="middle" src="images/icons/noteIcon.gif">):
+               			 The note button can be used to tell Pliny that you wish to create a note. After
+               			 pushing the button drag out the area where you wish the note to appear.
+               			 (Keyboard shortcut: F5)
+            </li>
+            <li><i>Connection Button</i> (<img align="middle" src="images/icons/connectionIcon.gif">): The connection button is used to tell
+               			 Pliny you want to connect a note and/or anchor with another note/anchor via a
+               			 line. After clicking on it drag from the source note/anchor to the target/note
+               			 anchor to indicate what two objects are to be connected. (Keyboard shortcut:
+               			 F6)
+            </li>
+            <li><i>Annotation Button</i> (<img align="middle" src="images/icons/annotationIcon.gif">): The annotation button, then, simply
+               			 acts as a short-cut way to create an anchor and a note connected by a
+               			 connection line. (Keyboard shortcut: F7)
+            </li>
+            <li><i>Anchor Button</i> (<img align="middle" src="images/icons/anchorIcon.gif">): The anchor button is used to tell Pliny
+               			 you wish to define an anchor area. After pushing the anchor button drag out the
+               			 area where you wish the anchor (a coloured box) to appear. (Keyboard shortcut:
+               			 F8)
+            </li>
+         </ul>
+      </p>
+      <p>There is no restriction to an annotation having only one note, one
+         		  anchor and one connection. You can draw more than one connection line between
+         		  either multiple anchors from one note or multiple notes to one anchor if that
+         		  is useful. You can delete any connection if you wish by selecting it and
+         		  pushing the Delete key.
+      </p>
+      <p>Notes can also appear that are not anchored to any part of the figure.
+         		  Suppose, for example, that we wish to add a further note to this image that
+         		  quotes a bit of CRSBI's web page discussion of these columns. To do so we click
+         		  on the Note button, drag out where we want the note to appear on the image, and
+         		  then edit the note contents and title:
+      </p>
+      <p align="center"><img src="images/image-tut-9.png"></p>
+      <p>You can add as many anchors, notes and connections as you need for
+         		  your purposes, of course.
+      </p>
+      <h2>Image Resources and the Resource Explorer</h2>
+      <p>In this tutorial we have only created one image resource, but one is
+         		  enough to allow us to examine how image resources are handled in the Resource
+         		  Explorer:
+      </p>
+      <p align="center"><img src="images/image-tut-10.gif"></p>
+      <p>Note that the Image folder is the place where all image resources are
+         		  stored. If we open the Image folder we see the "C" folder. Image resources are
+         		  organised by the Resource Explorer by the first letter of their name (the same
+         		  as we have seen for Notes and Web pages) -- and the single image resource we
+         		  currently have has a name that starts with "C". When we open the "C" folder we
+         		  see the single resource, with its idenifying icon (<img align="middle" src="images/icons/imageIcon.gif">). If we open this we see the same two groups
+         		  we saw within a note: <i>Displayed in</i> shows all the other resources that
+         		  have a reference to this image resource (currently there are none, so this is
+         		  empty), and <i>Contains</i> which shows what resources are contained in this
+         		  image. Inside the "Contains" item is the list of notes and other resources that
+         		  appear "on" the image. We can see here the three notes we have currently on the
+         		  image, and the one reference to the web page resource which also appears
+         		  there.
+      </p>
+      <p>You can use the image object in the Resource Explorer in three ways: 
+         		
+         <ul>
+            <li>You can <i>delete</i> the image (and its associated references) by
+               			 pointing at the resource you want to delete so that you select it, and then
+               			 either push the delete key or choose "Delete" from the "Edit" menu.
+            </li>
+            <li>You can <i>open</i> the image resource if it is not currently open
+               			 by double-clicking on the item.
+            </li>
+            <li>You can <i>edit</i> the image resource's name by clicking on the
+               			 name to open it, and then editing its text until you have the name you
+               			 wish.
+            </li>
+            <li>You can delete a reference within this image's annotation area by
+               			 selecting it from among the items displayed in the <i>Contains</i> list and
+               			 pushing the Delete key. Note that this deletes the <i>reference</i>, not the
+               			 underlying object itself.
+            </li>
+         </ul>
+      </p>
+      <h2>Managing a number of Image Resources</h2>
+      <p>The Resource Explorer will always provide you with a reference to all
+         		  the image resources your version of Pliny currently holds, but they will be
+         		  filed by their name. As the number of image resources gets large you may want
+         		  to keep track of them in other ways. Suppose, for example, you want to file the
+         		  images, and group them by the kind of image -- say, grouping all the
+         		  architectual images together. In Pliny one does this by creating an object
+         		  (usually a note) that contains images you want to reference. Furthermore, any
+         		  of these reference notes can appear as a Pliny bookmark so that they can be
+         		  quickly accessible.In this part of the tutorial we will begin to build such a
+         		  structure. The process is almost the same as that used to create the "My
+         		  Readings" note in the previous tutorial.
+      </p>
+      <h3>Creating "My Images" Bookmark note</h3>
+      <p>We begin by using the Note button in the Resource Explorer (be sure
+         			 you click on the right "New Note" icon -- there are probably several "Note"
+         			 icons on your Pliny screen and you want the one in the Resource Explorer pane!)
+         			 to create a new note called "My Images", and at the same time asking for it to
+         			 be stored as a bookmark:
+      </p>
+      <p align="center"><img src="images/image-tut-11.gif"></p>
+      <p>As a result Pliny will create the new note, and put it a reference
+         			 to it in the bookmarks:
+      </p>
+      <p align="center"><img src="images/image-tut-12.png"></p>
+      <p>This is the note we will use to hold organise referenes to images in
+         			 ways that suit our own interests. We add some content text in the left-hand
+         			 content area to this effect, stating that "My Images" is a top level holder for
+         			 all images we are using in our current study.
+      </p>
+      <p>Now, we wish to create a category <i>Architectural</i> which will
+         			 hold references to all architectual images we will be collecting. We want to
+         			 put our new Archectural container within the My Images reference area, so the
+         			 easiest way to achieve this is to on the <i>New Note</i> button in the Note
+         			 Editor's tool bar and draw out a new note in "My Images" reference area. We
+         			 then change the name of this new note to "Architectural", and add a brief
+         			 description of it for the note's textual content:
+      </p>
+      <p align="center"><img src="images/image-tut-13.png"></p>
+      <p>Now, we wish to use the <i>Architectural</i> note reference here as
+         			 a container for images that we consider architectural. To change the reference
+         			 object to its container format we click on the "Map Icon" (<img align="middle" src="images/icons/showMap.gif">) in Architectural's reference object. This
+         			 changes the way the reference object appears -- hiding the note's content, but
+         			 showing its reference area in its place:
+      </p>
+      <p align="center"><img src="images/image-tut-14.png"></p>
+      <p>Now we are ready to file a reference to our image. Locate the item
+         			 in the Resource Explorer and drag it into the "Architectural" note's reference
+         			 area:
+      </p>
+      <p align="center"><img src="images/image-tut-15.png"></p>
+      <p>As a result, a reference to our image will be stored in the
+         			 <i>Architectural</i> note within the <i>My Images</i> note. We can see the
+         			 reference both in the reference area for <i>My Images</i> and within the
+         			 <i>Contains</i> display in the Resource Explorer.
+      </p>
+      <p align="center"><img src="images/image-tut-16.png"></p>
+      <p>Furthermore, we can use either reference (in "My Image" or in the
+         			 <i>Resource Explorer</i>) as a way to open the image resource whenever we like
+         			 -- by double-clicking on the entry in the Resource Explorer, by double clicking
+         			 on the <img align="middle" src="images/icons/imageIcon.gif"> in the reference object
+         			 itself, or by choosing "Open Selected" from the context menu in the reference
+         			 area while the item we wish to open is selected.
+      </p>
+      <h2>Wrap-up</h2>
+      <p>Pliny supports the creation of image resources which can be annotated.
+         		  Image resources can be created from images held on your hard disk, or harvested
+         		  from web pages fetched from the WWW. Annotation on an image object combines
+         		  note creation with the ability to link to a spot on the image by means of an
+         		  anchor. Image resources appear in the Resource Explorer in the Image folder,
+         		  but you can create a kind of "master" note to hold, say, all images of a
+         		  certain kind, and add this master note to the Pliny bookmarks. In this way, you
+         		  can file your images in a way that better suits your particular needs.
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

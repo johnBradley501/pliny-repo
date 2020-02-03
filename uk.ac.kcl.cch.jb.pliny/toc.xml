@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?NLS TYPE="org.eclipse.help.toc"?><toc label="Pliny" topic="html/d1e11.html"><topic label="Getting Started with Pliny" href="html/getting.started.html">
+<topic label="Pliny and Eclipse" href="html/intro.plinyEclipse.html">
+<topic label="Eclipse UI Basics" href="html/intro.uiBasics.html">
+<topic label="Pliny on the Macintosh" href="html/intro.macintosh.html">
+
+</topic>
+</topic><topic label="Toolbars" href="html/intro.toolbars.html">
+
+</topic><topic label="Managing Panes" href="html/intro.panes.html">
+
+</topic>
+</topic><topic label="Pliny Tutorials" href="html/tut.tutorialIndex.html">
+<topic label="Using Pliny with Web-based materials" href="html/tut.plinyWithWeb.html">
+
+</topic><topic label="Using Pliny with Non-digital Materials" href="html/tut.nonDigital.html">
+
+</topic><topic label="Using Pliny with Images" href="html/tut.plinyWithImages.html">
+
+</topic><topic label="Using Pliny with PDF (Acrobat) files" href="html/tut.pdfAnnotator.html">
+
+</topic><topic label="Using Pliny to organise notes" href="html/tut.organisingNotes.html">
+
+</topic><topic label="Managing Pliny materials" href="html/tut.managingMaterials.html">
+
+</topic>
+</topic>
+</topic><topic label="Pliny Reference" href="html/ref.html">
+<topic label="Annotation Tools and Views" href="html/ref.InterfaceObjects.html">
+<topic label="Resource Explorer" href="html/ref.resourceExplorer.html">
+
+</topic><topic label="Image Annotator" href="html/ref.imageAnnotator.html">
+
+</topic><topic label="PDF Annotator" href="html/ref.pdfAnnotator.html">
+
+</topic><topic label="Note Editor" href="html/ref.noteEditor.html">
+
+</topic><topic label="Web Browser" href="html/ref.webBrowser.html">
+
+</topic><topic label="Annotation View" href="html/ref.annotationView.html">
+
+</topic><topic label="Containment View" href="html/ref.containmentView.html">
+
+</topic><topic label="Note Search View" href="html/ref.noteSearchView.html">
+
+</topic><topic label="Type Manager View" href="html/ref.typeManagerView.html">
+
+</topic><topic label="Pliny Resource Holder view" href="html/ref.resourceHolderView.html">
+
+</topic>
+</topic><topic label="Annotation/Reference area" href="html/ref.subComponents.html">
+<topic label="Annotation/Reference Area" href="html/ref.annotationArea.html">
+
+</topic><topic label="Reference Object" href="html/ref.referenceObject.html">
+
+</topic>
+</topic>
+</topic></toc>

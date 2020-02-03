@@ -1,0 +1,282 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Note Search View</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e4831">2.1.8 Note Search View</a></h1>
+      <h2>What's it for?</h2>
+      <p>The Note Search View is most useful when you have many notes in the
+         		  system. It allows you to search through all your notes by their content --
+         		  looking for words or word patterns. The underlying search engine is
+         		  <i>lucene</i>.
+      </p>
+      <h2>Starting the Note Search View</h2>
+      <p>You can ask for the note search view to be displayed by pushing the
+         		  Note Search View icon (<img align="middle" src="images/icons/searchIcon.gif">) in
+         		  Pliny's main toolbar and the very top of the Pliny window:
+      </p>
+      <p align="center"><img src="images/search-ref-1.gif"></p>
+      <p>Normally the Note Search View will appear in Pliny's left pane --
+         		  stacked on top of the Resource Explorer view.:
+      </p>
+      <p align="center"><img src="images/search-ref-2.png"></p>
+      <p>If you don't like it there, you can drag its tab elsewhere in the
+         		  Pliny Window to move it. You can even drag it outside of Pliny's window
+         		  altogether. See the discussion about this in the section "Moving viewpanes out
+         		  of the Pliny main window" in the topic <a href="intro.panes.html">Managing
+            		  Panes</a>.
+      </p>
+      <p>To get the Resource Explorer back you can simply close the Note Search
+         		  View by clicking on its close icon ("X") in its tab, or ask for the Resource
+         		  Explorer to again be brought to the front by clicking on the Resource
+         		  Explorer's tab (here showing to the left of the Note Search View's tab, or by
+         		  clicking on the Resource Explorer's icon in main toolbar near the top of the
+         		  Pliny window (<img align="middle" src="images/icons/resourceExplorer.gif">).
+      </p>
+      <h2>Parts of the Note Search View</h2>
+      <p>The note search view has a top area in which a query can be specified,
+         		  and a bottom area where the results appear. A labelled view of it (after a
+         		  query has been run) is:
+      </p>
+      <p align="center"><img src="images/search-ref-3.gif"></p>
+      <p>The parts are: 
+         		
+         <ul>
+            <li><b>Tab</b>: This names the view.
+            </li>
+            <li><b>Make Note Icon</b>: Described below in the <i>Commands</i>
+               			 section in detail. If clicked, makes a new note with references to the items
+               			 displayed in the "result area" below.
+            </li>
+            <li><b>Query Field</b>: The area in which you type in the word or word
+               			 pattern you wish to search for.
+            </li>
+            <li><b>Submit Button</b>: After providing a query, you push this "Go"
+               			 button to ask Pliny to run the search for you.
+            </li>
+            <li><b>Filter by Date opener:</b> Click here to have displayed a form
+               			 that allows you to filter your selection by the date the note was created. See
+               			 more about this in the section below <i>Filtering by Date</i>.
+            </li>
+            <li><b>Result Area</b>: Pliny shows the result of the search here as a
+               			 list of notes that met the query criteria. Note that the display of the items
+               			 in the result area is hierarchical. One can open up each item found there by
+               			 clicking on the "+" symbol to the left of the item name to see the Contains and
+               			 Displayed In items (similar to those found in the Resource Explorer.
+            </li>
+         </ul>
+      </p>
+      <h2>Commands</h2>
+      <h3>Running a Search</h3>
+      <p>Provide your query in the query field and push the "Go" button. The
+         			 first time you do this in a session Pliny will need to set up its search engine
+         			 (lucene), and a progress monitor box will appear to tell you this. For any
+         			 subsequent search after the first Pliny will have its search engine ready to go
+         			 and the response to the search will be faster.
+      </p>
+      <p>Query syntax is based on lucene. Lucene has the concept of "fields",
+         			 and in Pliny Lucene knows of two fields, the "title" (for the title of the
+         			 note) and "content" (for the content of the note). If a field is not mentioned
+         			 the search is conducted against the content of the note only.
+      </p>
+      <p>Common queries are: 
+         		  
+         <ul>
+            <li><b>word</b>: type in the word you want to search for, e.g.
+               				<tt>wittig</tt>.
+            </li>
+            <li><b>phrase</b>: surround a phrase with double-quotes to search for
+               				it, e.g. <tt>"the moon"</tt>.
+            </li>
+            <li><b>wildcards</b>: "?" and "*" are recognised as wildcards and may
+               				be used within a word pattern, or at the end, but not at the beginning. This
+               				search looks for all occurrences of words beginning with "plin":
+               				<tt>plin*</tt></li>
+         </ul>
+      </p>
+      <p>The full query language is the one lucene supports, and we do not
+         			 describe it here. See the
+         			 <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">Lucene
+            			 Documentation</a> for further details.
+      </p>
+      <h3>Working with the Result Area</h3>
+      <p>It is useful to think of the functions available in the result area
+         			 as a subset of those available in the Resource Explorer. You can: 
+         		  
+         <ul>
+            <li><b>Open any note</b>: in the result area by double clicking on
+               				it.
+            </li>
+            <li><b>Edit the note's name</b>: by single clicking on it and then
+               				typing in the name area.
+            </li>
+            <li><b>See references to the note</b>: by clicking on the "+" icon to
+               				the left of the name and choosing either "Displayed in" or "Contains".
+            </li>
+         </ul>
+      </p>
+      <h3>The New Note Button</h3>
+      <p>Click on the New Note Button (<img align="middle" src="images/icons/noteIcon.gif">) in the upper right corner of the view's pane
+         			 to create a new note that contains all the references to the items that
+         			 appeared in the search. If you do that with the Wittig results shown above you
+         			 will first see the "New Note" wizard:
+      </p>
+      <p align="center"><img src="images/search-ref-4.gif"></p>
+      <p>You can use any of these options in the usual way to specify how
+         			 Pliny handles the new note creation task. Note in particular that Pliny
+         			 suggests a name for the note containing the words "Query Selection" followed by
+         			 the query text itself. You can change this here if you wish. When ready, push
+         			 the "Finish" button to request that the new note be created. The result is:
+      </p>
+      <p align="center"><img src="images/search-ref-5.gif"></p>
+      <p>Note the reference area in the newly created note. It contains
+         			 references to the two items that the "Wittig" search found, and the references
+         			 are stacked so that the names of the referenced notes are visible. You might
+         			 now wish to organise the references in the reference area to, for example, show
+         			 all the items more clearly.
+      </p>
+      <p>The resulting note is not somehow still linked to the query. If a
+         			 new note containing the word "Wittig" was to be added, for example, it will not
+         			 automatically appear here. Consider the result of this query as a snapshot of
+         			 what was found at the time the query was run. This means that you can use the
+         			 "New Note" icon in the search view as a way to start to build a new note that
+         			 contains references to a concept of interest: 
+         		  
+         <ul>
+            <li>First, put words that might represent the concept in the query
+               				box and run the query. The list of notes that appear contain the concept words
+               				in their content.
+            </li>
+            <li>Then create the new note, and instead of letting it simply name
+               				the resulting note with a name beginning "Query Selection", change the name to
+               				be the name of the concept you are interested in.
+            </li>
+            <li>When the note is created you can review the notes that were
+               				selected and delete references to notes that don't really refer to the concept
+               				you have in mind, or you can add other notes that you think are relevant. You
+               				can use the reference area as a space to organise the references perhaps into
+               				subcategories.
+            </li>
+         </ul>
+      </p>
+      <h3>Filtering by Date</h3>
+      <p>Pliny's Note Search feature allows you to filter the selected notes
+         			 by a date range. This is useful if, for example, you remember that you wrote
+         			 about "Reading" in May of 2007 but cannot remember exactly which notes come
+         			 from that period of time. <i>Note</i>: even after you specify a date range
+         			 filter, you must always still specify a search pattern in the "search" box. If
+         			 you want to see <i>all notes</i> you created for a certain set of dates don't
+         			 try to do that here; go, instead, to the "Date" tab in the Resource Explorer
+         			 and find the date or dates you are interested in there.
+      </p>
+      <p>To see the form which allows you to specify the filtering date range
+         			 click on the date filter opener (highlighted in this figure by a red box):
+      </p>
+      <p align="center"><img src="images/search-ref-6.gif"></p>
+      <p>Having clicked on this box a form will appear immediately below the
+         			 "Filter by Date:" header:
+      </p>
+      <p align="center"><img src="images/search-ref-7.gif"></p>
+      <p>The form contains the following elements: 
+         		  
+         <ul>
+            <li><b>Date Filter Closer</b>: Click here to make the date form
+               				disappear. Any selected date shown in the form will only be used as a filter
+               				when the form is visible.
+            </li>
+            <li><b>Starting Date</b>: There are three fields in the first column
+               				that you can use to specify the year, month, and day for the starting date for
+               				the filter.. See below how one uses these form elements to select the starting
+               				date.
+            </li>
+            <li><b>Ending Date</b>: There are, again, three fields (year, month
+               				and day) that can be used to select the ending date for the date range.
+            </li>
+         </ul>
+      </p>
+      <p>Although one specifies a date by selecting from drop down menus in
+         			 the form, Pliny controls the options that appear there so that only dates on
+         			 which notes were created can be specified. If no notes were created on April
+         			 1st, 2007, but notes were created for other days in that month, you will find
+         			 that the year 2007 will be in the list, and when it is selected, the month
+         			 April will be availble, but "1" will not appear as one of the days you can
+         			 select.
+      </p>
+      <p>You must specify a date range by starting with the starting date
+         			 year for your date range. Only years in which notes were created will appear in
+         			 the year item.. Suppose you choose "2007" from the starting year drop-down
+         			 menu:
+      </p>
+      <p align="center"><img src="images/search-ref-8.gif"></p>
+      <p>As soon as you specify the year Pliny will set the <i>ending</i>
+         			 year to match it, and will restrict the choices of ending year so only those
+         			 the same or greater than your specified starting year will be available. As you
+         			 will see below, the same thing happens with the ending month and year as the
+         			 starting month and year is specified by you. In this way Pliny ensures that the
+         			 ending date provided on this form will never be <i>less</i> than the starting
+         			 one.
+      </p>
+      <p>If you want the date range to be an entire calendar year (all of
+         			 2007, say) you need only specify the year. Pliny will interpret the above
+         			 display as a date range from the frist day of 2007 to the last day of 2007.
+      </p>
+      <p>If you wish to further restrict the range to a particular month or
+         			 day, you can now choose the month from the second pair of drop down items. Now
+         			 that the year has been specified, you will find in the "starting month" drop
+         			 down's list only those months in which Pliny Notes were created in 2007.
+         			 Suppose you choose "May" from the starting date's drop down menu:
+      </p>
+      <p align="center"><img src="images/search-ref-9.gif"></p>
+      <p>Once again, Pliny will set the ending month to match the starting
+         			 month, and will only allow you to select as an ending month that is the same or
+         			 greater than the starting one. Here, the filter range is from the first of May
+         			 2007, to the last day of May, 2007.
+      </p>
+      <p>Although Pliny initially sets the ending year and month based on
+         			 your setting of the starting year and month, you are free to subsequently
+         			 change either the <i>ending</i> year or month as long as the ending date is
+         			 <i>greater</i> than the starting date. If, for example, you wanted the filter
+         			 period to extend for two months, from the first day in May to the end of June,
+         			 simply reset the end month to June:
+      </p>
+      <p align="center"><img src="images/search-ref-10.gif"></p>
+      <p>Now that you have specified the starting and/or ending months, you
+         			 will find the "day" dropdown menu will show the days on which notes were
+         			 created in the specified month. Although you do not have to provide a day, if
+         			 you wish, you can specify a starting and ending day for your search. For
+         			 example: 
+      </p>
+      <p align="center"><img src="images/search-ref-11.gif"></p>
+      <p>specifies a date filter range from the beginning of May 4th, 2007,
+         			 to the end of June 20th.
+      </p>
+      <p>After you have specified the date range, you can run your search for
+         			 notes containing the words you specified by clicking the "go" button that
+         			 appears directly above the date-range form.
+      </p>
+      <p>You can cancel or turn off your date range filter either by folding
+         			 up the "Filter by Date" area (Pliny only applies a filter when the date range
+         			 is displayed in this area), or by clearing the date by emptying the starting
+         			 year (which will, in turn, clear all the other year, month and day elements
+         			 also).
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>

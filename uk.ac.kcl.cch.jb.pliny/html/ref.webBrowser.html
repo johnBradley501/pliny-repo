@@ -1,0 +1,344 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Pliny: Web Browser</title>
+      <link rel="stylesheet" type="text/css" href="default.css">
+   </head>
+   <body>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 2px; border-bottom: 5px solid  #A22C28">
+         <tr>
+            <td align="left" style="background:#FFFFFF"><img src="images/pliny-head.gif"></td>
+            <td align="right" style="background:#FFFFFF"><img src="images/head.jpg"></td>
+         </tr>
+      </table>
+      <h1><a name="d1e4332">2.1.5 Web Browser</a></h1>
+      <p>This section provides a reference section for the embedded Web Browser.
+         		If you are unfamiliar with how to use the browser within Pliny, see
+         		<a href="tut.plinyWithWeb.html">the tutorial on this subject</a>.
+      </p>
+      <h2>What's it for</h2>
+      <p>Pliny's embedded Web Browser should be invoked whenever you wish to
+         		  attach Pliny resources such as notes to a web page. Although a web browser
+         		  (configurable in Eclipse, but generally it will be an established browser
+         		  already on your computer such as Internet Explorer or FireFox). It is an
+         		  editor, so it will launch an editing space in the editor pane.
+      </p>
+      <h2>Starting the Browser</h2>
+      <p>Pliny's embedded web browser can be started in any of three ways: 
+         		
+         <ul>
+            <li>Click on the Browser icon from the Eclipse main toolbar:
+               			 <img align="middle" src="images/icons/browserIcon.gif">. Unless you have changed your
+               			 home page setting (see how to do that in the section <i>Browser Controls</i>,
+               			 below), the browser will start with <tt>http://pliny.cch.kcl.ac.uk</tt> as its
+               			 default "homepage".
+            </li>
+            <li>Choose the "open" action from any reference to a web page
+               			 (identified with<img align="middle" src="images/icons/browserIcon.gif"> in its top left
+               			 corner). This will cause Pliny to launch the web browser and point it at the
+               			 web page to which the reference refers.
+            </li>
+            <li>Choose a web page reference from the resource explorer. Pliny will
+               			 launch the web browser and point it at the web page the reference
+               			 specified.
+            </li>
+         </ul>
+      </p>
+      <p>If you shut down Pliny (or Eclipse if you are using Pliny as a plugin)
+         		  when the browser is open, Pliny will remember that the browser was running at
+         		  the time, and will reopen it when it is restarted at the page it is currently
+         		  showing.
+      </p>
+      <h2>Screen components</h2>
+      <p>Here is a typical display of the embedded Web Browser, with its parts
+         		  labelled: 
+      </p>
+      <p align="center"><img src="images/browser-screen.gif"></p>
+      <p>The embedded browser appears with Pliny's standard toolbar at the top,
+         		  and two major areas below it divided by a bounday (labelled "Boundary" above).
+         
+         		
+         <ul>
+            <li>To the left is the <i>browser area</i>. Web pages fetched by the
+               			 browser appear in the large bottom left area. You can operate in this area
+               			 exactly as you do in your normal browser -- clicking on links that appear for
+               			 example to navigate to another web page. The top area (labelled "Browser
+               			 Controls" above) contains buttons that control the browser. See details about
+               			 their description in the subsection Browser Controls below.
+            </li>
+            <li>To the right is the <i>reference area</i> associated with this
+               			 page. You can create references to notes in this area that you wish to
+               			 associate with the browser page you are seeing at any time. Whenever you return
+               			 to this same page your associated notes will reappear here.
+            </li>
+         </ul>
+      </p>
+      <h3>Tab</h3>
+      <p>A row of tabs appear at the top of this pane, as it does above any
+         			 of Pliny's annotators/editors. The highlighted one (in the figure, "Pliny:
+         			 Welcome") belongs to the main screen area below. The "X" icon can be clicked on
+         			 to close the object. The name that appears in the tab is one of two
+         			 possibilities: 
+         		  
+         <ul>
+            <li>If the web page is already stored as a Pliny resource, then the
+               				name of the resource will appear here.
+            </li>
+            <li>If the page is being displayed from the WWW, but is not currently
+               				a Pliny resource, then the name here is the name your browser would normally
+               				show as the page's name -- often the page's "title", but perhaps the page's URL
+               				if it doesn't have a title.
+            </li>
+         </ul>
+      </p>
+      <h3>Boundary</h3>
+      <p>The reference area is separated from the browser areas by a
+         			 boundary. Drag the boundary area left or right to change the proportion of
+         			 screen are given to the two portions.
+      </p>
+      <h3>Browser Controls</h3>
+      <p>The browser has its own toolbar area, and it looks like this:</p>
+      <p align="center"><img src="images/browser-toolbar.png"></p>
+      <p>The areas on it are: 
+         		  
+         <ul>
+            <li><b>Back Button:</b> This is the normal browser "back"
+               				button.
+            </li>
+            <li><b>Forward Button</b>: This is the normal browser "forward"
+               				button.
+            </li>
+            <li><b>Stop Button</b>: This is the normal browser "stop"
+               				button.
+            </li>
+            <li><b>Refresh Button</b>: This is the normal browser "refresh page"
+               				button.
+            </li>
+            <li><b>Home Button</b>: This is the normal "home" button. By default,
+               				the home page for Pliny's embedded browser is
+               				<tt>http://pliny.cch.kcl.ac.uk</tt>, but you can change this. 
+               				
+               <ul>
+                  <li>First, navigate to the page you want to use as your home
+                     					 page.
+                  </li>
+                  <li>Then click on the dropdown button to the right of the Home
+                     					 icon itself (<img align="middle" src="images/pull-down.gif">). This invokes the home
+                     					 button's associated dropdown menu which contains a set of commands associated
+                     					 with the Home button.
+                  </li>
+                  <li>Click on the option "Make current home":
+                     					 
+                     <p align="center"><img src="images/browser-setHome.gif"></p> 
+                     					 
+                     <p>This will reset the home page to the page you are currently
+                        						viewing.
+                     </p>
+                  </li>
+               </ul> 
+            </li>
+            <li><b>Go Button</b>: This is the normal browser "go" button.
+            </li>
+            <li><b>Current URL</b>: This field is the place where the current URL
+               				is shown. You can also use it to make the browser go to a new web page: 
+               				
+               <ul>
+                  <li>You can type in the URL of the page, or paste a URL in from
+                     					 an outside source.
+                  </li>
+                  <li>The Current URL area is a drop-down menu which lists page you
+                     					 have referenced recently -- what in your regular browser is called the
+                     					 <i>history list</i>. You can return to one of these pages by choosing it from
+                     					 the list.
+                  </li>
+                  <li>You can drag a URL appearing in a browser outside of Pliny to
+                     					 this area to make the Pliny browser go to the same page.
+                  </li>
+               </ul>
+            </li>
+            <li><b>Harvest Images</b>: This is a button that, when pressed,
+               				causes Pliny to look for suitable images on the current webpage and to turn
+               				them into Image Resources that can be annotated. There is an example of its use
+               				in the tutorial <a href="tut.plinyWithImages.html">using Pliny with
+                  				Images</a>.
+            </li>
+         </ul>
+      </p>
+      <h3>Reference Area</h3>
+      <p>This is the area where you can make notes about this webpage in the
+         			 form of references to notes or to other Pliny resources. The Reference area
+         			 provides a working 2D space for laying out the <a href="ref.referenceObject.html">reference objects</a>. There is more about the
+         			 Reference area <a href="ref.referenceObject.html">here</a>.
+      </p>
+      <h2>Pliny ToolBar</h2>
+      <p>The toolbar for the Browser is Pliny's "Pliny Toolbar" and contains
+         		  tools that work with the Browser's Reference area. It looks like this, with its
+         		  parts labelled:
+      </p>
+      <p align="center"><img src="images/browser-pliny-toolbar.gif"></p>
+      <p>Looking left to right we find: 
+         		
+         <ul>
+            <li>First, there is the browser annotators <b>Drag and Drop</b> object.
+               			 The next section describes its use in the section "<i>Out of</i> the
+               			 Browser".
+            </li>
+            <li>To the right of this is a text field, labelled here the <b>Resource
+                  			 Name</b>. When Pliny saves a reference to a web page, or the browser points to
+               			 a page that has a resource already attached to it, the name of the web page
+               			 resource is shown here. It can be edited to whatever you like. When a page is
+               			 newly loaded, the default resource name used is the web page's title (usually
+               			 shown in the browser's tab), and if the page has no title, the URL for the page
+               			 is used.
+            </li>
+            <li>To the right end of the Pliny Toolbar are the tools to support
+               			 annotation and notetaking, called here the <b>Annotation Toolbar</b>. The tools
+               			 and their icons are: 
+               			 
+               <ul>
+                  <li><img align="middle" src="images/icons/referencersOn.gif">: Use this
+                     				  icon by clicking on the down arrow symbol (<img align="middle" src="images/pull-down.gif">) to its right rather than the icon itself.
+                     				  Clicking the down-arrow will cause Pliny to generate a list of all resources
+                     				  managed by Pliny that refer to the current page. To open one of these
+                     				  resources, choose it from the list.
+                  </li>
+                  <li><img align="middle" src="images/icons/undo.gif">: This icon allows you
+                     				  to undo the previous action you have done in the Reference area. Undo can also
+                     				  be chosen from the "Edit" menu, or requested using the standard keystroke for
+                     				  your platform.
+                  </li>
+                  <li><img align="middle" src="images/icons/redo.gif">: This icon allows you
+                     				  to redo an action you have just undone in the Reference area. Redo is also
+                     				  available from the "Edit" menu, or can be requested by the standard keystroke
+                     				  for redo.
+                  </li>
+                  <li><img align="middle" src="images/icons/noteIcon.gif">: This icon allows
+                     				  you to create a new note and a note reference for it that will appear in the
+                     				  Annotation area. You can use it in two ways: 
+                     				  
+                     <ol>
+                        <li>first click on the
+                           						<img align="middle" src="images/icons/noteIcon.gif"> button, then in the annotation
+                           						area drag over the area there that you wish to be used for the space the
+                           						reference is to occupy, or
+                        </li>
+                        <li>you can drag the
+                           						<img align="middle" src="images/icons/noteIcon.gif"> button itself into the annotation
+                           						area. This will give you a "standard size" note which you can later change its
+                           						size.
+                        </li>
+                     </ol> After Pliny has responded and created a reference and new
+                     				  note for you, you will want to type in the note name and its text in the newly
+                     				  created space. Each time a new note is created the "create new note" state is
+                     				  cleared, and you must push the <img align="middle" src="images/icons/noteIcon.gif">
+                     				  again to create another note or drag a new note from the
+                     				  <img align="middle" src="images/icons/noteIcon.gif"> button. There is a keyboard
+                     				  shortcut that puts Pliny in "create new note" state as well: F5).
+                  </li>
+                  <li><img align="middle" src="images/icons/connectionIcon.gif">: This icon
+                     				  allows you to create a connection between two references (a line joining them).
+                     				  A connection is usually used to represent some sort of conceptual connection
+                     				  between the two items.. To establish a connection line first click on the
+                     				  <img align="middle" src="images/icons/connectionIcon.gif">, then click in the reference
+                     				  that should hold the start of the line, and drag to the reference where the
+                     				  line should end. Each time you wish to create a new connection you must first
+                     				  push the <img align="middle" src="images/icons/connectionIcon.gif"> again. Keyboard
+                     				  Shortcut: F6.
+                  </li>
+                  <li><img align="middle" src="images/icons/allClose.gif">: Click on this
+                     				  icon to cause all the references in this reference area to be minimized.
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </p>
+      <h2>Drag and Drop</h2>
+      <p>An important element of Pliny's design was expressed in the work
+         		  involved in trying to make the creation of resources and references as
+         		  straight-forward as possible. To this end we have added various drag and drop
+         		  features to Pliny. We have already shown that references can be dragged about
+         		  in a reference area -- that is how you make use of the 2D space the reference
+         		  area provided to organise the notes. However, drag and drop can also be used to
+         		  copy materials from outside Pliny's integrated web browser into it, or from
+         		  inside the browser's reference area to other areas. Here is a summary of these
+         		  drag and drop features available in the WEb Browser:
+      </p>
+      <h3><i>Into</i> the Browser
+      </h3>
+      <p>Here are the kind of things that can be dragged from elsewhere into
+         			 the browser's reference area: 
+         		  
+         <ul>
+            <li>A reference to any resource can be dragged from the Resource
+               				Manager to the 2D reference area. Pliny will interpret this as a request to
+               				create a reference to that resource there. A reference to a note in the Note
+               				Search View works the same way.
+            </li>
+            <li>If you have more than one editor open at the same time you can
+               				drag a reference from one into the other by dragging the reference's <i>drag
+                  				source object</i>. See the figure in the section <i>Out of the Browser</i> to
+               				see where the drag source objects are.
+            </li>
+            <li>Text can be selected from another program that supports Drag and
+               				Drop (such as Word) outside of Pliny and dragged onto the reference area
+               				attached to a browser page. Pliny will interpret this as a request to create a
+               				note and a reference to it in the area. If the dragged text begins with a short
+               				line of text that looks like a heading, Pliny will interpret this as the note's
+               				title.
+            </li>
+         </ul>
+      </p>
+      <p>Finally, a URL can be dragged from an external browser into the
+         			 integrated browser's <i>current URL</i> field. This will cause the browser to
+         			 redirect itself to that page.
+      </p>
+      <h3><i>Out of </i>the Browser
+      </h3>
+      <p>The integrated browser provides two kinds of drag source objects
+         			 that can be dragged from the note editor into another Pliny object. The
+         			 following figure shows them:
+      </p>
+      <p align="center"><img src="images/browser-dnd.png"></p>
+      <p>Here we see Pliny displaying a note in the top area and the browser
+         			 in the bottom (the help section "Dividing a Pane: docking" in the topic
+         			 <a href="intro.panes.html">Managing Panes</a> describes how to split the Pliny
+         			 window in this way). The top part contains the note "Read Materials" and the
+         			 bottom is displaying the web page for Pliny the Elder's <i>Natural History</i>
+         			 from the Perseus project. A Pliny user can use one of the two drag source
+         			 objects shown to make a reference from something in the browser to the
+         			 reference area in the note. 
+         		  
+         <ul>
+            <li>If the user wanted to insert a reference to Perseus's web page
+               				<i>Natural History</i> in his/her "Read Materials" note, s/he should point at
+               				the drag source object belonging to the the web page (of the two marked in the
+               				figure above, this is the one to the left), and drag it into the reference area
+               				of the other note. Pliny will respond during the drag by showing you a grey box
+               				similar to that shown in the figure above. When you have placed the reference
+               				where you want it release the mouse button.
+            </li>
+            <li>If the user wanted to insert a reference to one of the objects in
+               				the web page's reference area this can also be done. Suppose the reference to
+               				the note about the translator was to be copied. Its drag source object is in
+               				its reference object at the left end (see it highlighted above). Point the
+               				mouse pointer at it and drag that object to a place in the receiving note's
+               				reference area. <b>Note</b> that dragging between notes will <i>only</i> work
+               				when one points at the specific drag source object. If one points elsewhere in
+               				the reference object Pliny will <i>not</i> understand it as a start of a
+               				request to drag a reference from one note to another -- it will see it as a
+               				request to move the object in its current reference space.
+            </li>
+         </ul>
+      </p>
+      <table width="20%" align="right">
+         <tr>
+            <td><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><img alt="Creative Commons License" style="border-width:0" src="images/cc-80x15.png"></a></td>
+         </tr>
+         <tr>
+            <td class="cc"><span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/Text" property="dc:title" rel="dc:type">Pliny Help Pages</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">John Bradley</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 UK: England &amp; Wales License</a>.
+               
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>
