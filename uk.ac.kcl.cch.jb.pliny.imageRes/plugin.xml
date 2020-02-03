@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="uk.ac.kcl.cch.jb.pliny.imageRes.ImageEditor"
+            contributorClass="uk.ac.kcl.cch.jb.pliny.imageRes.ImageEditorActionBarContributor"
+            default="false"
+            icon="icons/imageIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.imageRes.editor"
+            name="Image Annotator"/>
+   </extension>
+   <extension
+         point="uk.ac.kcl.cch.jb.pliny.resourceExtensionProcessor">
+         <processor class="uk.ac.kcl.cch.jb.pliny.imageRes.dnd.ImageEditorResourceExtensionProcessor"/>
+   </extension>
+   <extension
+         point="uk.ac.kcl.cch.jb.pliny.browserToolbarContribution">
+         <processor class="uk.ac.kcl.cch.jb.pliny.imageRes.actions.BrowserButtonImageImport"/>
+   </extension>
+
+</plugin>
