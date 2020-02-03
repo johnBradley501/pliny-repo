@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="uk.ac.kcl.cch.jb.pliny.pdfAnnot.PDFEditor"
+            contributorClass="uk.ac.kcl.cch.jb.pliny.pdfAnnot.PDFEditorContributor"
+            default="false"
+            icon="icons/pdfIcon.gif"
+            id="uk.ac.kcl.cch.jb.pliny.pdfAnnot.PDFEditor"
+            name="PDFEditor"/>
+   </extension>
+   <extension
+         point="uk.ac.kcl.cch.jb.pliny.resourceExtensionProcessor">
+        <processor class="uk.ac.kcl.cch.jb.pliny.pdfAnnot.dnd.PdfEditorResourceExtensionProcessor"/>
+    </extension>
+
+</plugin>
