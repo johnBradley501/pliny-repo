@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://pliny.cch.kcl.ac.uk/update">
+      Pliny is a prototype of a tool to assist you with managing personal research information digitally. The essential concept behind Pliny is captured in the act of recording a personal response to something you are working with with an annotation or note. With Pliny you can add private annotations to digital materials such as web sites, digital images and PDF files.
+   </description>
+   <feature url="features/uk.ac.kcl.cch.jb.pliny_1.1.2.jar" id="uk.ac.kcl.cch.jb.pliny" version="1.1.2">
+      <category name="pliny"/>
+   </feature>
+   <feature url="features/org.w3c.tidy_1.11.0.jar" id="org.w3c.tidy" version="1.11.0">
+      <category name="supporting Components"/>
+   </feature>
+   <feature url="features/org.jpedal.feature_3.81.0.jar" id="org.jpedal.feature" version="3.81.0">
+      <category name="supporting Components"/>
+   </feature>
+   <feature url="features/org.apache.derby.core.feature_10.5.1.jar" id="org.apache.derby.core.feature" version="10.5.1">
+      <category name="supporting Components"/>
+   </feature>
+   <category-def name="pliny" label="Pliny Base Components"/>
+   <category-def name="supporting Components" label="Components needed to run Pliny"/>
+</site>
