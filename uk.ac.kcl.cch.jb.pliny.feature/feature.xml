@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="uk.ac.kcl.cch.jb.pliny.feature"
+      label="Pliny Feature"
+      version="1.3.0.qualifier"
+      provider-name="John Bradley"
+      image="pliny-brand.jpg">
+
+   <description url="http://pliny.cch.kcl.ac.uk/">
+      Pliny is a tool to assist you with managing 
+personal research information digitally. The essential 
+concept behind Pliny is captured in the act of recording 
+a personal response to something you are working with 
+with an annotation or note. With Pliny you can add 
+private annotations to digital materials such as web 
+sites, digital images and PDF files.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      (c) Copyright John Bradley 2006-9.  All rights reserved.
+   </copyright>
+
+   <license url="//www.eclipse.org/legal/epl-v10.html">
+      This software is licensed under the terms of the Eclipse Public
+License - v 1.0 
+See details at: http://www.eclipse.org/legal/epl-v10.html
+   </license>
+
+   <url>
+      <update label="Pliny Distribution Update Site" url="http://pliny.cch.kcl.ac.uk/update"/>
+   </url>
+
+   <includes
+         id="org.jpedal.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.w3c.tidy.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.apache.derby.core.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.apache.derby.core"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.w3c.tidy"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.jpedal"/>
+      <import plugin="org.apache.lucene.core" version="3.5.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="uk.ac.kcl.cch.jb.pliny"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="uk.ac.kcl.cch.jb.pliny.imageRes"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="uk.ac.kcl.cch.jb.pliny.pdfAnnot"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="uk.ac.kcl.cch.rdb2java"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.json"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpclient"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
