@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         id="application"
+         name="Pliny Application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="uk.ac.kcl.cch.jb.pliny.rcp.appl.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="uk.ac.kcl.cch.jb.pliny.rcp.perspective"
+            class="uk.ac.kcl.cch.jb.pliny.rcp.appl.Perspective"
+            id="uk.ac.kcl.cch.jb.pliny.rcp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            id="uk.ac.kcl.cch.jb.pliny.rcp.introID">
+      </intro>
+      <introProductBinding
+            introId="uk.ac.kcl.cch.jb.pliny.rcp.introID"
+            productId="uk.ac.kcl.cch.jb.pliny.rcp.product">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="uk.ac.kcl.cch.jb.pliny.rcp.introID"
+            content="introContent.xml"
+            id="uk.ac.kcl.cch.jb.pliny.rcp.configId">
+         <presentation
+               home-page-id="root">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx">
+            </implementation>
+         </presentation>
+      </config>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="uk.ac.kcl.cch.jb.pliny.rcp.application"
+            name="Pliny">
+         <property
+               name="windowImages"
+               value="icon16.gif,icon32.gif">
+         </property>
+         <property
+               name="aboutText"
+               value="Pliny&#x0A;&#x0A;Version 1.3.0&#x0A;&#x0A;(c) Copyright John Bradley 2006-13, All rights reserved.&#x0A;Includes JPedal code Copyright (c) 2009, IDRsolutions and Contributors.&#x0A;Includes Apache Derby code Copyright (c) 2004-2007 Apache Software Foundation&#x0A;Visit http://pliny.cch.kcl.ac.uk&#x0A;&#x0A;This software is built using Eclipse components&#x0A;Visit http://www.eclipse.org&#x0A;The PDF viewer is built using JPedal&#x0A;Visit http://www.jpedal.org/">
+         </property>
+         <property
+               name="aboutImage"
+               value="about.gif">
+         </property>
+         <property
+               name="appName"
+               value="Pliny">
+         </property>
+       </product>
+   </extension>
+
+</plugin>

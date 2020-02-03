@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Pliny" uid="uk.ac.kcl.cch.jb.plwh.rcp" id="uk.ac.kcl.cch.jb.pliny.rcp.product" application="uk.ac.kcl.cch.jb.pliny.rcp.application" version="1.2.0" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/uk.ac.kcl.cch.jb.pliny.rcp/about.gif"/>
+      <text>
+         Pliny
+
+Version 1.2.0
+
+(c) Copyright John Bradley 2006-10, All rights reserved.
+Includes JPedal code Copyright (c) 2009, IDRsolutions and Contributors.
+Includes Apache Derby code Copyright (c) 2004-2007 Apache Software Foundation
+Visit http://pliny.cch.kcl.ac.uk
+
+This software is built using Eclipse components
+Visit http://www.eclipse.org
+The PDF viewer is built using JPedal
+Visit http://www.jpedal.org/
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Xmx128M</vmArgs>
+   </launcherArgs>
+
+   <windowImages i16="/uk.ac.kcl.cch.jb.pliny.rcp/icon16.gif" i32="/uk.ac.kcl.cch.jb.pliny.rcp/icon32.gif"/>
+
+   <splash
+      location="uk.ac.kcl.cch.jb.pliny.rcp" />
+   <launcher name="pliny">
+      <solaris/>
+      <win useIco="true">
+         <ico path="/uk.ac.kcl.cch.jb.pliny.rcp/pliny.ico"/>
+         <bmp
+            winSmallHigh="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-32.bmp"
+            winSmallLow="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-8.bmp"
+            winMediumHigh="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-32-32.bmp"
+            winMediumLow="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-32-8.bmp"
+            winLargeHigh="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-32.bmp"
+            winLargeLow="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-8.bmp"/>
+      </win>
+   </launcher>
+
+   <intro introId="uk.ac.kcl.cch.jb.pliny.rcp.introID"/>
+
+   <vm>
+   </vm>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="javax.servlet.jsp"/>
+      <plugin id="org.apache.ant"/>
+      <plugin id="org.apache.commons.el"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.derby.core"/>
+      <plugin id="org.apache.jasper"/>
+      <plugin id="org.apache.lucene"/>
+      <plugin id="org.apache.lucene.analysis"/>
+      <plugin id="org.eclipse.ant.core"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.net"/>
+      <plugin id="org.eclipse.core.net.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.resources.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.auth"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.ecf"/>
+      <plugin id="org.eclipse.ecf.filetransfer"/>
+      <plugin id="org.eclipse.ecf.identity"/>
+      <plugin id="org.eclipse.ecf.provider.filetransfer"/>
+      <plugin id="org.eclipse.ecf.provider.filetransfer.ssl" fragment="true"/>
+      <plugin id="org.eclipse.ecf.ssl" fragment="true"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.concurrent"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.registry"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.jsp.jasper"/>
+      <plugin id="org.eclipse.equinox.jsp.jasper.registry"/>
+      <plugin id="org.eclipse.equinox.p2.core"/>
+      <plugin id="org.eclipse.equinox.p2.engine"/>
+      <plugin id="org.eclipse.equinox.p2.metadata"/>
+      <plugin id="org.eclipse.equinox.p2.metadata.repository"/>
+      <plugin id="org.eclipse.equinox.p2.repository"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.security"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.appserver"/>
+      <plugin id="org.eclipse.help.base"/>
+      <plugin id="org.eclipse.help.ui"/>
+      <plugin id="org.eclipse.help.webapp"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.win32" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.jpedal"/>
+      <plugin id="org.mortbay.jetty.server"/>
+      <plugin id="org.mortbay.jetty.util"/>
+      <plugin id="org.w3c.tidy"/>
+      <plugin id="uk.ac.kcl.cch.jb.pliny"/>
+      <plugin id="uk.ac.kcl.cch.jb.pliny.imageRes"/>
+      <plugin id="uk.ac.kcl.cch.jb.pliny.pdfAnnot"/>
+      <plugin id="uk.ac.kcl.cch.jb.pliny.rcp"/>
+      <plugin id="uk.ac.kcl.cch.rdb2java"/>
+   </plugins>
+
+   <features>
+      <feature id="uk.ac.kcl.cch.jb.pliny.rcp.feature" version="1.2.0"/>
+      <feature id="uk.ac.kcl.cch.jb.pliny" version="1.2.0.12nov10"/>
+      <feature id="org.w3c.tidy" version="1.11.0"/>
+      <feature id="org.apache.derby.core.feature" version="10.5.1"/>
+      <feature id="org.jpedal.feature" version="3.81.0"/>
+      <feature id="org.eclipse.draw2d" version="3.6.1.v20100908-1100-4507w31211A2403131"/>
+      <feature id="org.eclipse.gef" version="3.6.1.v20100908-1100-777B181A3Bz-6B663E7974242"/>
+      <feature id="org.eclipse.rcp" version="3.6.1.r361_v20100827-9OArFLdFjY-ThSQXmKvKz0_T"/>
+      <feature id="org.eclipse.equinox.p2.user.ui" version="2.0.1.r361_v20100903-897HFZFFZRuSD2LMtVxyz0Vr"/>
+      <feature id="uk.ac.kcl.cch.wordhoard.feature" version="1.0.0.test6"/>
+   </features>
+
+
+</product>
