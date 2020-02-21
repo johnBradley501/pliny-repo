@@ -208,20 +208,13 @@ public class BrowserViewer extends Composite {
             return;
         }*/
         try {
-            this.browser = new Browser(this, SWT.MOZILLA); // tries to get Mozilla browser, if possible JB
+            this.browser = new Browser(this, SWT.NONE); 
         }
         catch (SWTError e) {
-        	// System.out.println("Mozilla Failed:);");
-        	// e.printStackTrace(System.out);
-            try {
-            	this.browser = new Browser(this, SWT.NONE);
-            }
-            catch (SWTError e2){
-        	   e.printStackTrace();
-               MessageDialog.openError(parentShell, "Open","Could not open the browser");
-               return;
-            }
-        }
+     	   e.printStackTrace();
+           MessageDialog.openError(parentShell, "Open","Could not open the browser");
+           return;
+      }
 
         if (showURLbar)
             updateHistory();

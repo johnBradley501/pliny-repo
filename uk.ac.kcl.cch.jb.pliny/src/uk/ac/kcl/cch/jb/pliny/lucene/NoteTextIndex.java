@@ -13,27 +13,34 @@ package uk.ac.kcl.cch.jb.pliny.lucene;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.ClassicAnalyzer;
+//import org.apache.lucene.analysis.standard.ClassicAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+//import org.apache.lucene.document.Field;
+import org.apache.lucene.document.TextField;
+import org.apache.lucene.document.StringField;
 import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.Term;
-import org.apache.lucene.queryParser.ParseException;
-import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.queryparser.classic.ParseException;
+//import org.apache.lucene.queryParser.ParseException;
+//import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.queryparser.classic.QueryParser;
 //import org.apache.lucene.search.Hits;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.Searcher;
+//import org.apache.lucene.search.Searcher;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -41,6 +48,9 @@ import org.apache.lucene.util.Version;
 import org.eclipse.core.runtime.IProgressMonitor;
 
 import uk.ac.kcl.cch.jb.pliny.PlinyPlugin;
+import uk.ac.kcl.cch.jb.pliny.figures.MapContentFigure;
+import uk.ac.kcl.cch.jb.pliny.figures.TextContentFigure;
+import uk.ac.kcl.cch.jb.pliny.figures.TopPanel;
 import uk.ac.kcl.cch.jb.pliny.model.Note;
 import uk.ac.kcl.cch.jb.pliny.model.NoteLucened;
 import uk.ac.kcl.cch.jb.pliny.model.NoteQuery;
@@ -48,7 +58,12 @@ import uk.ac.kcl.cch.rdb2java.Rdb2javaPlugin;
 
 /**
  * This is a singleton class that manages the interface between Lucene and Pliny to support word searching
- * in Pliny notes. (version for Eclipse: juno)
+ * in Pliny notes. It appears to the author of this code that lucene developers are constantly reinventing
+ * the API, requiring substantial revision of this code each time the lucene bundle is updated in Eclipse.  
+ * The code here is constructed for Lucene version 8.0.0, which ships with Eclipse version 2019-09 R (4.13.0).
+ * 
+ * <p>Much of this code is inspired by online examples, in particular
+ * https://lucene.apache.org/core/8_0_0/core/overview-summary.html#overview.description
  * 
  * @see uk.ac.kcl.cch.jb.pliny.model.NoteLucened
  * @see uk.ac.kcl.cch.jb.pliny.views.NoteSearchView
@@ -56,9 +71,6 @@ import uk.ac.kcl.cch.rdb2java.Rdb2javaPlugin;
  * @author John Bradley
  *
  */
-
-// this version is reconfigured to use Lucene 3.5 which is integrated in Eclipse Juno
-// I must say that the regular substantial change in Lucene's API is worrisome.   .jb
 
 public class NoteTextIndex {
 	
@@ -97,22 +109,25 @@ public class NoteTextIndex {
 		return indexingDone;
 	}
 	
-	/**
-	 * builds the Lucene index, and provides support for the display of a
-	 * progress monitor to the user.
-	 * 
-	 * @param monitor the monitor to be displayed to the user while s/he waits.
-	 * @throws IOException
-	 */
+	private Directory getFSDirectory() {
+		try {
+			if(fsDir == null)
+				fsDir = FSDirectory.open(Paths.get(luceneDir));
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return fsDir;
+	}
 	
 	private IndexWriter getIndexWriter(){
 		if(indexWriter == null){
 			try {
-				if(fsDir == null)
-					fsDir = FSDirectory.open(new File(luceneDir));
-				//if(writerConfig == null)
-					writerConfig = new IndexWriterConfig(Version.LUCENE_CURRENT,new ClassicAnalyzer(Version.LUCENE_CURRENT));
-				indexWriter = new IndexWriter(fsDir,  writerConfig);
+				Directory myDir = getFSDirectory();
+				// writerConfig = new IndexWriterConfig(Version.LUCENE_CURRENT,new ClassicAnalyzer(Version.LUCENE_CURRENT));
+				writerConfig = new IndexWriterConfig(new StandardAnalyzer());
+				indexWriter = new IndexWriter(myDir,  writerConfig);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -120,6 +135,14 @@ public class NoteTextIndex {
 		}
 		return indexWriter;
 	}
+	
+	/**
+	 * builds the Lucene index, and provides support for the display of a
+	 * progress monitor to the user.
+	 * 
+	 * @param monitor the monitor to be displayed to the user while s/he waits.
+	 * @throws IOException
+	 */
 	
 	public void buildIndex(IProgressMonitor monitor) throws IOException{
 		if(indexingDone)return;
@@ -159,33 +182,7 @@ public class NoteTextIndex {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        /*
-		Connection con = PlinyPlugin.getDefault().getConnection();
-	    Statement stmt;
-	    try {
-			stmt = con.createStatement();
-			String query = "select Resource.resourceKey, Resource.fullName, Note.content "+
-			   "from Resource, Note where Resource.resourceKey=Note.resourceKey";
-	        ResultSet rs = stmt.executeQuery(query);
-	        while(rs.next()){
-	        	int key = rs.getInt(1);
-	        	String title = rs.getString(2);
-	        	if(title == null)title = "";
-	        	String content = rs.getString(3);
-	        	if(content == null)content = "";
-	        	addToIndex(key, title, content);
-	        	if(monitor != null)monitor.worked(1);
-	        }
-	        stmt.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-		   PlinyPlugin.getDefault().returnConnection(con);
-		   if(monitor != null)monitor.done();
-		}
-		*/
-		if(monitor != null)monitor.done();
+        if(monitor != null)monitor.done();
 	}
 
 	private void addToIndex(IndexWriter indexWriter, int key, String title, String content) {
@@ -196,24 +193,13 @@ public class NoteTextIndex {
 		
 	    Document doc = new Document();
 	    String keyString = Integer.toString(key);
-	    // see deprecated update list at http://lucene.apache.org/java/1_9_0/api/deprecated-list.html
-        //doc.add(Field.Keyword("key",keyString));
-	    //doc.add(new Field("key",keyString,Field.Store.YES,Field.Index.UN_TOKENIZED));
-	    doc.add(new Field("key",keyString,Field.Store.YES,Field.Index.NOT_ANALYZED));
-        //Field titleField = Field.Text("title",title);
-        //Field titleField = Field.UnStored("title",title);
-	    //Field titleField = new Field("title",title,Field.Store.NO, Field.Index.TOKENIZED);
-        //      titleField.setBoost(1.5f);
-      	Field titleField = new Field("title",title,Field.Store.NO, Field.Index.ANALYZED);
-            titleField.setBoost(1.5f);
+	    doc.add(new Field("key",keyString,StringField.TYPE_STORED));
+      	Field titleField = new Field("title",title,TextField.TYPE_NOT_STORED);
+        //    titleField.setBoost(1.5f);
+      	// https://community.neo4j.com/t/how-to-boost-lucene-queries-with-field-values/9975
         doc.add(titleField);
-        //doc.add(Field.Text("content", content));
-        //doc.add(Field.UnStored("content", content));
-        //doc.add(new Field("content", content,Field.Store.NO, Field.Index.TOKENIZED));
-        doc.add(new Field("content", content,Field.Store.NO, Field.Index.ANALYZED));
-        //doc.add(Field.UnStored("all",title+" "+content));
-        //doc.add(new Field("all",title+" "+content,Field.Store.NO, Field.Index.TOKENIZED));
-        doc.add(new Field("all",title+" "+content,Field.Store.NO, Field.Index.ANALYZED));
+        doc.add(new Field("content", content,TextField.TYPE_NOT_STORED));
+        doc.add(new Field("all",title+" "+content,TextField.TYPE_NOT_STORED));
 		try {
 			indexWriter.addDocument(doc);
 		} catch (IOException e) {
@@ -222,13 +208,22 @@ public class NoteTextIndex {
 		}
 	}
 	
-	private Searcher getSearcher(){
+	//private IndexReader getReader() {
+	//	try {
+	//		if(indexReader == null){
+	//			indexReader = new IndexReader();
+	//		}
+	//		
+	//	} catch (IOException e) {
+	//		e.printStackTrace();
+	//	}
+	//}
+	
+	private IndexSearcher getSearcher(){
 		try {
-			if(fsDir == null)
-				fsDir = FSDirectory.open(new File(luceneDir));
-			return new IndexSearcher(fsDir);
+			DirectoryReader ireader = DirectoryReader.open(getFSDirectory());
+			return new IndexSearcher(ireader);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
@@ -294,28 +289,23 @@ public class NoteTextIndex {
 			}
 	}
 	
+	// https://stackoverflow.com/questions/39292911/how-to-delete-or-update-the-documents-in-apache-lucene
+	
 	private void doRealremoveNoteFromIndex(NoteLucened myNote){
 		if(!indexingDone)return;
 		if(myNote.getALID() == 0)return;
 		//int numbDeleted = 0;
 		
 		try {
-			finishWriter();
-			Directory fsDir = FSDirectory.open(new File(luceneDir));
-			//indexReader = IndexReader.open(luceneDir);
-			indexReader = IndexReader.open(fsDir, false);
+			IndexWriter writer = getIndexWriter();
 			String keyString = Integer.toString(myNote.getALID());
-			//numbDeleted = indexReader.delete(new Term("key", keyString));
-			// see deprecated list at http://lucene.apache.org/java/1_9_0/api/deprecated-list.html
-			//indexReader.delete(new Term("key", keyString));
-			indexReader.deleteDocuments(new Term("key", keyString));
-			indexReader.close();
-			indexReader = null;
+			indexWriter.deleteDocuments(new Term("key", keyString));
+			indexWriter.commit();
+			finishWriter();
 		} catch (IOException e) {
 			e.printStackTrace();
 			return;
 		}
-		//System.out.println("after removeNoteToIndex: count: "+indexWriter.docCount()+", numbDeleted: "+numbDeleted);
 	}
 	
 	/**
@@ -343,16 +333,18 @@ public class NoteTextIndex {
 	
 	public Vector search(String queryString) throws ParseException{
 		if(!indexingDone)return null;
-		Searcher searcher = getSearcher();
+		IndexSearcher searcher = getSearcher();
 		if(searcher == null)return null;
 		//Query query = QueryParser.parse(queryString, "content", new StandardAnalyzer());
 		// see deprecated data at http://lucene.apache.org/java/1_9_0/api/deprecated-list.html
 		//Query query = QueryParser.parse(queryString, "all", new StandardAnalyzer());
 		//QueryParser qp = new QueryParser("all", new StandardAnalyzer());
 		// code from http://alias-i.com/lingpipe-book/lucene-3-tutorial-0.5.pdf
-		Analyzer stdAn = new ClassicAnalyzer(Version.LUCENE_CURRENT);
-		// = new StandardAnalyzer(Version.LUCENE_CURRENT);
-		QueryParser qp = new QueryParser(Version.LUCENE_CURRENT,"all",stdAn);
+		Analyzer stdAn = // new ClassicAnalyzer(Version.LUCENE_CURRENT);
+		  // = new StandardAnalyzer(Version.LUCENE_CURRENT);
+		  new StandardAnalyzer();
+		//QueryParser qp = new QueryParser(Version.LUCENE_CURRENT,"all",stdAn);
+		QueryParser qp = new QueryParser("all",stdAn);
 		Query query = qp.parse(queryString);
 		Vector rslt = new Vector();
 		try {

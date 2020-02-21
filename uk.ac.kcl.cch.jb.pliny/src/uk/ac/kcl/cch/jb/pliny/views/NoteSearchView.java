@@ -19,7 +19,7 @@ import java.sql.Date;
 import java.util.Iterator;
 import java.util.Vector;
 
-import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryparser.classic.ParseException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.gef.commands.CommandStack;
