@@ -34,6 +34,7 @@ import uk.ac.kcl.cch.jb.pliny.model.IHasAttributeProperties;
 import uk.ac.kcl.cch.jb.pliny.model.ObjectType;
 import uk.ac.kcl.cch.jb.pliny.model.Resource;
 import uk.ac.kcl.cch.jb.pliny.model.VirtualResource;
+import uk.ac.kcl.cch.jb.pliny.parts.IHasCachedThumbnail;
 
 /***
  * VirtualBrowserResource is used by the Pliny integrated web browser to
@@ -48,7 +49,7 @@ import uk.ac.kcl.cch.jb.pliny.model.VirtualResource;
  */
 
 public class VirtualBrowserResource extends VirtualResource 
-implements IHasAttributeProperties, ICachingResource{
+implements IHasAttributeProperties, IHasCachedThumbnail{
 	
 	public static final int browserObjectType = 2;
 

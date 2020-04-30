@@ -36,7 +36,7 @@ public class RootResourcePart extends
 		ParentOfOrderableAbstractGraphicalEditPart 
 		implements PropertyChangeListener, IHasConnectionLayer, IHasIsContainmentLoop{
 	
-	private RootFigure myFigure;
+	//private RootFigure myFigure;
 	
 	protected RootResourcePart(){
 		
@@ -51,19 +51,18 @@ public class RootResourcePart extends
 	}
 
 	protected IFigure createFigure() {
-		myFigure = new RootFigure();
-		return myFigure;
+		return new RootFigure();
 	}
 
 	public RootFigure getMyFigure(){
-		return myFigure;
+		return (RootFigure)getFigure();
 	}
 	
 	/**
 	 * @return the Content pane for adding or removing child figures
 	 */
 	public IFigure getContentPane(){
-		return myFigure.getContentsFigure();
+		return getMyFigure().getContentsFigure();
 	}
 	
 	public List getModelChildren(){

@@ -164,7 +164,7 @@ public class ResourceAreaManager implements CommandStackListener, ISelectionChan
 		graphicalViewer.setKeyHandler(keyHandler);
 		
 		if(provider == null)
-		    provider = new PlinyMenuProvider(myPart,graphicalViewer, getEditDomain().getCommandStack());
+		    provider = getMyMenuProvider();
 		graphicalViewer.setContextMenu(provider);
 		if(myPageSite != null)
 			myPageSite.registerContextMenu(ownerID+".contextmenu", provider, graphicalViewer);
@@ -181,6 +181,11 @@ public class ResourceAreaManager implements CommandStackListener, ISelectionChan
 
 		return graphicalViewer.getControl();
 	}
+
+	protected ContextMenuProvider getMyMenuProvider() {
+		return new PlinyMenuProvider(myPart,getGraphicalViewer(), getEditDomain().getCommandStack());
+	}
+
 	
 	protected TransferDropTargetListener getMyDropTargetListener(EditPartViewer viewer){
 		return new PlinyObjectTransferDropTargetListener(viewer);
@@ -241,10 +246,11 @@ public class ResourceAreaManager implements CommandStackListener, ISelectionChan
 		getActionRegistry();
 		selectionActions.add(action);
 		actionRegistry.registerAction(action);
+		action.setSelectionProvider(myPart.getSite().getSelectionProvider());
 	}
 
 	public void selectionChanged(SelectionChangedEvent event) {
-		updateCommandStackActions();
+	updateCommandStackActions();
 	}
 
 	public void updateCommandStackActions(){
@@ -258,6 +264,10 @@ public class ResourceAreaManager implements CommandStackListener, ISelectionChan
 	public ActionRegistry getActionRegistry(){
 		if(actionRegistry == null)actionRegistry = new ActionRegistry();
         return actionRegistry;			
+	}
+	
+	public void setActionRegistry(ActionRegistry registry) {
+		actionRegistry = registry;
 	}
 	
 	public void addKeyStrokeAction(KeyStroke keystroke, IAction action){

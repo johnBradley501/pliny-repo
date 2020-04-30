@@ -76,13 +76,11 @@ public class PlinyToolBar implements PropertyChangeListener{
 	
 	private Composite toolbarComp = null;
 	private StyledText nameField;
-	//private TextViewer nameField;
-	//private StyledText nameWidget;
 	private DnDResourceHolder rh = null;
 	private ToolBarManager manager = null;
 	
 	private CommandStack commandStack;
-	private ActionRegistry actionRegistry;
+	//private ActionRegistry actionRegistry;
 	
 	private CutPlinyAction cutAction = null;
 	private CopyPlinyAction copyAction = null;
@@ -105,7 +103,7 @@ public class PlinyToolBar implements PropertyChangeListener{
         this.includeAnchorTools = includeAnchorTools;
         
         commandStack = areaManager.getEditDomain().getCommandStack();
-        actionRegistry = areaManager.getActionRegistry();
+        setupActions(areaManager.getActionRegistry());
         
         IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 
@@ -122,24 +120,13 @@ public class PlinyToolBar implements PropertyChangeListener{
         data.heightHint = 32;
         sep1.setLayoutData(data);
         
-        //nameField = new org.eclipse.swt.widgets.Text(toolbarComp, SWT.BORDER);
+        buildLeftEndTools(toolbarComp);
+        
         nameField = new StyledText(toolbarComp, SWT.BORDER);
-		//Composite titleHolder = new Composite(toolbarComp, SWT.NONE);
-		//titleHolder.setBackground(ColorConstants.red);
-		//titleHolder.setLayout(new FillLayout(SWT.VERTICAL));
-		//titleHolder.setLayoutData(new GridData(GridData.FILL_BOTH));
-        //nameField = new TextViewer(toolbarComp, SWT.BORDER | SWT.SINGLE);
-        //page.getSite().setSelectionProvider(nameField);
-        //nameWidget = nameField.getTextWidget();
-        //nameField.getControl().setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
         nameField.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-        // nameWidget.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-        //nameWidget.setBackground(ColorConstants.white);
         nameField.setBackground(ColorConstants.white);
         nameField.setText(resourceHolder.getMyResource().getName());
-        //nameWidget.setText(resourceHolder.getMyResource().getName());
         nameField.addFocusListener(new FocusAdapter(){
-        //nameWidget.addFocusListener(new FocusAdapter(){
 
     		public void focusGained(FocusEvent e) {
     			giveActionsStyledText(nameField);
@@ -163,24 +150,24 @@ public class PlinyToolBar implements PropertyChangeListener{
         	}
         });
         
-        //Label sep2 = new Label(toolbarComp, SWT.SEPARATOR);
-        //data = new GridData();
-        //data.heightHint = 32;
-        //sep2.setLayoutData(data);
-        
-        buildToolbarPart(part, areaManager, otherContributions);
+       buildToolbarPart(part, areaManager, otherContributions);
 
 	}
 	
+	private void setupActions(ActionRegistry actionRegistry) {
+		cutAction = (CutPlinyAction) actionRegistry.getAction(ActionFactory.CUT.getId());
+		copyAction = (CopyPlinyAction) actionRegistry.getAction(ActionFactory.COPY.getId());
+		pasteAction = (PastePlinyAction) actionRegistry.getAction(ActionFactory.PASTE.getId());
+	}
+	
 	private void giveActionsStyledText(StyledText myText){
-		if(cutAction == null){
-			cutAction = (CutPlinyAction) actionRegistry.getAction(ActionFactory.CUT.getId());
-			copyAction = (CopyPlinyAction) actionRegistry.getAction(ActionFactory.COPY.getId());
-			pasteAction = (PastePlinyAction) actionRegistry.getAction(ActionFactory.PASTE.getId());
-		}
 		cutAction.setStyledText(myText);
 		copyAction.setStyledText(myText);
 		pasteAction.setStyledText(myText);
+	}
+	
+	protected void buildLeftEndTools(Composite toolbarComp) {
+		//override to make it do something useful  JB
 	}
 
 	private void buildToolbarPart(IResourceDrivenPart part, ResourceAreaManager areaManager, Vector otherContributions) {
@@ -244,7 +231,6 @@ public class PlinyToolBar implements PropertyChangeListener{
         
 		MinimizeAllAction minimizeAllAction = new MinimizeAllAction();
 		minimizeAllAction.updatePart(part);
-		//toolItemActionLinkers.add(new ToolItemActionLinker(toolbar, minimizeAllAction));
 		manager.add(minimizeAllAction);
 
 		if(otherContributions != null && otherContributions.size() != 0){
@@ -264,12 +250,12 @@ public class PlinyToolBar implements PropertyChangeListener{
 	}
 
 	public void dispose(){
-		//Iterator it = toolItemActionLinkers.iterator();
-		//while(it.hasNext()){
-		//	((ButtonActionLinker)it.next()).dispose();
-		//}
-		if(manager != null)manager.dispose();
+	if(manager != null)manager.dispose();
 		if(currentResource != null)currentResource.removePropertyChangeListener(this);
+	}
+	
+	public Resource getResource() {
+		return resourceHolder.getMyResource();
 	}
 
 	

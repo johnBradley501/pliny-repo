@@ -206,14 +206,14 @@ IResourceDrivenPart/* , ISelectionListener*/{
 		return false;
 	}
 	
-	private class MultiSourceSelectionProvider 
+	/* private class MultiSourceSelectionProvider 
 	implements ISelectionProvider, ISelectionChangedListener {
 
 		/*
 		 *  (non-Javadoc)
 		 * @see org.eclipse.jface.viewers.ISelectionProvider#addSelectionChangedListener(org.eclipse.jface.viewers.ISelectionChangedListener)
 		 * modelled after org.eclipse.ui.part.MultiPageSelectionProvider
-		 */
+		 *
 	    private ListenerList listeners = new ListenerList();
 	    //private ListenerList listeners = new ListenerList(ListenerList.IDENTITY);
 	    private Set providers = new HashSet();
@@ -275,7 +275,7 @@ IResourceDrivenPart/* , ISelectionListener*/{
 			
 		}
 		
-	}
+	} */
 	
 	private void giveActionsStyledText(StyledText styledText){
 		cutAction.setStyledText(styledText);
@@ -321,62 +321,17 @@ IResourceDrivenPart/* , ISelectionListener*/{
 	} */
 	
 	private Composite defineNoteArea(Composite parent){
-/*		Composite noteArea = new Composite(parent, SWT.BORDER);
-		GridLayout layout = new GridLayout(1,true);
-		layout.marginWidth = 0;
-		layout.marginHeight = 0;
-		noteArea.setLayout(layout);
-		GridData gdata = new GridData(GridData.FILL_HORIZONTAL);
-		gdata.heightHint = 18;
-		
-		Composite titleArea = new Composite(noteArea, SWT.NONE);
-		titleArea.setLayout(new GridLayout(2, false));
-		//titleArea.setBackground(ColorConstants.green);
-		titleArea.setBackground(titleAreaColour);
-		titleArea.setLayoutData(gdata);
-		
-		Composite titleHolder = new Composite(titleArea, SWT.NONE);
-		titleHolder.setLayout(new FillLayout());
-		titleHolder.setLayoutData(new GridData(GridData.FILL_BOTH));
-		TextViewer viewer = new TextViewer(titleHolder, SWT.SINGLE);
-		titleText = viewer.getTextWidget();
-		titleText.setBackground(titleAreaColour);
-		viewer.setDocument(new Document(myNote.getName()));
-		titleFocusListener = new TitleFocusListener(titleText, myNote);
-		titleText.addFocusListener(titleFocusListener);
-		mySelectionProvider.addSelectionProvider(viewer);
 
-		
-		DnDResourceHolder myIcon = new DnDResourceHolder(titleArea, SWT.NONE);
-		myIcon.getLabel().setBackground(titleAreaColour);
-		myIcon.getLabel().setLayoutData(new GridData(GridData.VERTICAL_ALIGN_CENTER));
-		myIcon.getLabel().setImage(getIcon());
-		myIcon.setResource(myNote);
-		
-		gdata = new GridData(GridData.FILL_BOTH);
-		Composite noteHolder = new Composite(noteArea, SWT.NONE); */
 		Composite noteHolder = new Composite(parent, SWT.NONE);
 		noteHolder.setLayout(new FillLayout(SWT.VERTICAL));
-		//noteHolder.setLayoutData(gdata);
 		TextViewer viewer = new TextViewer(noteHolder, SWT.V_SCROLL | SWT.BORDER);
 		contentsText = viewer.getTextWidget();
 		contentsText.setWordWrap(true);
 		viewer.setDocument(new Document(myNote.getContent()));
-		//contentText.addModifyListener(this);
 		contentFocusListener = new ContentFocusListener(contentsText, myNote);
 		contentsText.addFocusListener(contentFocusListener);
 		mySelectionProvider.addSelectionProvider(viewer);
 		
-		//viewer.setDocument(new Document(myNote.getContent()));
-		
-		//contentsWidget = new Text(noteArea, SWT.V_SCROLL | SWT.WRAP);
-		//contentsWidget.setLayoutData(gdata);
-		//contentsWidget.setText(myNote.getContent());
-		//contentFocusListener = new ContentFocusListener(contentsWidget, myNote);
-		////contentsWidget.addModifyListener(this);
-		//contentsWidget.addFocusListener(contentFocusListener);
-		
-		//return noteArea;
 		return noteHolder;
 	}
 	
@@ -446,12 +401,6 @@ IResourceDrivenPart/* , ISelectionListener*/{
 		sash.addSelectionListener(mySashAdapter);
 		sash.addMouseListener(mySashAdapter);
 		
-		//MakeNoteAction mnAction = new MakeNoteAction();
-		//mnAction.setEditDomain(areaManager.getEditDomain());
-		//areaManager.addKeyStrokeAction(KeyStroke.getReleased(SWT.F5, 0), mnAction);
-		//MakeConnectionAction mcAction = new MakeConnectionAction();
-		//mcAction.setEditDomain(areaManager.getEditDomain());
-		//areaManager.addKeyStrokeAction(KeyStroke.getReleased(SWT.F6, 0), mcAction);
 	}
 	
 	private class SashSelectionAdapter extends SelectionAdapter implements MouseListener{

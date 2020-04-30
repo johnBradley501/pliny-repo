@@ -40,9 +40,15 @@ import uk.ac.kcl.cch.jb.pliny.model.Resource;
  */
 public class OrphanLinkableObjectsCommand extends Command {
 	
+	private static boolean ignoreOrphan = false;
+	public static void setIgnore(boolean val) {
+		ignoreOrphan = val;
+	}
+	
 	Vector linkableObjects = null;
 	Resource displayedIn = null;
 	Hashtable theCoords;
+	boolean ignoreThis = false;
 
 	/**
 	 * the constructor used in the policy code to set up this command.
@@ -54,9 +60,15 @@ public class OrphanLinkableObjectsCommand extends Command {
 		super("drag into container");
 		this.linkableObjects = linkableObjects;
 		theCoords = new Hashtable();
+		ignoreThis = ignoreOrphan;
 	}
 	
 	public void execute(){
+		if(ignoreOrphan || ignoreThis) {
+			ignoreOrphan = false;
+			ignoreThis = true;
+			return;
+		}
 		Iterator it = linkableObjects.iterator();
 		while(it.hasNext()){
 			LinkableObject obj = (LinkableObject)it.next();
@@ -69,6 +81,8 @@ public class OrphanLinkableObjectsCommand extends Command {
 	}
 
 	public void undo(){
+		if(ignoreThis) return;
+		
 		Iterator it = linkableObjects.iterator();
 		while(it.hasNext()){
 			LinkableObject obj = (LinkableObject)it.next();

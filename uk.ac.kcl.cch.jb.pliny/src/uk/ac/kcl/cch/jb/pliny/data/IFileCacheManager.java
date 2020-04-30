@@ -28,7 +28,7 @@ import uk.ac.kcl.cch.jb.pliny.model.ICachingResource;
  */
 public interface IFileCacheManager {
 
-	/**
+	/* no longer present. JB
 	 * creates object in the file cache. This is done by copying the file from outside
 	 * the cache into it
 	 * 

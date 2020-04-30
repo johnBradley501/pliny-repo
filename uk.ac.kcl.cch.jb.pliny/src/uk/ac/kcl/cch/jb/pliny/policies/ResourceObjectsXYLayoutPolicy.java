@@ -166,7 +166,8 @@ public class ResourceObjectsXYLayoutPolicy extends XYLayoutEditPolicy {
 		else if(targetObject instanceof IHoldsLinkableObject)
 			theResource = ((IHoldsLinkableObject)targetObject).getSurrogate();
 		else if(targetObject instanceof IHasResource)
-			theResource = ((ResourceHolder)targetObject).getResource();
+			//theResource = ((ResourceHolder)targetObject).getResource();
+			theResource = ((IHasResource)targetObject).getResource();
 		if(theResource == null)return null;
 		//System.out.println("getCreateCommand targetObject:"+targetObject.toString());
 		/*

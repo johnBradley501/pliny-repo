@@ -29,14 +29,20 @@ public class XmlElement {
 	private XmlElement currContent = null;
 	
 	private int state = 0;
+	private boolean inline;
 	private static final int notStarted = 0;
 	private static final int nameWritten = 1;
 	//private static final int attsWritten = 2;
 	private static final int headerDone = 3;
 
-	public XmlElement(String name) {
+	public XmlElement(String name, boolean inline) {
 		super();
 		this.name = name;
+		this.inline = inline;
+	}
+	
+	public XmlElement(String name) {
+		this(name, false);
 	}
 	
 	void setFile(XmlFile xmlFile){
@@ -65,7 +71,10 @@ public class XmlElement {
 		currContent = content;
 		currContent.setFile(xmlFile);
 		if(state == notStarted)writeGIName();
-		if(state != headerDone)xmlFile.getWriter().write(">\n");
+		if(state != headerDone) {
+			xmlFile.getWriter().write(">");
+			if(!inline)xmlFile.getWriter().write("\n");
+		}
 		state = headerDone;
 	}
 	
@@ -94,11 +103,13 @@ public class XmlElement {
 	public void close() throws IOException{
 		if(state != headerDone){
 			if(state == notStarted)writeGIName();
-			xmlFile.getWriter().write("/>\n");
+			xmlFile.getWriter().write("/>");
+			if(!inline)xmlFile.getWriter().write("\n");
 			return;
 		}
 		if(currContent != null)currContent.close();
-		xmlFile.getWriter().write("</"+name+">\n");
+		xmlFile.getWriter().write("</"+name+">");
+		if(!inline)xmlFile.getWriter().write("\n");
 	}
 	
 	static protected String update(String pat, char match, String repl){

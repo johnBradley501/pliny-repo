@@ -57,7 +57,7 @@ public class ClipboardHandler  {
 	};
 
 	
-	private ClipboardHandler() {
+	protected ClipboardHandler() {
 		super();
 	}
 	
@@ -205,6 +205,10 @@ public class ClipboardHandler  {
 		handleObjectForText(rslt, object);
 		return rslt;
 	}
+	
+	protected Object convertStringToObject(String theString) {
+		return StringToNoteHandler.getInstance().handleStringAsNote(theString);
+	}
 
 	private void handleObjectForText(Vector rslt, Object object) {
 		if(object == null)return;
@@ -213,7 +217,7 @@ public class ClipboardHandler  {
 			theString.replaceAll("\\r", "");
 			if(theString.startsWith("http:") || theString.startsWith("https:"))
 			   rslt.add(BrowserResourceExtensionProcessor.processAsURL(theString));
-			else rslt.add(StringToNoteHandler.getInstance().handleStringAsNote(theString));
+			else rslt.add(convertStringToObject(theString));
 		}
 		else if(object instanceof String[]){
 			String theStrings[] = (String[])object;

@@ -200,7 +200,7 @@ public class PlinyMenuProvider extends ContextMenuProvider {
 		}
 	}
 	
-	private Vector getSelectedBaseObjects(){
+	protected Vector getSelectedBaseObjects(){
 		IStructuredSelection selection = (IStructuredSelection)viewer.getSelection();
 		Vector rslts = new Vector();
 		Iterator iter = selection.iterator();
@@ -215,7 +215,7 @@ public class PlinyMenuProvider extends ContextMenuProvider {
 		return rslts;
 	}
 	
-	private Vector getSelectedEditParts(){
+	protected Vector getSelectedEditParts(){
 		IStructuredSelection selection = (IStructuredSelection)viewer.getSelection();
 		Vector rslts = new Vector();
 		Iterator iter = selection.iterator();
