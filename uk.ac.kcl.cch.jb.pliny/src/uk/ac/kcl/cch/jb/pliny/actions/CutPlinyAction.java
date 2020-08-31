@@ -29,7 +29,7 @@ import uk.ac.kcl.cch.jb.pliny.commands.CutObjectsCommand;
  * @author John Bradley
  *
  */
-public class CutPlinyAction extends CopyPlinyAction {
+public class CutPlinyAction extends CopyPlinyAction implements IStyledTextHandler{
 
 	/**
 	 * constructor for this Action.

@@ -207,9 +207,10 @@ public class BrowserResourceExtensionProcessor extends
 		if(matcher.find()){
 			title = matcher.group(1);
 		}
-		Resource theResource = new Resource(true);
+		// Resource theResource = new Resource(true);
+		Resource theResource = new VirtualBrowserResource(null);
 		theResource.setIdentifiers(id);
-		theResource.setName(title);
+		theResource.setName(title.trim());
 		theResource.reIntroduceMe();
 		theResource.setObjectType(htmlObjectType);
 		return theResource;

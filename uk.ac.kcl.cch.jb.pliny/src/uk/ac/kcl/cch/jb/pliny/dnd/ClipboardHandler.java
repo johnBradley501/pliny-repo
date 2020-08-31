@@ -142,11 +142,14 @@ public class ClipboardHandler  {
 			TextSelection selection = (TextSelection)contents;
 			if(selection.getText() != null)
 				buf.append(selection.getText());
+		} else if(contents instanceof IHasText) {
+			handlPlainString(((IHasText)contents).getText(), buf);
 		} else if(contents instanceof String)handlPlainString((String)contents, buf);
 		return new String(buf);
 	}
 	
 	private void handlPlainString(String contents, StringBuffer buf) {
+		if(contents == null)return;
 		String[] lines = contents.split("\\n");
 		String newline = System.getProperty("line.separator");
 		for (int i = 0 ; i < lines.length; i++){

@@ -57,6 +57,7 @@ import uk.ac.kcl.cch.jb.pliny.ResourceAreaManager;
 import uk.ac.kcl.cch.jb.pliny.actions.CopyPlinyAction;
 import uk.ac.kcl.cch.jb.pliny.actions.CutPlinyAction;
 import uk.ac.kcl.cch.jb.pliny.actions.DisplayReferrerAction;
+import uk.ac.kcl.cch.jb.pliny.actions.IStyledTextHandler;
 import uk.ac.kcl.cch.jb.pliny.actions.MakeAnchorAction;
 import uk.ac.kcl.cch.jb.pliny.actions.MakeAnnotationAction;
 import uk.ac.kcl.cch.jb.pliny.actions.MakeConnectionAction;
@@ -82,9 +83,9 @@ public class PlinyToolBar implements PropertyChangeListener{
 	private CommandStack commandStack;
 	//private ActionRegistry actionRegistry;
 	
-	private CutPlinyAction cutAction = null;
-	private CopyPlinyAction copyAction = null;
-	private PastePlinyAction pasteAction = null;
+	private IStyledTextHandler cutAction = null;
+	private IStyledTextHandler copyAction = null;
+	private IStyledTextHandler pasteAction = null;
 
 
 	private Vector toolItemActionLinkers= new Vector();
@@ -155,9 +156,9 @@ public class PlinyToolBar implements PropertyChangeListener{
 	}
 	
 	private void setupActions(ActionRegistry actionRegistry) {
-		cutAction = (CutPlinyAction) actionRegistry.getAction(ActionFactory.CUT.getId());
-		copyAction = (CopyPlinyAction) actionRegistry.getAction(ActionFactory.COPY.getId());
-		pasteAction = (PastePlinyAction) actionRegistry.getAction(ActionFactory.PASTE.getId());
+		cutAction = (IStyledTextHandler) actionRegistry.getAction(ActionFactory.CUT.getId());
+		copyAction = (IStyledTextHandler) actionRegistry.getAction(ActionFactory.COPY.getId());
+		pasteAction = (IStyledTextHandler) actionRegistry.getAction(ActionFactory.PASTE.getId());
 	}
 	
 	private void giveActionsStyledText(StyledText myText){

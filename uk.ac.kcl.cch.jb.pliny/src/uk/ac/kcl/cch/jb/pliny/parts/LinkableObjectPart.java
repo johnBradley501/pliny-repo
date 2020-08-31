@@ -78,7 +78,7 @@ public class LinkableObjectPart extends LinkableObjectBasePart
 
 	private PlinyDirectEditManager manager;
 	//private boolean showingMap;
-	private IFigure mainContents = null;
+	protected IFigure mainContents = null;
 
 	
 	public LinkableObjectPart(LinkableObject model) {

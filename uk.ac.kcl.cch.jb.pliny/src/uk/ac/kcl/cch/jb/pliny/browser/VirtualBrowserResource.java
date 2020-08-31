@@ -214,6 +214,10 @@ implements IHasAttributeProperties, IHasCachedThumbnail{
 		
 	}
 	
+	public File getMyThumbnailFile() {
+		return PlinyPlugin.getDefault().getWebCache().getThumbnailFile(this);
+	}
+	
 	public ImageDescriptor getMyThumbnailDescriptor(){
 		//return PdfAnnotPlugin.getDefault().getThumbnailFromImageCache(getCacheNumber());
 		File thumbFile = PlinyPlugin.getDefault().getWebCache().getThumbnailFile(this);

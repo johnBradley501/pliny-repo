@@ -14,6 +14,7 @@ package uk.ac.kcl.cch.jb.pliny.pdfAnnot.model;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -30,6 +31,7 @@ import uk.ac.kcl.cch.jb.pliny.model.ICachingResource;
 import uk.ac.kcl.cch.jb.pliny.model.IHasAttributeProperties;
 import uk.ac.kcl.cch.jb.pliny.model.LinkableObject;
 import uk.ac.kcl.cch.jb.pliny.model.Resource;
+import uk.ac.kcl.cch.jb.pliny.parts.IHasCachedThumbnail;
 import uk.ac.kcl.cch.jb.pliny.pdfAnnot.PdfAnnotPlugin;
 import uk.ac.kcl.cch.jb.pliny.pdfAnnot.SwtImageFromPdf;
 import uk.ac.kcl.cch.rdb2java.dynData.FKReferenceList;
@@ -52,7 +54,7 @@ import uk.ac.kcl.cch.rdb2java.dynData.FKReferenceList;
  *
  */
 public class PdfResource extends Resource 
-implements IHasAttributeProperties, ICachingResource{
+implements IHasAttributeProperties, IHasCachedThumbnail{
 	
 	public static final String CURRENTPAGE_EVENT="PdfResource.currentPage";
 	public static final String SCALECHANGE_EVENT="PdfResource.scale";
@@ -210,6 +212,13 @@ implements IHasAttributeProperties, ICachingResource{
 			return ImageDescriptor.createFromFile(null, thumbFile.getAbsolutePath());
 		return createThumbnail();
 	}
+	
+	public File getMyThumbnailFile() {
+		File thumbFile = PdfAnnotPlugin.getDefault().getCache().getThumbnailFile(this);
+		if(!thumbFile.exists())createThumbnail();
+		return thumbFile;
+	}
+
 	
 	/**
 	 * creates a thumbnail size image of the first page of the PDF file. 

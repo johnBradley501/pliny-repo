@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Pliny" id="uk.ac.kcl.cch.jb.pliny.rcp.product" application="uk.ac.kcl.cch.jb.pliny.rcp.application" version="1.3.1" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/uk.ac.kcl.cch.jb.pliny.rcp/about.gif"/>
+      <text>
+         Pliny
+
+Version 1.3.0
+
+(c) Copyright John Bradley 2006-13, All rights reserved.
+Includes JPedal code Copyright (c) 2009, IDRsolutions and Contributors.
+Includes Apache Derby code Copyright (c) 2004-2007 Apache Software Foundation
+Visit http://pliny.cch.kcl.ac.uk
+
+This software is built using Eclipse components
+Visit http://www.eclipse.org
+The PDF viewer is built using JPedal
+Visit http://www.jpedal.org/
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgs>-Xms512M -Xmx1G
+      </vmArgs>
+   </launcherArgs>
+
+   <windowImages i16="/uk.ac.kcl.cch.jb.pliny.rcp/icon16.gif" i32="/uk.ac.kcl.cch.jb.pliny.rcp/icon32.gif"/>
+
+   <splash
+      location="uk.ac.kcl.cch.jb.pliny.rcp" />
+   <launcher name="pliny">
+      <macosx icon="/uk.ac.kcl.cch.jb.pliny.rcp/pliny.icns"/>
+      <win useIco="true">
+         <ico path="/uk.ac.kcl.cch.jb.pliny.rcp/pliny.ico"/>
+         <bmp
+            winSmallHigh="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-32.bmp"
+            winSmallLow="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-8.bmp"
+            winMediumHigh="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-32-32.bmp"
+            winMediumLow="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-32-8.bmp"
+            winLargeHigh="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-32.bmp"
+            winLargeLow="/uk.ac.kcl.cch.jb.pliny.rcp/icon/icon-16-8.bmp"/>
+      </win>
+   </launcher>
+
+   <intro introId="uk.ac.kcl.cch.jb.pliny.rcp.introID"/>
+
+   <vm>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="uk.ac.kcl.cch.jb.pliny.rcp.feature"/>
+      <feature id="uk.ac.kcl.cch.jb.pliny.feature"/>
+      <feature id="org.eclipse.equinox.p2.user.ui"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient4.feature"/>
+      <feature id="org.eclipse.emf.ecore"/>
+      <feature id="org.jpedal.feature"/>
+      <feature id="org.eclipse.help"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature"/>
+      <feature id="org.eclipse.equinox.p2.extras.feature"/>
+      <feature id="org.w3c.tidy.feature"/>
+      <feature id="org.eclipse.equinox.p2.core.feature"/>
+      <feature id="org.eclipse.ecf.core.feature"/>
+      <feature id="org.eclipse.rcp"/>
+      <feature id="org.eclipse.emf.common"/>
+      <feature id="org.eclipse.equinox.p2.rcp.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.feature"/>
+      <feature id="org.eclipse.ecf.core.ssl.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.ssl.feature"/>
+      <feature id="org.apache.derby.core.feature"/>
+      <feature id="org.eclipse.e4.rcp"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient45.feature" installMode="root"/>
+      <feature id="org.eclipse.gef" installMode="root"/>
+      <feature id="org.eclipse.draw2d" installMode="root"/>
+      <feature id="uk.ac.kcl.cch.jb.pliny.platform.feature" installMode="root"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <property name="osgi.instance.area" value="@user.home/pliny" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>

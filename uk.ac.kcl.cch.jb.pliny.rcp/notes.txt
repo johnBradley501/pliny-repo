@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/38079429/export-eclipse-rcp-product-unresolved-requirement-require-bundle-org-eclip
+Unresolved requirement: Require-Bundle: org.eclipse.jface.text

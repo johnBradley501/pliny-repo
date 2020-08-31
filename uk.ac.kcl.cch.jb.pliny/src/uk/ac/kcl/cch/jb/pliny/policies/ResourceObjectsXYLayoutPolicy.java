@@ -122,7 +122,8 @@ public class ResourceObjectsXYLayoutPolicy extends XYLayoutEditPolicy {
 		}
 		Resource resource;
 		if(model instanceof Resource)resource = (Resource)model;
-		else if(model instanceof ResourceHolder) resource = ((ResourceHolder)model).getResource();
+		else if(model instanceof IHasResource) resource = ((IHasResource)model).getResource();
+		//else if(model instanceof ResourceHolder) resource = ((ResourceHolder)model).getResource();
 		else if(model instanceof IHoldsLinkableObject)resource = ((IHoldsLinkableObject)model).getSurrogate();
 		else return null;
 		if((container != null) && (resource.getALID() != container.getSurrogateFor().getALID()))return null;

@@ -137,10 +137,17 @@ public class LinkableObjectFigure extends Figure {
 		
 	}
     }
-	
+    
 	public LinkableObjectFigure(LinkableObjectPart myPart,
 			IFigure baseContents,
 			int contentType){
+		this(myPart, baseContents, contentType, null);
+	}
+    
+	
+	public LinkableObjectFigure(LinkableObjectPart myPart,
+			IFigure baseContents,
+			int contentType, Clickable anotherButton){
         super();
 		this.contentType = contentType;
 		this.loPart = myPart;
@@ -171,6 +178,10 @@ public class LinkableObjectFigure extends Figure {
 		if(baseContents != null)this.baseContents = baseContents;
 		else this.baseContents = mapContents;
 
+		if(anotherButton != null) {
+			otherButtons = new Clickable[3];
+			otherButtons[2] = anotherButton;
+		}
 		otherButtons[0] = switchMapButton;
 		otherButtons[1] = referencerButton;
 		//buildContentArea();

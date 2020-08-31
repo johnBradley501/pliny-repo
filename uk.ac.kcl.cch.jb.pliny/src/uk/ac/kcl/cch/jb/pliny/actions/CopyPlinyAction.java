@@ -42,11 +42,12 @@ import uk.ac.kcl.cch.rdb2java.dynData.BaseObject;
  * @author John Bradley
  *
  */
-public class CopyPlinyAction extends SelectionAction {
+public class CopyPlinyAction extends SelectionAction implements IStyledTextHandler{
 	 //  public static final String ActionLabelText =
 	//	   "uk.ac.kcl.cch.jb.noteMan.ui.imageEditor.CopyAction.ActionLabelText_UI_";
 	
 	protected StyledText styledText = null;
+	private Vector selectedModelItems = null;
 
 	/**
 	 * constructor for this Action.
@@ -126,7 +127,7 @@ public class CopyPlinyAction extends SelectionAction {
 		   List items = getSelectedObjects();
 		   if(items.size() == 0)return;
 		   Iterator it = items.iterator();
-		   Vector selectedModelItems = new Vector();
+		   selectedModelItems = new Vector();
 		   //Vector linkList = new Vector();
 		   Set linkList = new HashSet();
 		   Set itemsincluded = new HashSet();
@@ -145,7 +146,7 @@ public class CopyPlinyAction extends SelectionAction {
 				   //} else if (myModel instanceof BaseObject){
 				   //    selectedModelItems.add(myModel);
 				   //    itemsincluded.add(myModel);
-				   }
+				   } else handleOtherObject(selItem, selectedModelItems);
 			   }
 		   }
 		   
@@ -169,7 +170,15 @@ public class CopyPlinyAction extends SelectionAction {
 	//	   System.out.println("CopyNoteMan2Action setSelection: "+selection);
 	//	   super.setSelection(selection);
 	//  }
+	protected Vector getSelectedModelItems() {
+		return selectedModelItems;
+	}
 	
+	protected void handleOtherObject(Object selItem, Vector selectedModelItems) {
+		// override if handling other types of data
+		
+	}
+
 	public ISelection getMySelection(){
 		return this.getSelection();
 	}

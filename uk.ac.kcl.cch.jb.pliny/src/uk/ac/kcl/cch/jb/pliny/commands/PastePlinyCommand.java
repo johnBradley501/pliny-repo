@@ -100,6 +100,7 @@ public class PastePlinyCommand extends Command {
 				handleResource((Resource)obj, ++offset);
 			else if(obj instanceof LinkableObject)
 				handleLinkableObject((LinkableObject)obj, ++offset);
+			else handleOther(obj, ++offset);
 		}
 		
 		it = items.iterator();
@@ -110,6 +111,10 @@ public class PastePlinyCommand extends Command {
 			}
 		}
 		linkedObjects = null;
+	}
+	
+	protected void handleOther(Object obj, int offset) {
+		// override to make this do something    jb
 	}
 
 	private void handleLink(Link oldLink) {
@@ -149,7 +154,7 @@ public class PastePlinyCommand extends Command {
 		linkedObjects.put(object, rslt);
 	}
 
-	private void handleResource(Resource resource, int offset) {
+	protected void handleResource(Resource resource, int offset) {
 		LinkableObject rslt = new LinkableObject();
 		rslt.setDisplayRectangle(new Rectangle(offset*15, offset*15, 150, 100));
 		rslt.setIsOpen(true);

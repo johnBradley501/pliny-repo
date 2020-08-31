@@ -34,6 +34,7 @@ import uk.ac.kcl.cch.jb.pliny.model.AttributedResourceHandler;
 import uk.ac.kcl.cch.jb.pliny.model.ICachingResource;
 import uk.ac.kcl.cch.jb.pliny.model.IHasAttributeProperties;
 import uk.ac.kcl.cch.jb.pliny.model.Resource;
+import uk.ac.kcl.cch.jb.pliny.parts.IHasCachedThumbnail;
 import uk.ac.kcl.cch.jb.pliny.utils.ImageDataTools;
 
 /**
@@ -48,7 +49,7 @@ import uk.ac.kcl.cch.jb.pliny.utils.ImageDataTools;
  *
  */
 public class ImageResource extends Resource 
-implements IHasAttributeProperties, IZoomableImageResource, ICachingResource{
+implements IHasAttributeProperties, IZoomableImageResource, IHasCachedThumbnail{
 	
 	private AttributedResourceHandler attrHandler = null;
 	
@@ -225,6 +226,14 @@ implements IHasAttributeProperties, IZoomableImageResource, ICachingResource{
 		if(thumbFile.exists())
 			return ImageDescriptor.createFromFile(null, thumbFile.getAbsolutePath());
 		return createThumbnail(thumbFile);
+	}
+	
+	public File getMyThumbnailFile() {
+		URL theImageUrl = getMyUrl();
+		if(theImageUrl == null)return null;
+		File thumbFile = ImageResPlugin.getDefault().getCache().getThumbnailFile(this);
+		if(!thumbFile.exists())createThumbnail(thumbFile);
+		return thumbFile;
 	}
 	
 	static final int thumbWidth = 120;

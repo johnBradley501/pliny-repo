@@ -150,7 +150,7 @@ public class PlinyDirectEditManager extends DirectEditManager {
 		fireCommit(e);
 	}
 
-	private void restoreSavedActions(IActionBars actionBars){
+	protected void restoreSavedActions(IActionBars actionBars){
 		actionBars.setGlobalActionHandler(ActionFactory.COPY.getId(), copy);
 		actionBars.setGlobalActionHandler(ActionFactory.PASTE.getId(), paste);
 		actionBars.setGlobalActionHandler(ActionFactory.DELETE.getId(), delete);
@@ -161,7 +161,7 @@ public class PlinyDirectEditManager extends DirectEditManager {
 		actionBars.setGlobalActionHandler(ActionFactory.REDO.getId(), redo);
 	}
 
-	private void saveCurrentActions(IActionBars actionBars) {
+	protected void saveCurrentActions(IActionBars actionBars) {
 		copy = actionBars.getGlobalActionHandler(ActionFactory.COPY.getId());
 		paste = actionBars.getGlobalActionHandler(ActionFactory.PASTE.getId());
 		delete = actionBars.getGlobalActionHandler(ActionFactory.DELETE.getId());

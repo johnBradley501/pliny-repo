@@ -38,7 +38,7 @@ import uk.ac.kcl.cch.jb.pliny.model.Resource;
  *
  */
 
-public class PastePlinyAction extends SelectionAction {
+public class PastePlinyAction extends SelectionAction implements IStyledTextHandler{
 	private boolean allowAnchors;
 	
 	protected StyledText styledText = null;
@@ -65,7 +65,7 @@ public class PastePlinyAction extends SelectionAction {
 		this.styledText = null;
 	}
 	
-	private Command createPasteCommand(){
+	protected Command createPasteCommand(){
 		IWorkbenchPart part = this.getWorkbenchPart();
 		if(part ==  null)return null;
 		if(!(part instanceof IResourceDrivenPart))return null;
