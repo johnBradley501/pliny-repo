@@ -62,9 +62,6 @@ Visit http://www.jpedal.org/
       <feature id="uk.ac.kcl.cch.jb.pliny.platform.feature" installMode="root"/>
       <feature id="uk.ac.kcl.cch.jb.pliny.rcp.feature" installMode="root"/>
       <feature id="org.eclipse.equinox.p2.user.ui" version="2.4.500.v20190903-0934" installMode="root"/>
-      <feature id="org.eclipse.e4.rcp" version="1.6.600.v20190907-0426" installMode="root"/>
-      <feature id="org.eclipse.ecf.core.feature" installMode="root"/>
-      <feature id="org.eclipse.ecf.filetransfer.feature" installMode="root"/>
    </features>
 
    <configurations>

@@ -6,11 +6,13 @@
       provider-name="John Bradley">
 
    <description url="http://www.example.com/description">
-      Provides the runtime context for running Pliny standalone
+      Provides the runtime context for running Pliny standalone. This
+includes the application itself (from bundle uk.ac.kcl.cch.jb.pliny.rcp, the UI intro bundles, 
+and the features needed to support p2 with associated emf and ecf bundles.
    </description>
 
    <copyright url="http://www.example.com/copyright">
-      Copyright 2010 John Bradley
+      Copyright 2010=20 John Bradley
    </copyright>
 
    <license url="http://www.example.com/license">
@@ -35,6 +37,14 @@
 
    <includes
          id="org.eclipse.emf.common"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.core.feature"
+         version="0.0.0"/>
+
+   <includes
+         id="org.eclipse.ecf.filetransfer.feature"
          version="0.0.0"/>
 
    <requires>

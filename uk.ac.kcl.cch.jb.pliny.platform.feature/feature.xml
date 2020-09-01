@@ -10,7 +10,8 @@
 This feature is derived from the feature &quot;org.eclipse.platform&quot;.
 This version is copied from version 4.13.0.v20190916-1323,
 which is the one destribed with Eclipse version Version: 2019-09
-R (4.13.0), Build id: 20190917-1200. Whenever the Eclipse IDE is updated
+R (4.13.0), Build id: 20190917-1200. Whenever the Eclipse IDE
+is updated
 this feature can be created from the new version of org.eclipse.platform
 that exists in it&lt;/p&gt;
 
@@ -22,6 +23,9 @@ These are:&lt;/p&gt;
 org.eclipse.search
 org.eclipse.text.quicksearch
 org.eclipse.platform.doc.user
+org.eclipse.debug.core
+org.eclipse.debug.ui
+org.eclipse.core.externaltools
 &lt;/pre&gt;
    </description>
 
@@ -143,20 +147,6 @@ See details at: http://www.eclipse.org/legal/epl-v10.html
          download-size="71"
          install-size="148"
          version="3.5.300.v20190708-1141"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.debug.core"
-         download-size="388"
-         install-size="806"
-         version="3.14.0.v20190812-1404"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.debug.ui"
-         download-size="3061"
-         install-size="6252"
-         version="3.14.200.v20190822-2125"
          unpack="false"/>
 
    <plugin
@@ -320,13 +310,6 @@ See details at: http://www.eclipse.org/legal/epl-v10.html
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.ui.externaltools"
-         download-size="148"
-         install-size="284"
-         version="3.4.400.v20190705-1219"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.ui.ide"
          download-size="2451"
          install-size="4876"
@@ -460,13 +443,6 @@ See details at: http://www.eclipse.org/legal/epl-v10.html
          install-size="31"
          version="1.1.300.v20190830-1238"
          fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.externaltools"
-         download-size="42"
-         install-size="80"
-         version="1.1.400.v20190705-1530"
          unpack="false"/>
 
    <plugin
