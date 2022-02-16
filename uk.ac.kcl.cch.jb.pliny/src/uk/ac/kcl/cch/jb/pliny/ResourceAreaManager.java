@@ -210,9 +210,9 @@ public class ResourceAreaManager implements CommandStackListener, ISelectionChan
 	}
 	
 	public void dispose(){
-    	undoAction.dispose();
-    	redoAction.dispose();
-    	deleteAction.dispose();
+    	// undoAction.dispose();
+    	// redoAction.dispose();
+    	// deleteAction.dispose();
     	
     	Iterator it = selectionActions.iterator();
     	while(it.hasNext()){
