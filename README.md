@@ -1,5 +1,5 @@
 # pliny-repo
-This is the repository for the code for the Pliny software program (see http://pliny.cch.kcl.ac.uk)
+This is the repository for the code for the Pliny software program (see the associated Wiki page https://github.com/johnBradley501/pliny-repo/wiki, or http://pliny.cch.kcl.ac.uk)
 
 Pliny is written in Java and is built using the Eclipse plugin framework.  Coupled with several Eclipse plugins that define most of Pliny's functionality is an Eclipse RCP program, called Pliny, which allows the plugins to be used as a standalone application.  The following Eclipse projects are stored as directories:
 
