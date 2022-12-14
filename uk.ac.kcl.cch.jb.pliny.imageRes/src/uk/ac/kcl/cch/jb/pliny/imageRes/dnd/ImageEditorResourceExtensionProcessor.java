@@ -47,7 +47,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
-import jdk.nashorn.internal.parser.JSONParser;
 import uk.ac.kcl.cch.jb.pliny.browser.BrowserViewer;
 import uk.ac.kcl.cch.jb.pliny.browser.VirtualBrowserResource;
 import uk.ac.kcl.cch.jb.pliny.dnd.AbstractResourceExtensionProcessor;
