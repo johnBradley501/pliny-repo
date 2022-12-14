@@ -156,7 +156,7 @@ public class BrowserViewer extends Composite {
         layout.verticalSpacing = 0;
         layout.numColumns = 1;
         setLayout(layout);
-        setLayoutData(new GridData(GridData.FILL_BOTH));
+        // setLayoutData(new GridData(GridData.FILL_BOTH));
         clipboard = new Clipboard(parent.getDisplay());
         
         if (showToolbar || showURLbar) {
@@ -208,7 +208,7 @@ public class BrowserViewer extends Composite {
             return;
         }*/
         try {
-            this.browser = new Browser(this, SWT.NONE); 
+            this.browser = new Browser(this, SWT.EDGE); 
         }
         catch (SWTError e) {
      	   e.printStackTrace();
