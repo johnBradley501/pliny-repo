@@ -54,7 +54,6 @@ Visit http://www.jpedal.org/
       <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
    </vm>
 
-
    <plugins>
    </plugins>
 
@@ -76,10 +75,9 @@ Visit http://www.jpedal.org/
       <feature id="org.eclipse.ecf.filetransfer.feature" installMode="root"/>
       <feature id="org.eclipse.ecf.core.ssl.feature" installMode="root"/>
       <feature id="org.eclipse.ecf.filetransfer.ssl.feature" installMode="root"/>
-      <feature id="org.eclipse.gef" installMode="root"/>
       <feature id="org.apache.derby.core.feature" installMode="root"/>
-      <feature id="org.eclipse.draw2d" installMode="root"/>
       <feature id="org.eclipse.e4.rcp" installMode="root"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient5.feature" installMode="root"/>
    </features>
 
    <configurations>
