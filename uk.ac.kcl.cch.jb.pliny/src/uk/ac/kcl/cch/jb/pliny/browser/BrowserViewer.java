@@ -228,6 +228,10 @@ public class BrowserViewer extends Composite {
         addBrowserListeners();
         //listen();
     }
+    
+    BrowserEditor getBrowserEditor() {
+    	return container;
+    }
 
     /**
      * Returns the underlying SWT browser widget.

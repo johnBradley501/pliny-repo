@@ -31,3 +31,7 @@ work -- this is part of a GraphicalEditPart, but not AbstractEditPart
 defined new class AbstractDirectEditableTreeEditPart
 extending AbstractTreeEditPart, and adding abstract definitions for
 same two methods defined in IDirectEditablePart
+
+=====================================
+Setting target version for Pliny
+https://www.vogella.com/tutorials/EclipseTargetPlatform/article.html

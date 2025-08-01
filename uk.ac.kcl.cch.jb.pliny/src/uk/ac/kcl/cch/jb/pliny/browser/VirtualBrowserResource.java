@@ -143,15 +143,23 @@ implements IHasAttributeProperties, IHasCachedThumbnail{
 
 	public ImageDescriptor createThumbnail(Browser browser){
 		if(this.isNotPersisting())return null;
-        
-        //Point tableSize = browser.getSize();
-		Rectangle imageArea = browser.getClientArea(); // is this right? j.b.
-		//System.out.println("tableSize: "+tableSize);
-		//System.out.println("imageArea: "+imageArea);
-        GC gc = new GC(browser);
-        final Image image = new Image(browser.getDisplay(), imageArea.width, imageArea.height);
-        gc.copyArea(image, 0, 0);
-        gc.dispose();
+		if(getMyThumbnailFile().exists())return getMyThumbnailDescriptor();
+		return makeThumbnail(browser);
+	}
+		
+	public ImageDescriptor makeThumbnail(Browser browser) {
+		Image image = null;
+		// GC does not work properly for EDGE Browser type
+		// System.out.println("BrowserType: "+browser.getBrowserType());
+		if(browser.getBrowserType().equals("edge"))
+			image = getImageFromScreenCapture(browser);
+		else image = getImageFromCopyArea(browser);
+		if(image == null)return null;
+		// Rectangle imageArea = browser.getClientArea(); // is this right? j.b.
+        // GC gc = new GC(browser);
+        // final Image image = new Image(browser.getDisplay(), imageArea.width, imageArea.height);
+        // gc.copyArea(image, 0, 0);
+        // gc.dispose();
         
         ImageData data = image.getImageData();
 //      save image 
@@ -159,7 +167,8 @@ implements IHasAttributeProperties, IHasCachedThumbnail{
         //imageLoader.data = new ImageData[] { image.getImageData() }; 
         //imageLoader.save("c:/test.jpg", SWT.IMAGE_JPEG); // fails 
 
-		int width = imageArea.width;
+		Rectangle imageArea = image.getBounds();
+        int width = imageArea.width;
 		int height = imageArea.height;
 		if(width > thumbWidth){
 			if(height < width){
@@ -187,8 +196,8 @@ implements IHasAttributeProperties, IHasCachedThumbnail{
 		   scaledImage.dispose();
 		} else thumbData = data;
         image.dispose();
-		ImageLoader loader = new ImageLoader();
-		loader.data = new ImageData[]{thumbData};
+		// ImageLoader loader = new ImageLoader();
+		// loader.data = new ImageData[]{thumbData};
 		
 		return PlinyPlugin.getDefault().getWebCache().createThumbnail(this, thumbData);
 		
@@ -214,6 +223,40 @@ implements IHasAttributeProperties, IHasCachedThumbnail{
 		
 	}
 	
+	private Image getImageFromScreenCapture(Browser browser) {
+		Rectangle imageArea = browser.getClientArea();
+		Point bPlace = browser.toDisplay(0, 0);
+		imageArea = new Rectangle(imageArea.x+bPlace.x, imageArea.y+bPlace.y, imageArea.width, imageArea.height);
+
+		final Display display = Display.getCurrent();
+		Rectangle displayBounds = display.getBounds();
+
+		if(!(displayBounds.contains(imageArea.x, imageArea.y) && (displayBounds.contains(imageArea.x+imageArea.width, imageArea.y+imageArea.height))))
+			// Browser display is in part off the screen
+			return null;
+
+		final Image disImage = new Image(display, displayBounds.width, displayBounds.height);
+		GC disGC = new GC(display);
+		disGC.copyArea(disImage, 0, 0); // disImage now has screen shot of full computer screen in it
+		
+		final Image rslt = new Image(display, imageArea.width, imageArea.height);
+	    GC rsltGC = new GC(rslt);
+	    rsltGC.drawImage(disImage, imageArea.x, imageArea.y, imageArea.width, imageArea.height, 0, 0, imageArea.width, imageArea.height);
+	    disGC.dispose();
+	    rsltGC.dispose();
+	    disImage.dispose();
+	    return rslt;
+	}
+
+	private Image getImageFromCopyArea(Browser browser) {
+		Rectangle imageArea = browser.getClientArea(); // is this right? j.b.
+        GC gc = new GC(browser);
+        final Image image = new Image(browser.getDisplay(), imageArea.width, imageArea.height);
+        gc.copyArea(image, 0, 0);
+        gc.dispose();
+        return image;
+	}
+
 	public File getMyThumbnailFile() {
 		return PlinyPlugin.getDefault().getWebCache().getThumbnailFile(this);
 	}

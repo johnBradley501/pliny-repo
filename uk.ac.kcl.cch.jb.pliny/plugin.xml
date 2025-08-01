@@ -199,5 +199,9 @@
             name="TopicMap Files">
       </processor>
    </extension>
+   <extension
+         point="uk.ac.kcl.cch.jb.pliny.browserToolbarContribution">
+         <processor class="uk.ac.kcl.cch.jb.pliny.browser.UpdateThumbnameImage"/>
+   </extension>
 
 </plugin>
