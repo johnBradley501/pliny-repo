@@ -56,7 +56,8 @@ See details at: http://www.eclipse.org/legal/epl-v10.html
          id="org.apache.ant"
          download-size="2928"
          install-size="3433"
-         version="0.0.0"/>
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.ant.core"
